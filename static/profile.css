@@ -1,0 +1,1795 @@
+.acc_section{
+    background: #eee;
+    width: 100%;
+    height: 800px;
+    margin-top: 245px;
+    /* background: green; */
+}
+.acc_header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    /* box-shadow: 0 10px 10px rgba(1 1 1 / 65%); */
+}
+.acc_rooms_container{
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+.acc_rooms{
+    max-width: 95%;
+    min-height: 250px;
+    /* background: red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.acc_room{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    width: 350px;
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 15px;
+    cursor: pointer;
+    color: black;
+    transition: .9s ease;
+    /* background: blue; */
+}
+.room_img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: .9 ease;
+}
+.room_img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: .9 ease;
+}
+.room_info{
+    padding: 10px;
+    position: relative;
+    height: 100px;
+    width: 300px;
+    /* background: blue; */
+}
+.room_info h2{
+    font-size: 1.2em;
+    position: absolute;
+    top: 10px;
+    transition: .9s ease;
+}
+.room_info p{
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 10px;
+    transition: .9s ease;
+}
+
+
+.room
+{
+    position: absolute;
+    /* top: 350px; */
+    top: 850px;
+    z-index: 333;
+    width: 100%;
+    height: 350px;
+    background: #eee;
+    transition: .9s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.room_content{
+    width: 50%;
+    height: 100%;
+
+}
+.room_head{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.back{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background: #9b5de5;
+    border: 1px black solid;
+    transition: .9s ease;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.back:hover{
+    background: #7216e2;
+}
+.table_head{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+#first_data_div{
+    border-top: 1px #444 solid;
+}
+.data_div{
+    width: 100%;
+    height: 50px;
+    border-left: 1px #444 solid;
+    border-bottom: 1px #444 solid;
+    border-right: 1px #444 solid;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.data_div h3{
+    font-size: 1em;
+}
+.h3{
+    position: absolute;
+    left: 10px;
+}
+.p{
+    position: absolute;
+    right: 50%;
+}
+
+.change_password_div{
+    position: absolute;
+    top: 310px;
+    /* display: none; */
+    /* top: 750px; */
+    z-index: 333;
+    width: 100%;
+    height: 110px;
+    background: #eee;
+    transition: .9s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: green; */
+}
+.login_form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.username{
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.password{
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.submitt{
+    width: 100%;
+    height: 40px;
+    background: #9b5de5;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+.back_to_back_div{
+    width: 100%;
+    height : 60px;
+    margin-top: 350px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+.back_to_back{
+    width: 200px;
+    height: 40px;
+    border: 1px black solid;
+    transition: .9s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+#back_to_back:hover{
+    background: rgb(221, 221, 221);
+}
+
+.red_msg{
+    color: red;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.sep_data1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px #444 solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.sep_data{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.change_information_btn{
+    border: 1px black solid;
+    transition: .9s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 20px;
+    height: 40px;
+    background: #9b5de5;
+    font-weight: 700;
+}
+.change_information_btn:hover{
+    background: #7216e2;
+}
+.returns_head{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.policy span{
+    font-weight: 700;
+}
+.contacts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.contacts img{
+    width: 100px;
+}
+#im1{
+    width: 150px;
+}
+
+
+
+footer{
+    z-index: 334;
+    min-height: 350px;
+    /* display: none; */
+}
+footer
+{
+    width: 100%;
+    min-height: 350px;
+    background: black;
+    position: relative;
+    margin-bottom: 90px;
+    /* margin-right: 5px; */
+    /* margin-top: 10px; */
+    /* box-shadow:10px 0px 0px rgba(40, 40, 40, 0.65); */
+}
+
+
+
+
+
+/* ========================================== */
+/* Media Query */
+
+/*         ===> Extra small screens <===       */
+@media (max-width: 299px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 270px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .room_img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_img img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_info h2{
+        font-size: 1em;
+        position: absolute;
+        top: 15px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 15px;
+    }
+    .data_div h3{
+        font-size: 1em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+    .contacts img{
+        width: 70px;
+    }
+    #im1{
+        width: 100px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+    .table_head{
+        font-size: .9em;
+    }
+    #table_head2{
+        font-size: .7em;
+    }
+    .back{
+        width: 130px;
+        height: 40px;
+        font-size: 70%;
+    }
+    .sep_data1 p{
+        font-size: .7em;
+    }
+    .sep_data p{
+        font-size: .7em;
+    }
+    .data_div h3{
+        font-size: .8em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 500px;
+    }
+    .login_form{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 349px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 270px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .room_img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_img img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_info h2{
+        font-size: 1em;
+        position: absolute;
+        top: 15px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 15px;
+    }
+    .data_div h3{
+        font-size: .9em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+    #im1{
+        width: 100px;
+    }
+    .contacts img{
+        width: 70px;
+    }
+
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+    .table_head{
+        font-size: .7em;
+    }
+    .back{
+        width: 145px;
+        height: 40px;
+        font-size: .7em;
+    }
+    .sep_data p{
+        font-size: .8em;
+    }
+    .sep_data1 p{
+        font-size: .8em;
+    }
+    .data_div h3{
+        font-size: .8em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 450px;
+    }
+    .login_form{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 419px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 270px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+
+    .room_img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_img img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        transition: .9 ease;
+    }
+    .room_info h2{
+        font-size: 1em;
+        position: absolute;
+        top: 15px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 15px;
+    }
+    .data_div h3{
+        font-size: 1em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+    .table_head{
+        font-size: .9em;
+    }
+    .back{
+        width: 150px;
+        height: 40px;
+        font-size: .7em;
+    }
+    .sep_data1 p{
+        font-size: .9em;
+    }
+    .data_div h3{
+        font-size: .9em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 350px;
+    }
+    .login_form{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 499px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_info h2{
+        font-size: 1.1em;
+        position: absolute;
+        top: 10px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+
+    .data_div h3{
+        font-size: 1em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+
+
+    .table_head{
+        font-size: 1em;
+    }
+    .sep_data1 p{
+        font-size: .9em;
+    }
+    .data_div h3{
+        font-size: .9em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 250px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 549px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_info h2{
+        font-size: 1.1em;
+        position: absolute;
+        top: 10px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+
+    .data_div h3{
+        font-size: 1em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+
+
+    .table_head{
+        font-size: 1em;
+    }
+    .data_div h3{
+        font-size: .9em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 250px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 599px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_info h2{
+        font-size: 1.1em;
+        position: absolute;
+        top: 10px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+
+    .data_div h3{
+        font-size: 1em;
+    }
+    .h3{
+        position: absolute;
+        left: 10px;
+    }
+    .p{
+        position: absolute;
+        right: 10px;
+    }
+
+
+    .table_head{
+        font-size: .9em;
+    }
+    .data_div h3{
+        font-size: .9em;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+/* ========================================== */
+/*           ===> Small screens <===            */
+@media (min-width: 600px) and (max-width: 649px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_info h2{
+        font-size: 1.1em;
+        position: absolute;
+        top: 10px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 710px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_info h2{
+        font-size: 1.1em;
+        position: absolute;
+        top: 10px;
+    }
+    .room_info p{
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .room_content{
+        width: 95%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 711px) and (max-width: 767px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 85%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+/* ========================================== */
+/*          ===> Medium screens <==           */
+@media (min-width: 768px) and (max-width: 839px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 80%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 899px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 75%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 959px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 70%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 991px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 70%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+
+}
+
+/* ========================================== */
+/*          ===> Large screens <==            */
+@media (min-width: 992px) and (max-width: 1014px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 70%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+
+}
+
+@media (min-width: 1015px) and (max-width: 1099px){
+    .acc_section{
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .acc_header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        margin-top: 245px;
+    }
+    .acc_rooms_container{
+        width: 100%;
+        height: 500px;
+    }
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 330px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+    .room_content{
+        width: 70%;
+        height: 100%;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    .login_form{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .username{
+        border: 1px solid black;
+    }
+    .password{
+        border: 1px solid black;
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width: 1149px){
+    .acc_room{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 110px;
+        width: 330px;
+        padding: 10px;
+        border: 1px black solid;
+        border-radius: 15px;
+        cursor: pointer;
+        color: black;
+    }
+
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1200px){
+
+    footer{
+        margin-top: 50px;
+    }
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+}
+
+/* ========================================== */
+/*          ===> Extra large screens <==      */
+@media (min-width: 1201px) and (max-width: 1259px){
+
+    #account_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #information_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #returns_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+    #contacts_room{
+        position: absolute;
+        top: 350px;
+        right: 1300px;
+    }
+}
+
+@media (min-width: 1260px) and (max-width: 1349px){}
+
+@media (max-width: 1350px){}

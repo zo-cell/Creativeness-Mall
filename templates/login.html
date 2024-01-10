@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+{% endblock head %}
+{% block body %}
+
+<div class="login_container">
+    <div class="head">
+        <h1 class="hedd">Log in Page</h1>
+    </div>
+
+    <div class="login_form_div">
+        <form id="login_form" class="login_form" action="" method="POST">
+            {{form.hidden_tag()}}
+            {{form.username (class="username", id="username_input", autocomplete="off", onkeydown="hide_flash()")}}
+            <br>
+            {{form.password (class="password", id="password_input", autocomplete="off")}}
+            <br>
+            {{form.submit (class="submit1")}}
+        </form>
+    </div>
+
+    <div class="ask_div">
+        <a class="ask" href="/register">don't have an account ? register</a>
+    </div>
+
+
+    <footer>
+        <div class="title">
+            <h3>A CULUTURE OF FASHION</h3>
+        </div>
+        <div class="all_footer">
+            <div class="footer_container">
+                <div class="join_us">
+                    <h3>JOIN US</h3>
+                    <a href="/register">sign up</a>
+                </div>
+                <div class="contact_us">
+                    <h3>CONTACT US</h3>
+                    <a href="#">contact us</a>
+                </div>
+                <div class="social_icons">
+                    <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                    <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                    <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                </div>
+                <div class="footer_bar">
+                    <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                    <div class="visa_icons">
+                        <img src="static/visa1.png" alt="VisaCard">
+                        <img src="static/mastercard1.webp" alt="MasterCard">
+                        <img src="static/paypal.png" alt="Paypal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock body %}

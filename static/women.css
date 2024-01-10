@@ -1,0 +1,3011 @@
+
+.fst_show_women
+{
+    width: 100%;
+    min-height: 800px;
+    position: absolute;
+    left: 0;
+    top: 180px;
+    background-size: cover;
+    background: #fdd2ec;
+}
+.fst_show_women .cards_women
+{
+    width: 70%;
+    min-height: 800px;
+    margin-left: 335px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 250px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background: blue; */
+}
+.women_theme
+{
+    box-shadow:5px 10px 10px rgba(10, 10, 10, 0.65);
+    padding: 15px;
+    background: #f15bb5;
+    transition: .9s ease-in-out;
+}
+.women_theme:hover
+{
+    transform: scale(1.09);
+}
+.women_header
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    position: relative;
+    /* background: green; */
+}
+.women_header::before
+{
+    content: "";
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    background: #9b5de5;
+    box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+}
+.women_header h1
+{
+
+    /* margin-left: 550px; */
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 10px;
+    color: black;
+}
+
+.add_new_product_here_btn
+{
+    width: 90%;
+    height: 50px;
+    background: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .9s ease-in-out;
+    border-radius: 15px;
+    color: black;
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.themes_container
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+}
+.women_theme
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #9b5de5; */
+    width: 18.75em;
+    height: 31em;
+    box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+    padding: 25px;
+    /* margin-top: 80px; */
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.women_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.women_card_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.women_footer h5
+{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 1.2em;
+
+}
+.women_footer p
+{
+    font-weight: 600;
+    font-size: .8em;
+    color: black;
+}
+.prices{
+    width: 100%;
+    /* background: green; */
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+}
+.span1
+{
+    text-decoration-line: line-through;
+    color: red;
+    font-size: .9em;
+    font-weight: 900;
+    /* margin-left: 30px; */
+}
+.span2
+{
+    color: black;
+    font-size: .9em;
+    font-weight: 900;
+    margin-left: 20px;
+
+}
+.card_image_div{
+    width: 250px;
+    height: 450px;
+    border-radius: 10px;
+    /* z-index: 999; */
+    overflow: hidden;
+}
+.card_image_div ul{
+    padding: 0;
+    width: 500px;
+    animation: sliding 20s ease-in-out infinite;
+    animation-duration: 10s;
+}
+.card_image_div ul:hover{
+
+    position: relative;
+
+}
+.card_image_div ul li{
+    float: left;
+}
+@keyframes sliding{
+    0%{left: 0}
+    10%{left: 0}
+    50%{left: -250px}
+    100%{left: -250px}
+}
+
+.women_theme img
+{
+    width: 250px;
+    height: 370px;
+    /* border-radius: 10px; */
+
+}
+.categories
+{
+    position: absolute;
+    top: 270px;
+    left: 50px;
+    height: 40px;
+}
+.categories h1
+{
+    color: #807e7eb6;
+}
+.categories::before
+{
+    content: "";
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    background: #aca9a9b6;
+}
+.category_content
+{
+    position:absolute;
+    left: 0;
+    top: 65px;
+}
+.category_ul
+{
+    position: relative;
+}
+.women_menu > a
+{
+    color: black;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.women_category
+{
+    margin: 20px;
+}
+.women_category a
+{
+    color: black;
+    font-weight: 600;
+    font-size: .9em;
+}
+.filters
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+
+}
+
+.show_me
+{
+    position: relative;
+    width: 165px;
+    height: 30px;
+    background: #f15bb500;
+    border: 0;
+    margin-bottom: 10px;
+
+}
+.show_me::before
+{
+    content: "";
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #aca9a9b6;
+}
+.show_me img
+{
+    position: absolute;
+    right: 0;
+    width: 12px;
+}
+.show_me:hover
+{
+    cursor: pointer;
+}
+.hidden
+{
+    display: none;
+}
+.sub_hidden
+{
+    height: 30px;
+    width: 100%;
+    margin-left: 20px;
+
+}
+.sub_hidden > a
+{
+    font-size: .8em;
+}
+
+
+
+.controll
+{
+    width:100%;
+    display: none;
+}
+.controll-option
+{
+    /* position: absolute; */
+    /* top: %; */
+    /* left: 45%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    /* background: #9b5de5; */
+
+}
+.head
+{
+    margin-bottom: 30px;
+    color: black;
+    font-size: 2em;
+}
+.controll-option h1
+{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.controll-option input
+{
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.product_submit
+{
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    background: chocolate;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 10px;
+    box-shadow: 0 10px 10px rgba( 1 1 1 / 65%);
+    cursor: pointer;
+    transition: .9s ease;
+}
+.product_submit:hover
+{
+    transform: scale(1.06);
+}
+.session_div
+{
+    /* position: absolute; */
+    /* top: 500px; */
+    /* margin-top: 200px; */
+    z-index: 999;
+    /* background: red; */
+    width: 100%;
+}
+.product_img
+{
+    width: 100%;
+    min-height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: red; */
+    position: relative;
+}
+
+input[type="file"]
+{
+    display:none;
+}
+.product_img_header
+{
+    width: 200px;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 39.8%;
+    top: 0;
+    padding-bottom: 20px;
+}
+.product_img_image
+{
+    width: 100%;
+
+    /* background: blue; */
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* left: 34.2%; */
+    /* top: 50px; */
+    bottom: 0px;
+    top: 25%;
+}
+.upload_btn_div
+{
+    background: green;
+    width: 30%;
+    height: 30%;
+
+}
+.upload_btn_div label
+{
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    background: #9b5de5;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0 10px 10px rgba( 1 1 1 / 65%);
+    cursor: pointer;
+    transition: .9s ease;
+
+}
+
+.upload_btn_div label:hover
+{
+    transform: scale(1.06);
+}
+#uploadbtn_label1
+{
+    display: none;
+}
+
+#uploadbtn_label2
+{
+    display: none;
+}
+#uploadbtn_label3
+{
+    display: none;
+}
+#uploadbtn_label4
+{
+    display: none;
+}
+#uploadbtn_label5
+{
+    display: none;
+}
+#new_product_Title
+{
+    transition: .9s ease;
+}
+#new_product_Title:focus
+{
+    width: 350px;
+}
+#new_product_description
+{
+    transition: .9s ease;
+}
+#new_product_description:focus
+{
+    width: 350px;
+}
+#new_product_old_pcice
+{
+    transition: .9s ease;
+}
+#new_product_old_price:focus
+{
+    width: 350px;
+}
+#new_product_new_price
+{
+    transition: .9s ease;
+}
+#new_product_new_price:focus
+{
+    width: 350px;
+}
+#product_image1
+{
+    transition: .9s ease;
+}
+#product_image1:focus
+{
+    width: 350px;
+
+}
+#product_image2
+{
+    transition: .9s ease;
+}
+#product_image2:focus
+{
+    width: 350px;
+}
+
+#DeleteAll
+{
+    width: 100%;
+}
+.fst_pic{
+    transition: .9s ease;
+}
+/* .fst_pic:hover{
+    display: none;
+} */
+/* .snd_pic{
+
+    display: none;
+} */
+
+
+footer
+{
+    width: 100%;
+    min-height: 300px;
+    background: black;
+    position: relative;
+    margin-bottom: 90px;
+    /* margin-right: 5px; */
+    /* margin-top: 10px; */
+    /* box-shadow:10px 0px 0px rgba(40, 40, 40, 0.65); */
+}
+
+
+/* ==========================================*/
+/* Media Query: */
+
+/*         ===> Extra small screens <===     */
+@media(max-width: 299px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 1300px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        margin-left: 15px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 85%;
+        letter-spacing: 0px;
+    }
+
+    #women{
+        font-size: 130%;
+    }
+    #women_sweetshirts_header{
+        font-size: 70%;
+        margin-left: 0px;
+        letter-spacing: 0px;
+    }
+    #women_clutch_header{
+        font-size: 70%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+    #women_phoneaccessories_header{
+        font-size: 70%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+
+
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 12em;
+        height: 23em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        /* margin-top: 50px; */
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .7em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 150px;
+        height: 329px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 300px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -150px}
+        100%{left: -150px}
+    }
+
+    .women_theme img
+    {
+        width: 150px;
+        height: 240px;
+        border-radius: 10px;
+    }
+}
+
+@media(min-width: 300px) and (max-width: 349px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        margin-left: 15px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 90%;
+        letter-spacing: 0px;
+    }
+
+    #women{
+        font-size: 130%;
+    }
+    #women_sweetshirts_header{
+        font-size: 80%;
+        margin-left: 0px;
+        letter-spacing: 0px;
+    }
+    #women_clutch_header{
+        font-size: 80%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+    #women_phoneaccessories_header{
+        font-size: 80%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .themes_container{
+        min-height: 50%;
+    }
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 10em;
+        height: 20em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: .9em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .7em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .85em;
+        font-weight: 900;
+    }
+    .span2
+    {
+        color: black;
+        font-size: .55em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 140px;
+        height: 279px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 280px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -140px}
+        100%{left: -140px}
+    }
+
+    .women_theme img
+    {
+        width: 140px;
+        height: 185px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 419px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        margin-left: 20px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 95%;
+        letter-spacing: 0px;
+    }
+
+    #women{
+        font-size: 130%;
+    }
+    #women_sweetshirts_header{
+        font-size: 90%;
+        margin-left: 0px;
+        letter-spacing: 0px;
+    }
+
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+
+    .themes_container{
+        min-height: 50%;
+    }
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 11.5em;
+        /* height: 26.5em; */
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 1em;
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .7em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 160px;
+        /* height: 260px; */
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 320px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+        height: 300px;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -160px}
+        100%{left: -160px}
+    }
+    .women_theme img
+    {
+        width: 160px;
+        /* height: 260px; */
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 499px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 22.5px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 100%;
+        letter-spacing: 1px;
+    }
+
+    #women{
+        font-size: 130%;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .themes_container{
+        margin-top: 50px;
+        min-height: 50%;
+    }
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 12.7em;
+        height: 23em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .7em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 160px;
+        height: 329px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 320px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -160px}
+        100%{left: -160px}
+    }
+
+    .women_theme img
+    {
+        width: 160px;
+        height: 240px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 549px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 1300px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 30px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 120%;
+        letter-spacing: 1px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 13.6em;
+        height: 28em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .8em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 170px;
+        height: 399px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 340px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -170px}
+        100%{left: -170px}
+    }
+
+    .women_theme img
+    {
+        width: 170px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 599px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 1300px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 30px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 130%;
+        letter-spacing: 1px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 13.6em;
+        height: 28em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+    }
+    .span2
+    {
+        color: black;
+        font-size: .8em;
+        font-weight: 900;
+        margin-left: 20px;
+    }
+    .card_image_div{
+        width: 170px;
+        height: 399px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 340px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+        position: relative;
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -170px}
+        100%{left: -170px}
+    }
+    .women_theme img
+    {
+        width: 170px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+/* ========================================= */
+/*          ===> Small screens <==          */
+@media (min-width: 600px) and (max-width: 649px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 1300px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 30px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 130%;
+        letter-spacing: 2px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 13.6em;
+        height: 28em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .8em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 170px;
+        height: 399px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 340px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -170px}
+        100%{left: -170px}
+    }
+
+    .women_theme img
+    {
+        width: 170px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 710px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 37px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 140%;
+        letter-spacing: 3px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 13em;
+        height: 28em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .8em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 170px;
+        height: 399px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 340px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -170px}
+        100%{left: -170px}
+    }
+
+    .women_theme img
+    {
+        width: 170px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 711px) and (max-width: 767px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 40px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 140%;
+        letter-spacing: 5px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 14em;
+        height: 29em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 180px;
+        height: 410px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 360px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -180px}
+        100%{left: -180px}
+    }
+    .women_theme img
+    {
+        width: 180px;
+        height: 330px;
+        border-radius: 10px;
+    }
+}
+
+/* ========================================= */
+/*          ===> Medium screens <==          */
+@media (min-width: 768px) and (max-width: 839px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 45px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 140%;
+        letter-spacing: 5px;
+    }
+
+    .categories{
+        display: none;
+    }
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 15.2em;
+        height: 30em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+    }
+    .card_image_div{
+        width: 190px;
+        height: 420px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 380px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+        position: relative;
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -190px}
+        100%{left: -190px}
+    }
+    .women_theme img
+    {
+        width: 190px;
+        height: 340px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 899px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 50px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 150%;
+        letter-spacing: 7px;
+    }
+
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 17em;
+        height: 30em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 210px;
+        height: 430px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 420px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -210px}
+        100%{left: -210px}
+    }
+
+    .women_theme img
+    {
+        width: 210px;
+        height: 350px;
+        border-radius: 10px;
+
+    }
+}
+
+@media (min-width: 900px) and (max-width: 959px) {
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 50px;
+        position: relative;
+    }
+    .women_header h1{
+        margin-left: 10px;
+        font-size: 150%;
+        letter-spacing: 7px;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 18em;
+        height: 31em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+    }
+    .card_image_div{
+        width: 230px;
+        height: 450px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 460px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+        position: relative;
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -230px}
+        100%{left: -230px}
+    }
+    .women_theme img
+    {
+        width: 230px;
+        height: 370px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 991px) {
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 60px;
+        position: relative;
+    }
+    #women_sweetshirts_header{
+        font-size: 140%;
+        margin-left: 20px;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 18em;
+        height: 31em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 230px;
+        height: 450px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 460px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -230px}
+        100%{left: -230px}
+    }
+
+    .women_theme img
+    {
+        width: 230px;
+        height: 370px;
+        border-radius: 10px;
+
+    }
+}
+
+/* ========================================= */
+/*          ===> Large screens <==           */
+@media (min-width: 992px) and (max-width: 1014px){
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* background: blue; */
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 60px;
+        position: relative;
+    }
+    #women_sweetshirts_header{
+        font-size: 140%;
+        margin-left: 20px;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 18em;
+        height: 31em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 230px;
+        height: 450px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 460px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -230px}
+        100%{left: -230px}
+    }
+
+    .women_theme img
+    {
+        width: 230px;
+        height: 370px;
+        border-radius: 10px;
+
+    }
+}
+
+@media (min-width: 1015px) and (max-width: 1099px){
+
+    .fst_show_women{
+        top: 0;
+    }
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 60px;
+        position: relative;
+    }
+    #women_sweetshirts_header{
+        font-size: 140%;
+        margin-left: 20px;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 18em;
+        height: 31em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 230px;
+        height: 450px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 460px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -230px}
+        100%{left: -230px}
+    }
+
+    .women_theme img
+    {
+        width: 230px;
+        height: 370px;
+        border-radius: 10px;
+
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1149px){
+
+
+    .fst_show_women .cards_women
+    {
+        width: 100%;
+        min-height: 800px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* background: blue; */
+    }
+    .women_header
+    {
+        width: 90%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 60px;
+        position: relative;
+        /* background: green */
+    }
+    #women_sweetshirts_header{
+        font-size: 140%;
+        margin-left: 20px;
+    }
+    .women_header::before
+    {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        bottom: 0;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
+    }
+    .categories{
+        display: none;
+    }
+
+
+    /* Women theme */
+    .women_theme
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #9b5de5; */
+        width: 18em;
+        height: 31em;
+        box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+        padding: 25px;
+        margin-top: 0px;
+        border-radius: 15px;
+    }
+    .women_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .women_card_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .women_footer h5
+    {
+        color: black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 1.2em;
+
+    }
+    .women_footer p
+    {
+        font-weight: 600;
+        font-size: .8em;
+        color: black;
+    }
+    .prices{
+        width: 100%;
+        /* background: green; */
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    .span1
+    {
+        text-decoration-line: line-through;
+        color: red;
+        font-size: .9em;
+        font-weight: 900;
+        /* margin-left: 30px; */
+    }
+    .span2
+    {
+        color: black;
+        font-size: .9em;
+        font-weight: 900;
+        margin-left: 20px;
+
+    }
+    .card_image_div{
+        width: 230px;
+        height: 450px;
+        border-radius: 10px;
+        /* z-index: 999; */
+        overflow: hidden;
+    }
+    .card_image_div ul{
+        padding: 0;
+        width: 460px;
+        animation: sliding 20s ease-in-out infinite;
+        animation-duration: 10s;
+    }
+    .card_image_div ul:hover{
+
+        position: relative;
+
+    }
+    .card_image_div ul li{
+        float: left;
+    }
+    @keyframes sliding{
+        0%{left: 0}
+        10%{left: 0}
+        50%{left: -230px}
+        100%{left: -230px}
+    }
+
+    .women_theme img
+    {
+        width: 230px;
+        height: 370px;
+        border-radius: 10px;
+
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1200px){
+    #women_sweetshirts_header{
+        font-size: 140%;
+        margin-left: 20px;
+    }
+}
+

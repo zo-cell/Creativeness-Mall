@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+    <div class="container">
+        <div class="header">
+            <h1 id="Ucontroll_pad">Controll Pad</h1>
+        </div>
+        <div class="tools_div">
+            <div class="tools">
+                <div class="tools_header">
+                    <h2>Controll Tools</h2>
+                </div>
+                <div class="create_new_product">
+                    <button id="create_btn" class="create_btn">Create a New Product</button>
+                </div>
+                <div class="edit_delete_product">
+                    <button id="edit_btn" class="edit_btn">Edit/Delete a Product</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="process_lap" class="process_lap">
+            <div id="controll-option" class="controll-option">
+                <form class="create_form" action="/update{{product_to_update.id}}" method="post" enctype="multipart/form-data">
+                    <h2 id="Update_page" class="head">Update a Product</h2>
+                    <h1>Title</h1>
+                    <input name="name" id="new_product_Title" type="text" autocomplete="off" placeholder="Title" value="{{product_to_update.name}}">
+                    <h1>Brand</h1>
+                    <input name="brand" id="new_product_description" type="text" autocomplete="off" placeholder="Brand" value="{{product_to_update.brand}}">
+                    <h1>Desciption</h1>
+                    <input name="description" id="new_product_description" type="text" autocomplete="off" placeholder="Description" value="{{product_to_update.description}}">
+                    <h1>Price before</h1>
+                    <input name="old_price" id="new_product_old_price" type="number" autocomplete="off" placeholder="Price before" value="{{product_to_update.old_price}}">
+                    <h1>Price after</h1>
+                    <input name="new_price" id="new_product_new_price" type="number" autocomplete="off" placeholder="Price after" value="{{product_to_update.new_price}}">
+                    <h1>Colors</h1>
+                    <div id="color_select_div" class="color_select_div">
+                        <select id="color_select1" class="color_select" name="color1">
+                            <option>----</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                        <select id="color_select2" class="color_select" name="color2">
+                            <option>----</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                        <select id="color_select3" class="color_select" name="color3">
+                            <option>----</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                        <select id="color_select4" class="color_select" name="color4">
+                            <option>----</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                        <select id="color_select5" class="color_select" name="color5">
+                            <option>----</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                    </div>
+                    <div class="product_img">
+                        <div class="product_img_header">
+                            <h1 id="img1_hed">product image 1</h1>
+                        </div>
+                        <div class="product_img_image">
+                            <input  id="product_image1" type="text" autocomplete="off" placeholder="Image 1" value="{{product_to_update.img1}}">
+
+
+                        </div>
+                        <div class="upload_btn_div">
+                            <input name="img1" type="file" id="uploadbtn" accept="image/png, image/jpg, image/webp, image/avif, image/jpeg">
+                            <label id="uploadbtn_label1" for="uploadbtn">Upload</label>
+                        </div>
+
+                    </div>
+
+                    <div class="product_img">
+                        <div class="product_img_header">
+                            <h1 id="img2_hed">product image 2</h1>
+                        </div>
+                        <div class="product_img_image">
+                            <input id="product_image2" type="text" autocomplete="off" placeholder="Image 2" value="{{product_to_update.img2}}">
+
+                        </div>
+                        <div class="upload_btn_div">
+                            <input name="img2" type="file" id="uploadbtn2">
+                            <label id="uploadbtn_label2" for="uploadbtn2">Upload</label>
+                        </div>
+
+                    </div>
+                    <div class="product_img">
+                        <div class="product_img_header">
+                            <h1 id="img3_hed">product image 3</h1>
+                        </div>
+                        <div class="product_img_image">
+                            <input id="product_image3" type="text" autocomplete="off" placeholder="Image 3" value="{{product_to_update.img3}}">
+
+                        </div>
+                        <div class="upload_btn_div">
+                            <input name="img3" type="file" id="uploadbtn3">
+                            <label id="uploadbtn_label3" for="uploadbtn3">Upload</label>
+                        </div>
+
+                    </div>
+                    <div class="product_img">
+                        <div class="product_img_header">
+                            <h1 id="img4_hed">product image 4</h1>
+                        </div>
+                        <div class="product_img_image">
+                            <input id="product_image4" type="text" autocomplete="off" placeholder="Image 4" value="{{product_to_update.img4}}">
+
+                        </div>
+                        <div class="upload_btn_div">
+                            <input name="img4" type="file" id="uploadbtn4">
+                            <label id="uploadbtn_label4" for="uploadbtn4">Upload</label>
+                        </div>
+
+                    </div>
+                    <div class="product_img">
+                        <div class="product_img_header">
+                            <h1 id="img5_hed">product image 5</h1>
+                        </div>
+                        <div class="product_img_image">
+                            <input id="product_image5" type="text" autocomplete="off" placeholder="Image 5" value="{{product_to_update.img5}}">
+
+                        </div>
+                        <div class="upload_btn_div">
+                            <input name="img5" type="file" id="uploadbtn5">
+                            <label id="uploadbtn_label5" for="uploadbtn5">Upload</label>
+                        </div>
+
+                    </div>
+
+                        <button id="product_submit" class="product_submit">Update</button>
+                        <h1 id="message">Product successfully added</h1>
+                </form>
+
+
+            </div>
+        </section>
+        <footer>
+            <div class="title">
+                <h3>A CULUTURE OF FASHION</h3>
+            </div>
+            <div class="all_footer">
+                <div class="footer_container">
+                    <div class="join_us">
+                        <h3>JOIN US</h3>
+                        <a href="/register">sign up</a>
+                    </div>
+                    <div class="contact_us">
+                        <h3>CONTACT US</h3>
+                        <a href="#">contact us</a>
+                    </div>
+                    <div class="social_icons">
+                        <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                        <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                        <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                    </div>
+                    <div class="footer_bar">
+                        <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                        <div class="visa_icons">
+                            <img src="static/visa1.png" alt="VisaCard">
+                            <img src="static/mastercard1.webp" alt="MasterCard">
+                            <img src="static/paypal.png" alt="Paypal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock body %}

@@ -1,0 +1,5635 @@
+.checkout_container{
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    background: #eee;
+    margin-top: 235px;
+}
+.card_content_div{
+    width: 40%;
+    height: 100%;
+    /* margin-bottom: 30px; */
+    border-left: 1px #999 solid;
+    /* border-top: 1px #999 solid; */
+    margin-left: 809px;
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+}
+.checkout_product_div{
+    width: 90%;
+    height: 100px;
+    /* background: red; */
+    margin-bottom: 15px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px;
+}
+
+#show_media_card_btn{
+    width: 68.5%;
+    height: 70px;
+    margin-top : 20px;
+    margin-left: 17%;
+    border: 0;
+    border-top : 2px solid black;
+    border-bottom: 2px solid black;
+    background: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 20px;
+    display: none;
+}
+.btn_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    font-weight: 600;
+}
+.btn_arrow_imgg{
+    width: 13px;
+    margin-top: 3px;
+}
+.btn_total{
+    font-size: 1.2em;
+}
+.email_div{
+    display: flex;
+}
+.email_p{
+    margin-top: 10px;
+}
+.save_div{
+    display: flex;
+}
+.save_div p{
+    margin-top: 5px;
+}
+.forget_div{
+    display: flex;
+}
+.forget_div p{
+    margin-top: 5px;
+}
+
+.media_card_content_div{
+    width: 80%;
+    /* height: 100px; */
+    display: flex;
+    margin-left: 12%;
+    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    /* position: block; */
+    display: none;
+}
+
+.media_card_content_div2{
+    min-height: 100px;
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.media_payment_form{
+
+    /* margin-top: 500px; */
+    background: #eee;
+    width: 69%;
+    margin-left: 17%;
+    padding-bottom  : 50px;
+    padding-top: 30px;
+    transition: .9s ease-in-out;
+    display: none;
+}
+.Mcheckout_card_details{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Mcheckout_product_div{
+    width: 100%;
+    height: 100px;
+    /* background: red; */
+    margin-bottom: 15px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 10px; */
+}
+.Mtotal_div{
+    width: 100%;
+    height: 50px;
+    border-top:  1px #999 solid;
+    background: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantityandimg{
+    width: 85px;
+    height: 85px;
+    position: relative;
+}
+.checkout_card_quantity{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout_card_quantity p{
+    color: white;
+}
+.checkout_card_img_div{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #999 solid;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.checkout_card_img_div img{
+    width: 50px;
+    height: 80px;
+}
+.checkout_card_details{
+    width: 76.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout_card_foot{
+    width: 80%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column
+}
+.sub_total_div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shipping_div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.taxes_div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.discount_div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total_div{
+    width: 100%;
+    height: 50px;
+    border-top:  1px #999 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total{
+    font-weight: 700;
+}
+.total_dolar{
+    color: red;
+}
+
+.payment_form{
+    width: 47%;
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    padding-top: 30px;
+}
+.contact_div{
+    width: 100%;
+    height: 100px;
+}
+.contact_hed{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact_hed h1{
+    font-size: 1.8em;
+}
+.email{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.email_checkbox{
+    margin-right: 10px;
+}
+.delivery_div{
+    margin-top: 40px;
+}
+#delivery{
+    /* font-size: 1.8em; */
+    padding-bottom: 10px;
+}
+.country{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.delivery_div p{
+    margin-bottom: 5px;
+}
+.name_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.fname{
+    width: 49%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.lname{
+    width: 49%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.address{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.apartment_no_city_div{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.apartment_no{
+    width: 49%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.city{
+    width: 49%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.phone{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.remember{
+    margin-right: 10px;
+}
+.payment_methods_div{
+    margin-top: 50px;
+}
+.payment_methods_div h1{
+    padding-bottom: 10px;
+}
+.pay_method{
+    margin-bottom: 10px;
+}
+.Pay{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.Pay_stop{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#requirements_msg_div{
+    /* background: green; */
+}
+.requirements_msg{
+    color: red;
+}
+.remove_div{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 70px;
+}
+.remove_div a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.total_price{
+    font-weight: 700;
+}
+.total_dolar{
+    color: red;
+    font-weight: 700;
+}
+.Red{
+    width: 20px;
+    height: 20px;
+    border: 3px #c5c3c3ca solid;
+    border-radius: 50%;
+    background-color: red;
+    color: red;
+    /* display: none; */
+}
+.Green{
+    width: 20px;
+    height: 20px;
+    border: 3px #c5c3c3ca solid;
+    border-radius: 50%;
+    background-color: green;
+    color: green;
+    /* display: none; */
+}
+.Blue{
+    width: 20px;
+    height: 20px;
+    border: 3px #c5c3c3ca solid;
+    border-radius: 50%;
+    background-color: blue;
+    color: blue;
+    /* display: none; */
+}
+.Black{
+    width: 20px;
+    height: 20px;
+    border: 3px #c5c3c3ca solid;
+    border-radius: 50%;
+    background-color: black;
+    /* display: none; */
+}
+
+.White{
+    width: 20px;
+    height: 20px;
+    border: 3px #c5c3c3ca solid;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    /* display: none; */
+}
+
+
+
+
+
+
+/* ========================================== */
+/* Media Query */
+
+/*         ===> Extra small screens <===       */
+@media (max-width: 299px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 170px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65%;
+        font-size: .9em;
+        font-weight: 500;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 82%;
+        height: 50px;
+        margin-left: 9%;
+    }
+    .checkout_product_name{
+        font-size: 1em;
+    }
+    .details p{
+        font-size: .8em;
+    }
+    .checkout_product_price{
+        font-size: .9em;
+    }
+    .order_summary{
+        font-size: 1.3em;
+    }
+    .email_p{
+        margin-top: 10px;
+    }
+    .save{
+        font-size: .8em;
+    }
+    .forget{
+        font-size: .8em;
+    }
+    .media_card_content_div{
+        width: 92%;
+        margin-left: 4%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        width: 82%;
+        margin-left: 9%;
+        /* left: 17%; */
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 5px;
+    }
+    .Green{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 5px;
+    }
+    .Blue{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 5px;
+    }
+    .Black{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 5px;
+    }
+
+    .White{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 5px;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact_hed p{
+        font-size: .8em;
+    }
+    .email_p{
+        font-size: .9em;
+        margin-bottom: 10px;
+    }
+    .delivery_div{
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 349px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 170px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 52%;
+        font-size: .9em;
+        font-weight: 500;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 82%;
+        height: 60px;
+        margin-left: 9%;
+    }
+    .checkout_product_name{
+        font-size: 1.2em;
+    }
+    .details p{
+        font-size: .9em;
+    }
+    .order_summary{
+        font-size: 1.3em;
+    }
+    .save{
+        font-size: .9em;
+    }
+    .forget{
+        font-size: .9em;
+    }
+    .media_card_content_div{
+        width: 92%;
+        margin-left: 4%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 82%;
+        margin-left: 9%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 5px;
+    }
+    .Green{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 5px;
+    }
+    .Blue{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 5px;
+    }
+    .Black{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 5px;
+    }
+
+    .White{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 5px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 419px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 150px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 52%;
+        font-size: .9em;
+        font-weight: 500;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 82%;
+        height: 60px;
+        margin-left: 9%;
+    }
+    .checkout_product_name{
+        font-size: 1.2em;
+    }
+    .details p{
+        font-size: .9em;
+    }
+    .order_summary{
+        font-size: 1.3em;
+    }
+
+
+    .media_card_content_div{
+        width: 92%;
+        margin-left: 4%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 82%;
+        margin-left: 9%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 5px;
+    }
+    .Green{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 5px;
+    }
+    .Blue{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 5px;
+    }
+    .Black{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 5px;
+    }
+
+    .White{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 5px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 499px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 79%;
+        margin-left: 11%;
+    }
+    .checkout_product_name{
+        font-size: 1.2em;
+    }
+    .details p{
+        font-size: .9em;
+    }
+    .order_summary{
+        font-size: 1.3em;
+    }
+
+
+    .media_card_content_div{
+        width: 89%;
+        margin-left: 6%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 79%;
+        margin-left: 11%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 5px;
+    }
+    .Green{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 5px;
+    }
+    .Blue{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 5px;
+    }
+    .Black{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 5px;
+    }
+
+    .White{
+        width: 15px;
+        height: 15px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 5px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 549px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 44%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 78%;
+        margin-left: 11%;
+    }
+    .checkout_product_name{
+        font-size: 1.2em;
+    }
+    .media_card_content_div{
+        width: 88%;
+        margin-left: 6%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 78%;
+        margin-left: 11%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 599px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 74%;
+        margin-left: 13%;
+    }
+    .checkout_product_name{
+        font-size: 1.2em;
+    }
+    .media_card_content_div{
+        width: 84%;
+        margin-left: 8%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 74%;
+        margin-left: 13%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+/* ========================================== */
+/*           ===> Small screens <===            */
+@media (min-width: 600px) and (max-width: 649px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 38%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 71%;
+        margin-left: 15%;
+    }
+    .media_card_content_div{
+        width: 81%;
+        margin-left: 10%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        width: 71%;
+        margin-left: 15%;
+
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 710px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 36%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 71%;
+        margin-left: 15%;
+    }
+    .media_card_content_div{
+        width: 81%;
+        margin-left: 10%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+    }
+    .media_payment_form{
+        display: block;
+        width: 71%;
+        margin-left: 15%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 711px) and (max-width: 767px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 32%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .media_card_content_div{
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+        /* left: 17%; */
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+/* =======================  =================== */
+/*          ===> Medium screens <==           */
+@media (min-width: 768px) and (max-width: 839px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 31%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+    }
+    .media_card_content_div{
+        width: 79%;
+        /* margin-left: 10%; */
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        /* left: 17%; */
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 899px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 28%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+    }
+    .media_card_content_div{
+        width: 79%;
+        /* margin-left: 10%; */
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        /* left: 17%; */
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 959px){
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+
+    .btn_name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 26%;
+        font-weight: 600;
+    }
+    #show_media_card_btn{
+        display: flex;
+    }
+    .media_card_content_div{
+        width: 79%;
+        /* margin-left: 10%; */
+        display: flex;
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 991px){
+
+    .checkout_container{
+        position: relative;
+        width: 100%;
+        min-height: 1000px;
+        background: #eee;
+        margin-top: 235px;
+        /* background: blue; */
+    }
+    .card_content_div{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        border-right: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -727px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        display: none;
+        /* background: red; */
+    }
+    .card_content_div2{
+        position: absolute;
+        width: 88%;
+        min-height: 35%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        left: -857px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        display: none
+    }
+    #show_media_card_btn{
+        display: flex;
+        margin-left: 16%;
+    }
+    .media_card_content_div{
+        width: 78%;
+        margin-left: 11%;
+        /* display: flex; */
+    }
+
+
+/*          ===> payment form <===            */
+    .payment_form{
+        width: 88%;
+        /* width: 47%; */
+        position: absolute;
+        top: 350px;
+        left: 81px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: none;
+        /* background: green; */
+    }
+    .media_payment_form{
+        display: block;
+        margin-left: 16%;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+/* ========================================== */
+/*          ===> Large screens <==            */
+@media (min-width: 992px) and (max-width: 1014px){
+    .card_content_div{
+        width: 39%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 580px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+    }
+    .card_content_div2{
+        width: 39%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 580px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 450px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 80px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 1015px) and (max-width: 1099px){
+    .card_content_div{
+        width: 38%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 630px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+    }
+    .card_content_div2{
+        width: 38%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 630px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 500px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 80px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1149px){
+    .card_content_div{
+        width: 36%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 700px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+    }
+    .card_content_div2{
+        width: 36%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 700px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 500px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 150px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+@media (min-width: 1150px) and (max-width: 1200px){
+    .card_content_div{
+        width: 36%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 700px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+    }
+    .card_content_div2{
+        width: 36%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 700px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 500px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 150px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+
+/* ========================================== */
+/*          ===> Extra large screens <==      */
+@media (min-width: 1201px) and (max-width: 1259px){
+    .card_content_div{
+        width: 35%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 750px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+    }
+    .card_content_div2{
+        width: 35%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 750px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 550px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 150px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}
+@media (min-width: 1260px) and (max-width: 1349px){
+    .card_content_div{
+        width: 35%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 790px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .card_content_div2{
+        width: 35%;
+        height: 100%;
+        /* margin-bottom: 30px; */
+        border-left: 1px #999 solid;
+        /* border-top: 1px #999 solid; */
+        margin-left: 790px;
+        display: flex;
+        padding-top: 30px;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+
+/*          ===> paynent form <===            */
+    .payment_form{
+        width: 600px;
+        /* width: 47%; */
+        position: absolute;
+        top: 0px;
+        left: 150px;
+        padding-top: 30px;
+    }
+    .contact_div{
+        width: 100%;
+        height: 100px;
+    }
+    .contact_hed{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_hed h1{
+        font-size: 1.8em;
+    }
+    .email{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .email_checkbox{
+        margin-right: 10px;
+    }
+    .delivery_div{
+        margin-top: 40px;
+    }
+    #delivery{
+        /* font-size: 1.8em; */
+        padding-bottom: 10px;
+    }
+    .country{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .delivery_div p{
+        margin-bottom: 5px;
+    }
+    .name_div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .fname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .lname{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .address{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .apartment_no_city_div{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .apartment_no{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .city{
+        width: 49%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .phone{
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+    }
+    .remember{
+        margin-right: 10px;
+    }
+    .payment_methods_div{
+        margin-top: 50px;
+    }
+    .payment_methods_div h1{
+        padding-bottom: 10px;
+    }
+    .pay_method{
+        margin-bottom: 10px;
+    }
+    .Pay{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        cursor: pointer;
+    }
+    .Pay_stop{
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .requirements_msg{
+        color: red;
+    }
+    .remove_div{
+        width: 30px;
+        height: 30px;
+        margin-bottom: 70px;
+    }
+    .remove_div a img{
+        width: 100%;
+        height: 100%;
+    }
+    .Red{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: red;
+        color: red;
+        margin: 0 10px;
+    }
+    .Green{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: green;
+        color: green;
+        margin: 0 10px;
+    }
+    .Blue{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: blue;
+        color: blue;
+        margin: 0 10px;
+    }
+    .Black{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 10px;
+    }
+
+    .White{
+        width: 20px;
+        height: 20px;
+        border: 3px #c5c3c3ca solid;
+        border-radius: 50%;
+        background-color: white;
+        color: white;
+        margin: 0 10px;
+    }
+    .details{
+        display: flex;
+    }
+}

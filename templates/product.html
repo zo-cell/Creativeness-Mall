@@ -1,0 +1,315 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+
+
+
+        <div id="pro_page_content" class="pro_page_content">
+
+            <div class="pro_page_header">
+                <h1 id="product_name">{{ product_to_show.name }}</h1>
+            </div>
+            <div class="brand">
+                <h3 id="brand">{{ product_to_show.brand }}</h3>
+            </div>
+
+            <div class="the_price">
+                <span id="price_before" class="span4">USD {{ product_to_show.old_price }}.00$</span>
+                <span id="price_after" class="span2">USD{{ product_to_show.new_price }}.00$</span>
+            </div>
+            <form action="/product{{product_to_show.id}}" method="post">
+                <h4 class="S">Size</h4>
+                {% if product_to_show.section == "women-flats" or product_to_show.section == "women-sneakers" or product_to_show.section == "women-heals" or product_to_show.section == "women-boots" or product_to_show.section == "women-sandals&mules" or product_to_show.section == "women-slippers" or product_to_show.section == "Men-shoes" or product_to_show.section == "Men-sneakers" %}
+                    <div class="size_div">
+                        <input type="radio" name="size" id="Small" class="size" value="37">
+                        <label for="Small">37</label>
+                        <input type="radio" name="size" id="Medium" class="size" value="38">
+                        <label for="Medium">38</label>
+                        <input type="radio" name="size" id="Large" class="size" value="39">
+                        <label for="Large">39</label>
+                        <input type="radio" name="size" id="xLarge" class="size" value="40">
+                        <label for="Large">40</label>
+                        <input type="radio" name="size" id="xxLarge" class="size" value="41">
+                        <label for="Large">41</label>
+                        <input type="text" name="size_take1" id="size_take2">
+                    </div>
+                {% elif "perfume" in product_to_show.section %}
+                    <div class="size_div">
+                        <input type="radio" name="size" id="ml" class="size" value="100ml">
+                        <label for="ml">100 ml</label>
+                        <input type="text" name="size_take1" id="size_take3">
+                    </div>
+                {% else %}
+                    <div class="size_div">
+                        <input type="radio" name="size" id="Small" class="size" value="Small">
+                        <label for="Small">Small</label>
+                        <input type="radio" name="size" id="Medium" class="size" value="Medium">
+                        <label for="Medium">Medium</label>
+                        <input type="radio" name="size" id="Large" class="size" value="Large">
+                        <label for="Large">Large </label>
+                        <input type="text" name="size_take1" id="size_take1">
+                    </div>
+                {% endif %}
+
+                <h4 id="colorss" class="colorss">Colors</h4>
+                <div id="colors_div" class="colors">
+                    {% if color_to_show.color1 %}
+                        <input name="red" id="color1_btn" class="{{ color_to_show.color1 }}" value="{{ color_to_show.color1 }}">
+                    {% endif %}
+                    {% if color_to_show.color2 %}
+                        <input name="green" id="color2_btn" class="{{ color_to_show.color2 }}" value="{{ color_to_show.color2 }}">
+                    {% endif %}
+                    {% if color_to_show.color3 %}
+                        <input name="blue" id="color3_btn" class="{{ color_to_show.color3 }}" value="{{ color_to_show.color3 }}">
+                    {% endif %}
+                    {% if color_to_show.color4 %}
+                        <input name="black" id="color4_btn" class="{{ color_to_show.color4 }}" value="{{ color_to_show.color4 }}">
+                    {% endif %}
+                    {% if color_to_show.color5 %}
+                        <input name="white" id="color5_btn" class="{{ color_to_show.color5 }}" value="{{ color_to_show.color5 }}">
+                    {% endif %}
+
+                    <input id="color_take" name="color_take" type="text">
+                </div>
+
+                <h4 class="Q">Quantity</h4>
+                <input id="Quantity" class="Quantity" name="quantity" type="number" value="1">
+                <div class="description">
+                    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum voluptate iste architecto, distinctio ad repudiandae sint facilis similique. Delectus magnam odit eius excepturi laborum autem corporis maiores doloremque inventore magni?
+                    Eveniet adipisci id voluptatem est fugit! Perferendis odit illo ducimus earum in quis possimus fugit consequatur fuga officiis blanditiis, molestiae ipsam magnam laudantium aliquam .</h2>
+                </div>
+                <div class="add_to_cart_div">
+                    <a href=""><button id="add_to_cart" class="add_to_cart">ADD TO CART</button></a>
+                    <form action="/fast_checkout{{product_to_show.id}}" method="post">
+                        <div class="hidden_form">
+                            <input type="text" name="size_take" id="size_take">
+                            <input type="text" name="color_take2" id="color_take2">
+                            <input type="number" name="quantity_take" id="quantity_take" value="1">
+                        </div>
+
+                        <button onclick="fast_check()" id="buy_now" class="buy_now" >Buy Now</button>
+                        
+                    </form>
+
+                </div>
+            </form>
+
+
+
+            <div class="pro_page_img">
+
+                <div id="slid_imgs" class="slid_imgs">
+                    {% if product_to_show.img2 != "no_photo.jpg" %}
+                        <img id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                    {% else %}
+                        <img style="display: none;" id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                    {% endif %}
+
+                    {% if product_to_show.img3 != "no_photo.jpg" %}
+                        <img id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                    {% else %}
+                        <img style="display: none;" id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                    {% endif %}
+
+                    {% if product_to_show.img4 != "no_photo.jpg" %}
+                        <img id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                    {% else %}
+                        <img style="display: none;" id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                    {% endif %}
+
+                    {% if product_to_show.img5 != "no_photo.jpg" %}
+                        <img id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
+                    {% else %}
+                        <img style="display: none;" id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
+                    {% endif %}
+
+                    {% if product_to_show.img1 %}
+                        <img id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
+                    {% else %}
+                        <img style="display: none;" id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
+                    {% endif %}
+                </div>
+                <div id="main_img_div" class="main_img_div">
+                    <img id="main_img" class="main_img" src="static/uploads/{{ product_to_show.img1 }}">
+
+                </div>
+
+
+            </div>
+
+                {% if del_mode_row.del_mode == 1 %}
+
+                    <div id="side_cart_div2" class="side_cart_div2">
+                        <div class="hed">
+                            <form method="post">
+                                <input type="number" name="del_take" id="del_take">
+                                <button id="close_btn2">Close <span>X</span></button>
+                            </form>
+                            <h1>My Cart</h1>
+                        </div>
+                        {% for car in user_car %}
+                        <div class="side_cart_product">
+                            <div class="product_data">
+                                <div class="cart_pro_title_div">
+                                    {% if car.Brand|length >= 15  or car.Name|length >= 15 %}
+                                        <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                    {% else %}
+                                        <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                    {% endif %}
+                                </div>
+                                <div class="cart_priceandcolor_div">
+                                    <div class="cart_price_div">
+                                        <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                                    </div>
+                                    <div class="cart_color_div">
+                                        <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                                    </div>
+                                </div>
+
+                                <div class="cart_sizeandquantity_div">
+                                    <div class="cart_size_div">
+                                        <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                                    </div>
+                                    <div class="cart_quantity_div">
+                                        <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="car_edit_btns">
+                                    <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                                    <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                                </div>
+
+                            </div>
+                            <div class="product_image">
+                                <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="cart_foot">
+                            <span class="total_price" id="total_price"></span>
+                        </div>
+                        <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+                    </div>
+                {% else %}
+                    <div id="side_cart_div" class="side_cart_div">
+                        <div class="hed">
+                            <button id="close_btn">Close <span>X</span></button>
+
+                            <h1>My Cart</h1>
+                        </div>
+                        {% for car in user_car %}
+                            <div class="side_cart_product">
+                                <div class="product_data">
+                                    <div class="cart_pro_title_div">
+                                        {% if car.Brand|length >= 15  or car.Name|length >= 15 %}
+                                            <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                        {% else %}
+                                            <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                        {% endif %}
+                                    </div>
+                                    <div class="cart_priceandcolor_div">
+                                        <div class="cart_price_div">
+                                            <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                                        </div>
+                                        <div class="cart_color_div">
+                                            <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cart_sizeandquantity_div">
+                                        <div class="cart_size_div">
+                                            <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                                        </div>
+                                        <div class="cart_quantity_div">
+                                            <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="car_edit_btns">
+                                        <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                                        <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                                    </div>
+
+                                </div>
+                                <div class="product_image">
+                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="cart_foot">
+                            <span class="total_price" id="total_price"></span>
+                        </div>
+                        <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+                    </div>
+                {% endif %}
+
+
+
+            <script>
+                var total = 0;
+                {% for car in user_car %}
+                total += parseFloat({{ car.price }} * {{ car.quantity}});
+                {% endfor %}
+                let cart_total_price = document.getElementById('total_price')
+                if(cart_total_price)
+                {
+                    cart_total_price.innerHTML = "Total Price: "+total+"<span class='total_dolar'>&dollar;</span>";
+                }
+
+                let del_take = document.getElementById('del_take');
+                let close_btn = document.getElementById('close_btn2');
+                if(close_btn){
+                    close_btn.onclick = function(){
+                        del_take.value = 0;
+                    }
+                }
+
+
+
+
+
+            </script>
+            <div class="footer_containerrr">
+                <footer>
+                    <div class="title">
+                        <h3>A CULUTURE OF FASHION</h3>
+                    </div>
+                    <div class="all_footer">
+                        <div class="footer_container">
+                            <div class="join_us">
+                                <h3>JOIN US</h3>
+                                <a href="/register">sign up</a>
+                            </div>
+                            <div class="contact_us">
+                                <h3>CONTACT US</h3>
+                                <a href="#">contact us</a>
+                            </div>
+                            <div class="social_icons">
+                                <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                                <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                                <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                            </div>
+                            <div class="footer_bar">
+                                <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                                <div class="visa_icons">
+                                    <img src="static/visa1.png" alt="VisaCard">
+                                    <img src="static/mastercard1.webp" alt="MasterCard">
+                                    <img src="static/paypal.png" alt="Paypal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+
+{% endblock body %}

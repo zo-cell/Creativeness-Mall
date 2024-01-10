@@ -1,0 +1,808 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+    <h1 id="fast_delivery"></h1>
+    {% if del_mode_row.del_mode == 1 %}
+
+        <div id="side_cart_div2" class="side_cart_div2">
+            <div class="hed">
+                <form method="post">
+                    <input type="number" name="del_take" id="del_take">
+                    <button id="close_btn2">Close <span>X</span></button>
+                </form>
+                <h1>My Cart</h1>
+            </div>
+            {% for car in user_car %}
+            <div class="side_cart_product">
+                <div class="product_data">
+                    <div class="cart_pro_title_div">
+                        {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                            <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                        {% else %}
+                            <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                        {% endif %}
+                    </div>
+                    <div class="cart_priceandcolor_div">
+                        <div class="cart_price_div">
+                            <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                        </div>
+                        <div class="cart_color_div">
+                            <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                        </div>
+                    </div>
+
+                    <div class="cart_sizeandquantity_div">
+                        <div class="cart_size_div">
+                            <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                        </div>
+                        <div class="cart_quantity_div">
+                            <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                        </div>
+                    </div>
+
+
+                    <div class="car_edit_btns">
+                        <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                        <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                    </div>
+
+                </div>
+                <div class="product_image">
+                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                </div>
+            </div>
+            {% endfor %}
+            <div class="cart_foot">
+                <span class="total_price" id="total_price"></span>
+            </div>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+        </div>
+    {% else %}
+        <div id="side_cart_div" class="side_cart_div">
+            <div class="hed">
+                <button id="close_btn">Close <span>X</span></button>
+
+                <h1>My Cart</h1>
+            </div>
+            {% for car in user_car %}
+                <div class="side_cart_product">
+                    <div class="product_data">
+                        <div class="cart_pro_title_div">
+                            {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% else %}
+                                <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% endif %}
+                        </div>
+                        <div class="cart_priceandcolor_div">
+                            <div class="cart_price_div">
+                                <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                            </div>
+                            <div class="cart_color_div">
+                                <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                            </div>
+                        </div>
+
+                        <div class="cart_sizeandquantity_div">
+                            <div class="cart_size_div">
+                                <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                            </div>
+                            <div class="cart_quantity_div">
+                                <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                            </div>
+                        </div>
+
+
+                        <div class="car_edit_btns">
+                            <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                            <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                        </div>
+
+                    </div>
+                    <div class="product_image">
+                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="cart_foot">
+                <span class="total_price" id="total_price"></span>
+            </div>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+        </div>
+    {% endif %}
+
+
+
+    <script>
+    var total = 0;
+    {% for car in user_car %}
+    total += parseFloat({{ car.price }} * {{ car.quantity}});
+    {% endfor %}
+    let cart_total_price = document.getElementById('total_price')
+    if(cart_total_price)
+    {
+    cart_total_price.innerHTML = "Total Price: "+total+"<span class='total_dolar'>&dollar;</span>";
+    }
+
+    let del_take = document.getElementById('del_take');
+    let close_btn = document.getElementById('close_btn2');
+    close_btn.onclick = function(){
+    del_take.value = 0;
+    }
+
+
+
+
+    </script>
+    <section class="checkout_container">
+
+
+        <div class="card_content_div">
+
+            <div class="checkout_product_div">
+
+                <div class="quantityandimg">
+                    <div class="checkout_card_quantity">
+                        <p>{{ user_fast_check.quantity }}</p>
+                    </div>
+                    <div class="checkout_card_img_div">
+                        <img src="static/uploads/{{ product_to_show.img1 }}">
+                    </div>
+                </div>
+
+                <div class="checkout_card_details">
+                    <div class="checkout_product_title">
+                        <h2 class="checkout_product_name">{{ product_to_show.name }}</h2>
+                        <div class="details">
+                            <p class="checkout_product_brand">{{ product_to_show.brand }}</p>
+                            <button class="{{user_fast_check.color}}"></button>
+                            <p class="det_size">{{ user_fast_check.size }}</p>
+                        </div>
+
+                    </div>
+                    <div class="checkout_product_price">{{ product_to_show.new_price }}</div>
+                </div>
+
+
+            </div>
+
+            <div class="checkout_card_foot">
+                <div class="sub_total_div">
+                    <span class="sub_total">subtotal:</span>
+                    <span id="sub_total"></span>
+                </div>
+                <div class="shipping_div">
+                    <span class="shipping">shipping:</span>
+                    <span id="shipping"></span>
+                </div>
+                <div class="taxes_div">
+                    <span class="taxes">taxes:</span>
+                    <span id="taxes"></span>
+                </div>
+                <div class="discount_div">
+                    <span class="discount">discount:</span>
+                    <span id="discount"></span>
+                </div>
+                <div class="total_div">
+                    <span class="total">Total:</span>
+                    <span id="Total"></span>
+                </div>
+            </div>
+            <script>
+                var subtotal = 0;
+                var shipping = 0;
+                var taxes = 0;
+                var discount = 0;
+                var grand_total = 0;
+
+                subtotal = parseFloat( {{ product_to_show.new_price }} * {{ user_fast_check.quantity}} );
+                shipping =  subtotal * 5/100 ;
+                taxes =  subtotal * 15/100  ;
+                discount =  subtotal * 10/100  ;
+                grand_total = Math.round(subtotal + shipping + taxes - discount, 2)
+
+                document.getElementById('sub_total').innerHTML = subtotal + "<span class='total_dolar'>&dollar;</span>";
+                document.getElementById('shipping').innerHTML = shipping + "<span class='total_dolar'>&dollar;</span>";
+                document.getElementById('taxes').innerHTML = taxes + "<span class='total_dolar'>&dollar;</span>";
+                document.getElementById('discount').innerHTML = discount + "<span class='total_dolar'>&dollar;</span>";
+                document.getElementById('Total').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+            </script>
+        </div>
+
+
+
+        <!-- Media screens checkout card 992px -->
+        <button id="show_media_card_btn" onclick="show_med_card()">
+            <div class="btn_name">Show order summary<img src="static/arroww.png" alt="arrow" class="btn_arrow_imgg" id="btn_arrow_imgg"></div>
+            <div class="btn_total" id="btn_total"></div>
+        </button>
+        <div id="media_card_content_div" class="media_card_content_div">
+            {% for car in user_car %}
+                <div class="checkout_product_div">
+
+                    <div class="quantityandimg">
+                        <div class="checkout_card_quantity">
+                            <p>{{ car.quantity }}</p>
+                        </div>
+                        <div class="checkout_card_img_div">
+                            <img src="static/uploads/{{ car.img1 }}">
+                        </div>
+                    </div>
+
+                    <div class="Mcheckout_card_details">
+                        <div class="checkout_product_title">
+                            <h2 class="checkout_product_name">{{ car.Name }}</h2>
+                            <div class="details">
+                                <p class="checkout_product_brand">{{ car.Brand }}</p>
+                                <button class="{{car.color}}"></button>
+                                <p class="det_size">{{ car.size }}</p>
+                            </div>
+
+                        </div>
+                        <div class="checkout_product_price">{{ car.price }}<span class='total_dolar'>&dollar;</span></div>
+                    </div>
+
+
+                </div>
+            {% endfor %}
+                <div class="checkout_card_foot">
+                    <div class="sub_total_div">
+                        <span class="sub_total">subtotal:</span>
+                        <span id="Msub_total"></span>
+                    </div>
+                    <div class="shipping_div">
+                        <span class="shipping">shipping:</span>
+                        <span id="Mshipping"></span>
+                    </div>
+                    <div class="taxes_div">
+                        <span class="taxes">taxes:</span>
+                        <span id="Mtaxes"></span>
+                    </div>
+                    <div class="discount_div">
+                        <span class="discount">discount:</span>
+                        <span id="Mdiscount"></span>
+                    </div>
+                    <div class="Mtotal_div">
+                        <span class="total">Total:</span>
+                        <span id="MTotal"></span>
+                    </div>
+                </div>
+                <script>
+                    var subtotal = 0;
+                    var shipping = 0;
+                    var taxes = 0;
+                    var discount = 0;
+                    var grand_total = 0;
+                    {% for car in user_car %}
+                    subtotal += parseFloat( {{ car.price }} * {{ car.quantity}} );
+                    shipping =  subtotal * 5/100 ;
+                    taxes =  subtotal * 15/100  ;
+                    discount =  subtotal * 10/100  ;
+                    grand_total = Math.round(subtotal + shipping + taxes - discount, 2)
+                    {% endfor %}
+                    document.getElementById('Msub_total').innerHTML = subtotal + "<span class='total_dolar'>&dollar;</span>";
+                    document.getElementById('Mshipping').innerHTML = shipping + "<span class='total_dolar'>&dollar;</span>";
+                    document.getElementById('Mtaxes').innerHTML = taxes + "<span class='total_dolar'>&dollar;</span>";
+                    document.getElementById('Mdiscount').innerHTML = discount + "<span class='total_dolar'>&dollar;</span>";
+                    document.getElementById('MTotal').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+                    document.getElementById('btn_total').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+
+                </script>
+        </div>
+
+
+        <!-- Media Screens Payment Form 992px -->
+
+        <div id="media_payment_form" class="media_payment_form">
+            <form action="/checkout" method="post">
+                <div class="contact_div">
+                    <small class="contact_hed">
+                        <h1>Contact</h1>
+                        {% if not user %}
+                        <p>Have an account? <a href="/login">Log in</a> | <a href="/register">Register</a></p>
+                        {% endif %}
+                    </small>
+
+        <!-- We Have a Break Here TODO somethings in the form  -->
+        {% if user %}
+            {% if rem.remember == 1 %}
+                    <input type="text" name="checkout_email" placeholder="Email" class="email" value="{{user_email}}">
+                    <div class="email_div">
+                        <input type="checkbox" checked class="email_checkbox"><p class="email_p">Email me with news and offers</p>
+                    </div>
+
+                </div>
+                <div class="delivery_div">
+                    <h1>Delivery</h1>
+                    <p>Country/Region</p>
+                    <select class="country" name="country" placeholder="Country/Region">
+                        <option>{{rem.country}}</option>
+                        <option>Egypt</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Canada</option>
+                    </select>
+                    <div class="name_div">
+                        <input class="fname" name="fname" type="text" placeholder="First name" value="{{rem.first_name}}">
+                        <input class="lname" name="lname" type="text" placeholder="Last name" value="{{rem.last_name}}">
+                    </div>
+                    <input class="address" type="text" placeholder="Address" name="address" value="{{rem.address}}">
+                    <div class="apartment_no_city_div">
+                        <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no" value="{{rem.apartment_no}}">
+                        <input type="text" name="city" placeholder="City" class="city" value="{{rem.city}}">
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone" class="phone" value="{{rem.phone}}">
+                    <div class="save_div">
+                        <input type="checkbox" name=remember class="remember" id="remember" value="1" checked> <p class="save">save this information for next time</p>
+                    </div>
+                    <div class="forget_div">
+                        <input type="checkbox" name=remember2 class="remember" id="remember2" value="2"> <p class="forget">forget my information</p>
+                    </div>
+
+                </div>
+                <div id="payment_methods_div" class="payment_methods_div">
+                    <h1>Payment Methods</h1>
+                    <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                </div>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                            <p class="requirements_msg">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% if grand_total > current_user_cash %}
+                    <div id="Mrequirements_msg_div"></div>
+                    <div class="Pay_stop" onclick="cash_msg()">Pay now</div>
+                {% else %}
+
+
+                        <!-- Order Summary -->
+                    <div id="media_card_content_div2" class="media_card_content_div2">
+                        <h2 class="order_summary">Order Summary</h2>
+                        {% for car in user_car %}
+                            <div class="Mcheckout_product_div">
+
+                                <div class="quantityandimg">
+                                    <div class="checkout_card_quantity">
+                                        <p>{{ car.quantity }}</p>
+                                    </div>
+                                    <div class="checkout_card_img_div">
+                                        <img src="static/uploads/{{ car.img1 }}">
+                                    </div>
+                                </div>
+
+                                <div class="Mcheckout_card_details">
+                                    <div class="checkout_product_title">
+                                        <h2 class="checkout_product_name">{{ car.Name }}</h2>
+                                        <div class="details">
+                                            <p class="checkout_product_brand">{{ car.Brand }}</p>
+                                            <button class="{{car.color}}"></button>
+                                            <p class="det_size">{{ car.size }}</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="checkout_product_price">{{ car.price }}<span class='total_dolar'>&dollar;</span></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="checkout_card_foot">
+                            <div class="sub_total_div">
+                                <span class="sub_total">subtotal:</span>
+                                <span id="Msub_total2"></span>
+                            </div>
+                            <div class="shipping_div">
+                                <span class="shipping">shipping:</span>
+                                <span id="Mshipping2"></span>
+                            </div>
+                            <div class="taxes_div">
+                                <span class="taxes">taxes:</span>
+                                <span id="Mtaxes2"></span>
+                            </div>
+                            <div class="discount_div">
+                                <span class="discount">discount:</span>
+                                <span id="Mdiscount2"></span>
+                            </div>
+                            <div class="Mtotal_div">
+                                <span class="total">Total:</span>
+                                <span id="MTotal2"></span>
+                            </div>
+                        </div>
+                        <script>
+                            var subtotal = 0;
+                            var shipping = 0;
+                            var taxes = 0;
+                            var discount = 0;
+                            var grand_total = 0;
+                            {% for car in user_car %}
+                            subtotal += parseFloat( {{ car.price }} * {{ car.quantity}} );
+                            shipping =  subtotal * 5/100 ;
+                            taxes =  subtotal * 15/100  ;
+                            discount =  subtotal * 10/100  ;
+                            grand_total = Math.round(subtotal + shipping + taxes - discount, 2)
+                            {% endfor %}
+                            document.getElementById('Msub_total2').innerHTML = subtotal + "<span class='total_dolar'>&dollar;</span>";
+                            document.getElementById('Mshipping2').innerHTML = shipping + "<span class='total_dolar'>&dollar;</span>";
+                            document.getElementById('Mtaxes2').innerHTML = taxes + "<span class='total_dolar'>&dollar;</span>";
+                            document.getElementById('Mdiscount2').innerHTML = discount + "<span class='total_dolar'>&dollar;</span>";
+                            document.getElementById('MTotal2').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+                            document.getElementById('btn_total2').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+
+                        </script>
+                    </div>
+
+
+                    <button class="Pay">Pay now</button>
+                {% endif %}
+            {% else %}
+                    <input type="text" name="checkout_email" placeholder="Email" class="email">
+                    <div class="email_div">
+                        <input type="checkbox" class="email_checkbox" checked><p class="email_p">Email me with news and offers</p>
+                    </div>
+                </div>
+                    <div class="delivery_div">
+                        <h1>Delivery</h1>
+                        <p>Country/Region</p>
+                        <select class="country" name="country" placeholder="Country/Region">
+                            <option>---</option>
+                            <option>Egypt</option>
+                            <option>United States</option>
+                            <option>United Kingdom</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                            <option>Canada</option>
+                        </select>
+                        <div class="name_div">
+                            <input class="fname" name="fname" type="text" placeholder="First name">
+                            <input class="lname" name="lname" type="text" placeholder="Last name">
+                        </div>
+                        <input class="address" type="text" placeholder="Address" name="address">
+                        <div class="apartment_no_city_div">
+                            <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no">
+                            <input type="text" name="city" placeholder="City" class="city">
+                        </div>
+                        <input type="text" name="phone" placeholder="Phone" class="phone">
+                        <div class="save_div">
+                            <input type="checkbox" name=remember3 class="remember" id="remember3" value="1"> <p class="save">save this information for next time</p>
+                        </div>
+
+                    </div>
+                    <div id="Mpayment_methods_div" class="payment_methods_div">
+                        <h1>Payment Methods</h1>
+                        <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                    </div>
+
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <p class="requirements_msg">{{ msg }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
+                    {% if grand_total > current_user_cash %}
+                        <div id="requirements_msg_div3"></div>
+                        <div class="Pay_stop" onclick="cash_msg3()">Pay now</div>
+                        <script>
+                            function cash_msg3(){
+                                document.getElementById('requirements_msg_div3').innerHTML = `
+                                <p class="requirements_msg">Sorry You Dont Have Enough Cash!</p>
+                                `;
+                            }
+                        </script>
+                    {% else %}
+
+
+                                <!-- Order Summary -->
+                        <div id="media_card_content_div2" class="media_card_content_div2">
+                            <h2 class="order_summary">Order Summary</h2>
+                            {% for car in user_car %}
+                                <div class="Mcheckout_product_div">
+
+                                    <div class="quantityandimg">
+                                        <div class="checkout_card_quantity">
+                                            <p>{{ car.quantity }}</p>
+                                        </div>
+                                        <div class="checkout_card_img_div">
+                                            <img src="static/uploads/{{ car.img1 }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="Mcheckout_card_details">
+                                        <div class="checkout_product_title">
+                                            <h2 class="checkout_product_name">{{ car.Name }}</h2>
+                                            <div class="details">
+                                                <p class="checkout_product_brand">{{ car.Brand }}</p>
+                                                <button class="{{car.color}}"></button>
+                                                <p class="det_size">{{ car.size }}</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="checkout_product_price">{{ car.price }}<span class='total_dolar'>&dollar;</span></div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="checkout_card_foot">
+                                <div class="sub_total_div">
+                                    <span class="sub_total">subtotal:</span>
+                                    <span id="Msub_total2"></span>
+                                </div>
+                                <div class="shipping_div">
+                                    <span class="shipping">shipping:</span>
+                                    <span id="Mshipping2"></span>
+                                </div>
+                                <div class="taxes_div">
+                                    <span class="taxes">taxes:</span>
+                                    <span id="Mtaxes2"></span>
+                                </div>
+                                <div class="discount_div">
+                                    <span class="discount">discount:</span>
+                                    <span id="Mdiscount2"></span>
+                                </div>
+                                <div class="Mtotal_div">
+                                    <span class="total">Total:</span>
+                                    <span id="MTotal2"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var subtotal = 0;
+                                var shipping = 0;
+                                var taxes = 0;
+                                var discount = 0;
+                                var grand_total = 0;
+                                {% for car in user_car %}
+                                subtotal += parseFloat( {{ car.price }} * {{ car.quantity}} );
+                                shipping =  subtotal * 5/100 ;
+                                taxes =  subtotal * 15/100  ;
+                                discount =  subtotal * 10/100  ;
+                                grand_total = Math.round(subtotal + shipping + taxes - discount, 2)
+                                {% endfor %}
+                                document.getElementById('Msub_total2').innerHTML = subtotal + "<span class='total_dolar'>&dollar;</span>";
+                                document.getElementById('Mshipping2').innerHTML = shipping + "<span class='total_dolar'>&dollar;</span>";
+                                document.getElementById('Mtaxes2').innerHTML = taxes + "<span class='total_dolar'>&dollar;</span>";
+                                document.getElementById('Mdiscount2').innerHTML = discount + "<span class='total_dolar'>&dollar;</span>";
+                                document.getElementById('MTotal2').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+                                document.getElementById('btn_total2').innerHTML = grand_total + "<span class='total_dolar'>&dollar;</span>";
+
+                            </script>
+                        </div>
+
+                        <button class="Pay">Pay now</button>
+                    {% endif %}
+                {% endif %}
+        {% else %}
+                    <input type="text" name="checkout_email" placeholder="Email" class="email">
+                    <div class="email_div">
+                        <input type="checkbox" class="email_checkbox" checked><p class="email_p">Email me with news and offers</p>
+                    </div>
+                </div>
+                <div class="delivery_div">
+                    <h1>Delivery</h1>
+                    <p>Country/Region</p>
+                    <select class="country" name="country" placeholder="Country/Region">
+                        <option>---</option>
+                        <option>Egypt</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Canada</option>
+                    </select>
+                    <div class="name_div">
+                        <input class="fname" name="fname" type="text" placeholder="First name">
+                        <input class="lname" name="lname" type="text" placeholder="Last name">
+                    </div>
+                    <input class="address" type="text" placeholder="Address" name="address">
+                    <div class="apartment_no_city_div">
+                        <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no">
+                        <input type="text" name="city" placeholder="City" class="city">
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone" class="phone">
+                    <div class="save_div">
+                        <input type="checkbox" name=remember class="remember" id="remember" value="1"> <p class="save">save this information for next time</p>
+                    </div>
+
+                </div>
+                <div id="Mpayment_methods_div" class="payment_methods_div">
+                    <h1>Payment Methods</h1>
+                    <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                </div>
+                <div id="Mrequirements_msg_div"></div>
+
+                <div onclick="login_required()" class="Pay_stop">Pay now</div>
+                {% endif %}
+                <script>
+                    function login_required(){
+                        document.getElementById('Mrequirements_msg_div').innerHTML = `
+                            <p class="requirements_msg">You have to login first in order to complete the purchase process!</p>
+                        `;
+                    }
+                    function cash_msg(){
+                        document.getElementById('Mrequirements_msg_div').innerHTML = `
+                        <p class="requirements_msg">Sorry You Dont Have Enough Cash!</p>
+                        `;
+                    }
+                </script>
+            </form>
+        </div>
+
+
+
+        <!-- Origenal Payment form -->
+
+        <div class="payment_form">
+            <form action="/fast_checkout{{product_to_show.id}}" method="post">
+                <div class="contact_div">
+                    <small class="contact_hed">
+                        <h1>Contact</h1>
+                        {% if not user %}
+                        <p>Have an account? <a href="/login">Log in</a> | <a href="/register">Register</a></p>
+                        {% endif %}
+                    </small>
+
+                    <!-- We Have a Break Here TODO somethings in the form  -->
+
+                    {% if user %}
+                        {% if rem.remember == 1 %}
+                                <input type="text" name="checkout_email" placeholder="Email" class="email" value="{{user_email}}">
+                                <input type="checkbox" checked class="email_checkbox"> Email me with news and offers
+                            </div>
+                            <div class="delivery_div">
+                                <h1>Delivery</h1>
+                                <p>Country/Region</p>
+                                <select class="country" name="country" placeholder="Country/Region">
+                                    <option>{{rem.country}}</option>
+                                    <option>Egypt</option>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Canada</option>
+                                </select>
+                                <div class="name_div">
+                                    <input class="fname" name="fname" type="text" placeholder="First name" value="{{rem.first_name}}">
+                                    <input class="lname" name="lname" type="text" placeholder="Last name" value="{{rem.last_name}}">
+                                </div>
+                                <input class="address" type="text" placeholder="Address" name="address" value="{{rem.address}}">
+                                <div class="apartment_no_city_div">
+                                    <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no" value="{{rem.apartment_no}}">
+                                    <input type="text" name="city" placeholder="City" class="city" value="{{rem.city}}">
+                                </div>
+                                <input type="text" name="phone" placeholder="Phone" class="phone" value="{{rem.phone}}">
+                                <input type="checkbox" name=remember class="remember" id="remember" value="1" checked>save this information for next time
+                                <input type="checkbox" name=remember2 class="remember" id="remember2" value="2"> forget my information
+                            </div>
+                            <div id="payment_methods_div" class="payment_methods_div">
+                                <h1>Payment Methods</h1>
+                                <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                            </div>
+
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for msg in messages %}
+                                        <p class="requirements_msg">{{ msg }}</p>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+
+                            {% if grand_total > current_user_cash %}
+                                <div id="requirements_msg_div"></div>
+                                <div class="Pay_stop" onclick="cash_msg()">Pay now</div>
+                            {% else %}
+                                <button class="Pay">Pay now</button>
+                            {% endif %}
+                        {% else %}
+                                <input type="text" name="checkout_email" placeholder="Email" class="email">
+                                <input type="checkbox" class="email_checkbox" checked>Email me with news and offers
+                            </div>
+                            <div class="delivery_div">
+                                <h1>Delivery</h1>
+                                <p>Country/Region</p>
+                                <select class="country" name="country" placeholder="Country/Region">
+                                    <option>---</option>
+                                    <option>Egypt</option>
+                                    <option>United States</option>
+                                    <option>United Kingdom</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Canada</option>
+                                </select>
+                                <div class="name_div">
+                                    <input class="fname" name="fname" type="text" placeholder="First name">
+                                    <input class="lname" name="lname" type="text" placeholder="Last name">
+                                </div>
+                                <input class="address" type="text" placeholder="Address" name="address">
+                                <div class="apartment_no_city_div">
+                                    <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no">
+                                    <input type="text" name="city" placeholder="City" class="city">
+                                </div>
+                                <input type="text" name="phone" placeholder="Phone" class="phone">
+                                <input type="checkbox" name=remember3 class="remember" id="remember3" value="1">save this information for next time
+                            </div>
+                            <div id="payment_methods_div" class="payment_methods_div">
+                                <h1>Payment Methods</h1>
+                                <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                            </div>
+
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for msg in messages %}
+                                        <p class="requirements_msg">{{ msg }}</p>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+
+                            {% if grand_total > current_user_cash %}
+                                <div id="requirements_msg_div2"></div>
+                                <div class="Pay_stop" onclick="cash_msg2()">Pay now</div>
+                            {% else %}
+                                <button class="Pay">Pay now</button>
+                            {% endif %}
+                        {% endif %}
+
+                    {% else %}
+                            <input type="text" name="checkout_email" placeholder="Email" class="email">
+                            <input type="checkbox" class="email_checkbox" checked>Email me with news and offers
+                        </div>
+                        <div class="delivery_div">
+                            <h1 id="delivery">Delivery</h1>
+                            <p>Country/Region</p>
+                            <select class="country" name="country" placeholder="Country/Region">
+                                <option>---</option>
+                                <option>Egypt</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>France</option>
+                                <option>Germany</option>
+                                <option>Canada</option>
+                            </select>
+                            <div class="name_div">
+                                <input class="fname" name="fname" type="text" placeholder="First name">
+                                <input class="lname" name="lname" type="text" placeholder="Last name">
+                            </div>
+                            <input class="address" type="text" placeholder="Address" name="address">
+                            <div class="apartment_no_city_div">
+                                <input type="text" name="apartment_no" placeholder="Apartment no." class="apartment_no">
+                                <input type="text" name="city" placeholder="City" class="city">
+                            </div>
+                            <input type="text" name="phone" placeholder="Phone" class="phone">
+                            <input type="checkbox" name=remember class="remember" id="remember" value="1">save this information for next time
+                        </div>
+                        <div id="payment_methods_div" class="payment_methods_div">
+                            <h1>Payment Methods</h1>
+                            <input type="radio" name="pay_method" class="pay_method"> Account Wallet
+                        </div>
+                        <div id="requirements_msg_div"></div>
+
+                        <div onclick="login_required()" class="Pay_stop">Pay now</div>
+                {% endif %}
+            </form>
+            <script>
+                function login_required(){
+                    document.getElementById('requirements_msg_div').innerHTML = `
+                        <p class="requirements_msg">You have to login first in order to complete the purchase process!</p>
+                    `;
+                }
+                function cash_msg(){
+                    document.getElementById('requirements_msg_div').innerHTML = `
+                    <p class="requirements_msg">Sorry You Dont Have Enough Cash!</p>
+                    `;
+                }
+                function cash_msg2(){
+                    document.getElementById('requirements_msg_div2').innerHTML = `
+                    <p class="requirements_msg">Sorry You Dont Have Enough Cash!</p>
+                    `;
+                }
+
+            </script>
+        </div>
+    </section>
+{% endblock body %}

@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+<section class="acc_section">
+
+    {% if del_mode_row.del_mode == 1 %}
+
+        <div id="side_cart_div2" class="side_cart_div2">
+            <div class="hed">
+                <form method="post">
+                    <input type="number" name="del_take" id="del_take">
+                    <button id="close_btn2">Close <span>X</span></button>
+                </form>
+                <h1>My Cart</h1>
+            </div>
+            {% for car in user_car %}
+            <div class="side_cart_product">
+                <div class="product_data">
+                    <div class="cart_pro_title_div">
+                        {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                            <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                        {% else %}
+                            <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                        {% endif %}
+                    </div>
+                    <div class="cart_priceandcolor_div">
+                        <div class="cart_price_div">
+                            <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                        </div>
+                        <div class="cart_color_div">
+                            <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                        </div>
+                    </div>
+
+                    <div class="cart_sizeandquantity_div">
+                        <div class="cart_size_div">
+                            <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                        </div>
+                        <div class="cart_quantity_div">
+                            <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                        </div>
+                    </div>
+
+
+                    <div class="car_edit_btns">
+                        <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                        <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                    </div>
+
+                </div>
+                <div class="product_image">
+                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                </div>
+            </div>
+            {% endfor %}
+            <div class="cart_foot">
+                <span class="total_price" id="total_price"></span>
+            </div>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+        </div>
+    {% else %}
+        <div id="side_cart_div" class="side_cart_div">
+            <div class="hed">
+                <button id="close_btn">Close <span>X</span></button>
+
+                <h1>My Cart</h1>
+            </div>
+            {% for car in user_car %}
+                <div class="side_cart_product">
+                    <div class="product_data">
+                        <div class="cart_pro_title_div">
+                            {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% else %}
+                                <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% endif %}
+                        </div>
+                        <div class="cart_priceandcolor_div">
+                            <div class="cart_price_div">
+                                <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                            </div>
+                            <div class="cart_color_div">
+                                <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                            </div>
+                        </div>
+
+                        <div class="cart_sizeandquantity_div">
+                            <div class="cart_size_div">
+                                <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                            </div>
+                            <div class="cart_quantity_div">
+                                <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                            </div>
+                        </div>
+
+
+                        <div class="car_edit_btns">
+                            <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                            <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                        </div>
+
+                    </div>
+                    <div class="product_image">
+                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="cart_foot">
+                <span class="total_price" id="total_price"></span>
+            </div>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+        </div>
+    {% endif %}
+
+
+
+    <script>
+    var total = 0;
+    {% for car in user_car %}
+    total += parseFloat({{ car.price }} * {{ car.quantity}});
+    {% endfor %}
+    let cart_total_price = document.getElementById('total_price')
+    if(cart_total_price)
+    {
+        cart_total_price.innerHTML = "Total Price: "+total+"<span class='total_dolar'>&dollar;</span>";
+    }
+
+    let del_take = document.getElementById('del_take');
+    let close_btn = document.getElementById('close_btn2');
+    close_btn.onclick = function(){
+        del_take.value = 0;
+    }
+
+
+
+
+    </script>
+    <div class="acc_header">
+        <h1>MY ACCOUNT</h1>
+    </div>
+    <div class="acc_rooms_container">
+        <div id="change_password" class="change_password_div">
+
+            <div class="back_to_back_div">
+                <a href="/user_profile" class="back_to_back">Back to previous page</a>
+            </div>
+
+            <form class="login_form" action="" method="POST">
+                {{form.hidden_tag()}}
+                <span>Username</span>
+                <input class="username" name="username" type="text" placeholder="Username" value="{{user}}">
+                {% for error in form.username.errors %}
+                    <p class="register_error">{{error}}</p>
+                {% endfor %}
+
+                <span>Email</span>
+                <input type="email" name="email" class="username" value="{{user_email}}" placeholder="Email">
+
+                <span>Your old password</span>
+                <input type="password" name="old_password" id="old_password" class="password" autocomplete="off" placeholder="Old password">
+
+                <span>Your New password</span>
+                {{form.password ( class="password", autocomplete="off" )}}
+
+                <span>Password Confirm</span>
+                {{form.confirm ( class="password", autocomplete="off" )}}
+                {% for error in form.confirm.errors %}
+                    <p class="red_msg">{{error}}</p>
+                {% endfor %}
+
+                {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <p class="red_msg">{{ msg }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                <input class="submitt" type="submit" value="CHANGE">
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="title">
+            <h3>A CULUTURE OF FASHION</h3>
+        </div>
+        <div class="all_footer">
+            <div class="footer_container">
+                <div class="join_us">
+                    <h3>JOIN US</h3>
+                    <a href="/register">sign up</a>
+                </div>
+                <div class="contact_us">
+                    <h3>CONTACT US</h3>
+                    <a href="#">contact us</a>
+                </div>
+                <div class="social_icons">
+                    <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                    <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                    <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                </div>
+                <div class="footer_bar">
+                    <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                    <div class="visa_icons">
+                        <img src="static/visa1.png" alt="VisaCard">
+                        <img src="static/mastercard1.webp" alt="MasterCard">
+                        <img src="static/paypal.png" alt="Paypal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+{% endblock body %}

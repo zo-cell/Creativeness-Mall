@@ -1,0 +1,1186 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+
+        <section id="process_lap" class="process_lap">
+
+            <div class="header">
+                <h1 id="controll_pad">Control Pad</h1>
+            </div>
+
+            <div class="tools_table">
+                <div class="tools_div">
+                    <div id="tools" class="tools">
+                        <div class="tools_header">
+                            <h2 id="controll_tools">Control Tools</h2>
+                        </div>
+                        <div class="create_new_product">
+                            <a onclick="sections()" id="create_btn" class="create_btn">Create a New Product</a>
+
+
+                        </div>
+                        <div class="sections_div" id="sections_div">
+                            <p class="sections_head">Choose a section</p>
+                            <form id="creation_form" action="/creation_form-" method="post">
+                                <input type="text" name="section_take" id="section_take">
+                                <ul class="sections_menu_ul" id="sections_ul">
+
+                                    <li id="sections_menu_li" class="sections_menu_li">
+                                        <a id="sections_menu_women_btn" class="sections_menu_btn" onclick="women_submenu()">Women</a>
+
+                                        <ul id="sections_submenu_women_ul" class="sections_submenu_ul">
+                                            <li id="sections_submenu_li_clothing" class="sections_submenu_li">
+                                                <a id="sections_submenu_clothing_btn" class="sections_submenu_btn" onclick="clothing_subsub()">Clothing</a>
+                                                <ul id="sections_subsub_clothing_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                    <button id="sections_women_clothing_dresses_btn" class="sections_subsub_btn">Dresses</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_tops_btn" class="sections_subsub_btn">Tops</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_jacketcoats_btn" class="sections_subsub_btn">Jakets & Coats</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_blazers_btn" class="sections_subsub_btn">Blazers</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_pantsjeans_btn" class="sections_subsub_btn">Pants & Jeans</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_shirtsblouses_btn" class="sections_subsub_btn">Shirts & Blouses</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_sweetshirtshoodies_btn" class="sections_subsub_btn">Sweetshirts & Hoodies</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_skirts_btn" class="sections_subsub_btn">Skirts</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_sportwear_btn" class="sections_subsub_btn">SportWear</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_clothing_sleepwear_btn" class="sections_subsub_btn">SleepWear</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="sections_submenu_li_footwears" class="sections_submenu_li">
+                                                <a id="sections_submenu_footwears_btn" class="sections_submenu_btn" onclick="footwears_subsub()">Foot_Wears</a>
+                                                <ul id="sections_subsub_footwears_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_flats_btn" class="sections_subsub_btn">Flats</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_sneakers_btn" class="sections_subsub_btn">Sneakers</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_heals_btn" class="sections_subsub_btn">Heals</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_boots_btn" class="sections_subsub_btn">Boots</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_sandalsmules_btn" class="sections_subsub_btn">Sandals.&.Mules</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_footwears_slippers_btn" class="sections_subsub_btn">Slippers</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="sections_submenu_li_bags" class="sections_submenu_li">
+                                                <a id="sections_submenu_bags_btn" class="sections_submenu_btn" onclick="bags_subsub()">Bags</a>
+                                                <ul id="sections_subsub_bags_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_bags_shoulderbags_btn" class="sections_subsub_btn">Shoulder_Bags</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_bags_ClutchMinibags_btn" class="sections_subsub_btn">Clutch.&.Mini_bags</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_bags_tutebags_btn" class="sections_subsub_btn">Tute_Bags</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_bags_backpacks_btn" class="sections_subsub_btn">Back_packs</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_bags_laptopbags_btn" class="sections_subsub_btn">Laptop_Bags</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="sections_submenu_li_jewelryandaccessories" class="sections_submenu_li">
+                                                <a id="sections_submenu_jewelryandaccessories_btn" class="sections_submenu_btn" onclick="jewelry_subsub()">Jewelry.&.Accessories</a>
+                                                <ul id="sections_subsub_jewelryandaccessories_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_jewelryandaccessories_earrings_btn" class="sections_subsub_btn">Earrings</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_jewelryandaccessories_necklaces_btn" class="sections_subsub_btn">Necklaces</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_jewelryandaccessories_rings_btn" class="sections_subsub_btn">Rings</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_jewelryandaccessories_hairaccessories_btn" class="sections_subsub_btn">Hair_Accessories</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_jewelryandaccessories_phoneaccessories_btn" class="sections_subsub_btn">Phone_Accessories</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="sections_submenu_li_beauty" class="sections_submenu_li">
+                                                <a id="sections_submenu_beauty_btn" class="sections_submenu_btn" onclick="beauty_subsub()">Beauty</a>
+                                                <ul id="sections_subsub_beauty_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_beauty_bathbody_btn" class="sections_subsub_btn">Bath.&.Body</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_beauty_skincare_btn" class="sections_subsub_btn">Skincare</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_women_beauty_haircare_btn" class="sections_subsub_btn">Haircare</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_men" class="hide_me"></div>
+                                            <a id="sections_menu_men_btn" class="sections_menu_btn" onclick="men_submenu()">Men</a>
+                                        </div>
+
+                                        <ul id="sections_submenu_men_ul" class="sections_submenu_ul">
+                                            <li id="sections_submenu_li_clothing_men" class="sections_submenu_li">
+                                                <a id="sections_submenu_clothing_men_btn" class="sections_submenu_btn" onclick="men_clothing_subsub()">Clothing</a>
+                                                <ul id="sections_subsub_clothing_men_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_sweetshirthoodies_btn" class="sections_subsub_btn">Sweetshirts.&.Hoodies</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_pulloversweeters_btn" class="sections_subsub_btn">Pullover.&.Sweeters</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_jackets_btn" class="sections_subsub_btn">Jackets</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_shirts_btn" class="sections_subsub_btn">Shirts</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_tshirts_btn" class="sections_subsub_btn">T-shirts</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_pantssweetpants_btn" class="sections_subsub_btn">Pants.&.Sweetpants</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_sportwear_btn" class="sections_subsub_btn">Sportwear</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_clothing_sleepwear_btn" class="sections_subsub_btn">Full-Suits</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="sections_submenu_li_footwear_men" class="sections_submenu_li">
+                                                <a id="sections_submenu_footwear_men_btn" class="sections_submenu_btn" onclick="men_footwear_subsub()">Footwear</a>
+                                                <ul id="sections_subsub_footwear_men_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_footwear_shoes_btn" class="sections_subsub_btn">Shoes</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_footwear_sneakers_btn" class="sections_subsub_btn">Sneakers</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="sections_submenu_li_accessories_men" class="sections_submenu_li">
+                                                <a id="sections_submenu_accessories_men_btn" class="sections_submenu_btn" onclick="men_accessories_subsub()">Accessories</a>
+                                                <ul id="sections_subsub_accessories_men_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_accessories_bracelets_btn" class="sections_subsub_btn">Bracelets</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_accessories_socks_btn" class="sections_subsub_btn">Socks</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="sections_submenu_li_beauty_men" class="sections_submenu_li">
+                                                <a id="sections_submenu_beauty_men_btn" class="sections_submenu_btn" onclick="men_beauty_subsub()">Beauty</a>
+                                                <ul id="sections_subsub_beauty_men_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_men_beauty_perfumes_btn" class="sections_subsub_btn">Perfumes</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_kids" class="hide_me"></div>
+                                            <a id="sections_menu_kids_btn" class="sections_menu_btn" onclick="kids_submenu()">Kids</a>
+                                        </div>
+                                        <ul id="sections_submenu_kids_ul" class="sections_submenu_ul">
+                                            <li id="sections_submenu_li_boys_kids" class="sections_submenu_li">
+                                                <a id="sections_submenu_boys_kids_btn" class="sections_submenu_btn" onclick="kids_boys_subsub()">Boys</a>
+                                                <ul id="sections_subsub_boys_kids_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_boys_sweetshirtshoodies_btn" class="sections_subsub_btn">Sweetshirts.&.Hoodies</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_boys_tshirtspolos_btn" class="sections_subsub_btn">T-shirts.&.Polos</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_boys_pantssweetpants_btn" class="sections_subsub_btn">Pants.&.Sweetpants</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_boys_shorts_btn" class="sections_subsub_btn">Shorts</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_boys_footwears_btn" class="sections_subsub_btn">Footwears</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="sections_submenu_li_girls_kids" class="sections_submenu_li">
+                                                <a id="sections_submenu_girls_kids_btn" class="sections_submenu_btn" onclick="kids_girls_subsub()">Girls</a>
+                                                <ul id="sections_subsub_girls_kids_ul" class="sections_subsub_ul">
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_tops_btn" class="sections_subsub_btn">Tops</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_sweetshirtshoodies_btn" class="sections_subsub_btn">Sweetshirts.&.Hoodies</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_dressesjumpsuits_btn" class="sections_subsub_btn">Dresses.&.Jumpsuits</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_jacketcoats_btn" class="sections_subsub_btn">Jacket.&.Coats</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_pantssweetpants_btn" class="sections_subsub_btn">Pants.&.Sweetpants</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_skirts_btn" class="sections_subsub_btn">Skirts</button>
+                                                    </li>
+                                                    <li class="sections_subsub_li">
+                                                        <button id="sections_kids_girls_footwear_btn" class="sections_subsub_btn">Footwear</button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li id="newarrivals" class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_newarrival" class="hide_me"></div>
+                                            <a id="sections_menu_newarrival_btn" class="sections_menu_btn" onclick="new_arrival_submenu()">New.arrivals</a>
+                                        </div>
+
+                                        <ul id="sections_submenu_newarrival_ul" class="sections_submenu_ul">
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_women_newarrival_btn" class="sections_subsub_btn">Women</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_men_newarrival_btn" class="sections_subsub_btn">Men</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_kids_newarrival_btn" class="sections_subsub_btn">Kids</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="bestsellers" class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_bestsellers" class="hide_me"></div>
+                                            <a id="sections_menu_bestsellers_btn" class="sections_menu_btn" onclick="bestsellers_submenu()">Best.sellers</a>
+                                        </div>
+
+                                        <ul id="sections_submenu_bestsellers_ul" class="sections_submenu_ul">
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_women_bestsellers_btn" class="sections_subsub_btn">Women</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_men_bestsellers_btn" class="sections_subsub_btn">Men</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_kids_bestsellers_btn" class="sections_subsub_btn">Kids</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_jewelrybeauty_bestsellers_btn" class="sections_subsub_btn">Jewelry.&.Beauty</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_brands" class="hide_me"></div>
+                                            <a id="sections_menu_brands_btn" class="sections_menu_btn" onclick="brands_submenu()">Brands</a>
+                                        </div>
+
+                                        <ul id="sections_submenu_brands_ul" class="sections_submenu_ul">
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_calvin_brands_btn" class="sections_subsub_btn">Calvin</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_puma_brands_btn" class="sections_subsub_btn">Puma</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_lacoste_brands_btn" class="sections_subsub_btn">Lacoste</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_fila_brands_btn" class="sections_subsub_btn">Fila</button>
+                                            </li>
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_dockers_brands_btn" class="sections_subsub_btn">Dockers</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sections_menu_li">
+                                        <div class="menu_btn_div">
+                                            <div id="hide_me_now_sale" class="hide_me"></div>
+                                            <a id="sections_menu_sale_btn" class="sections_menu_btn" onclick="sale_submenu()">Sale</a>
+                                        </div>
+
+                                        <ul id="sections_submenu_sale_ul" class="sections_submenu_ul">
+                                            <li class="sections_subsub_li">
+                                                <button id="sections_subsub_sale_btn" class="sections_subsub_btn">Sale</button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </form>
+
+                        </div>
+                        <div class="ctrl_tools_btns_div">
+                            <button id="show_transactions_btn" class="show_transactions_btn" onclick="show_full_trans()">Show Sales Transactions</button>
+                        </div>
+                        <div class="ctrl_tools_btns_div">
+                            <button id="best_selling_btn" class="show_transactions_btn" onclick="View_best_selling()">View the best selling products</button>
+                        </div>
+                        <div class="ctrl_tools_btns_div">
+                            <button id="my_users_btn" class="show_transactions_btn" onclick="view_users()">Show my users</button>
+                        </div>
+                    </div>
+                </div>
+<!-- ========================= PRODUCTS TABLES ================================================================================================ -->
+                <div id="products_table_div" class="table_div">
+                    <h1 id="product_table_header" class="site_products_count">My Products ({{LP}})</h1>
+                    <table id="table1">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Description</th>
+                            <th>Colors</th>
+                            <th>Old Price</th>
+                            <th>New Price</th>
+                            <th>Image1</th>
+                            <th>Image2</th>
+                            <th>Image3</th>
+                            <th>Image4</th>
+                            <th>Image5</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.brand }}</td>
+                                    <td>{{ product.description }}</td>
+                                    <td>{{ product.colors }}</td>
+                                    <td class="Price">{{ product.old_price }}<span class="table_doller">$</span></td>
+                                    <td class="Price">{{ product.new_price }}<span class="table_doller">$</span></td>
+                                    {% if product.img1 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img1}}" alt="img1"></td>
+                                    {% else %}
+                                    <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img2 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img2}}" alt="img2"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img3 != "no_photo.jpg"%}
+                                        <td><img src="static/uploads/{{product.img3}}" alt="img3"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img4 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img4}}" alt="img4"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img5 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img5}}" alt="img5"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    <td><a class="a_update" href="/update{{product.id}}"><button class="updatebtnn" id="update_btn">Update</button></a></td>
+
+                                    <td><a class="a_delete" href="/delete/{{product.id}}"><button class="deletebtnn" id="deletee_btn">Delete</button></a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="table_div2" class="table_div2">
+                    <h1 class="site_products_count">My Products ({{LP}})</h1>
+                    <div class="table_view_more_btn_div">
+                        <button id="table_view_more_btn" class="table_view_more_btn" onclick="show_table()">View more details</button>
+                    </div>
+                    <table id="table2">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Description</th>
+                            <th>Colors</th>
+                            <th>Old Price</th>
+                            <th>New Price</th>
+                            <th>Img1</th>
+                        </tr>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.brand }}</td>
+                                    <td>{{ product.description }}</td>
+                                    <td>{{ product.colors }}</td>
+                                    <td>{{ product.old_price }}<span class="table_doller">$</span></td>
+                                    <td>{{ product.new_price }}<span class="table_doller">$</span></td>
+                                    {% if product.img1 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img1}}" alt="img1"></td>
+                                    {% else %}
+                                    <td>No photos</td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+                <div id="table_div3" class="table_div3">
+                    <h1 class="site_products_count">My Products ({{LP}})</h1>
+
+                    <div id="table_view_less_forsmall_btn_ForTableDiv3" class="table_view_less_forsmall_btn_div">
+                        <button id="table_view_less_forsmall_btn2" class="table_view_less_forsmall_btn" onclick="hide_small_table()">View less details</button>
+                    </div>
+
+
+                    <div class="table_view_less_btn_div">
+                        <button id="table_view_less_btn" class="table_view_less_btn" onclick="hide_table()">View less details</button>
+                    </div>
+                    <table id="table3">
+                        <tr>
+                            <th>id</th>
+                            <th>Img2</th>
+                            <th>Img3</th>
+                            <th>Img4</th>
+                            <th>Img5</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    {% if product.img2 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img2}}" alt="img2"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img3 != "no_photo.jpg"%}
+                                        <td><img src="static/uploads/{{product.img3}}" alt="img3"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img4 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img4}}" alt="img4"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    {% if product.img5 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img5}}" alt="img5"></td>
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
+                                    <td><a class="a_update" href="/update{{product.id}}"><button class="updatebtnn" id="update_btn">Update</button></a></td>
+
+                                    <td><a class="a_delete" href="/delete/{{product.id}}/{{x}}"><button class="deletebtnn" id="deletee_btn">Delete</button></a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+<!-- ======== -->
+
+
+
+                <div id="small_screen_table_div" class="small_screen_table_div">
+                    <h1 class="site_products_count">My Products ({{LP}})</h1>
+                    <div id="small_screen_table_view_more_btn_div" class="small_screen_table_view_more_btn_div">
+                        <button id="small_screen_table_view_more_btn" class="small_screen_table_view_more_btn" onclick="show_small_table()">View more details</button>
+                    </div>
+                    <table id="small_table">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Colors</th>
+                            <th>N.Price</th>
+                            <th>Img1</th>
+                        </tr>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.brand }}</td>
+                                    <td>{{ product.colors }}</td>
+                                    <td class="Price">{{ product.new_price }}<span class="table_doller">$</span></td>
+                                    {% if product.img1 != "no_photo.jpg" %}
+                                        <td><img src="static/uploads/{{product.img1}}" alt="img1"></td>
+                                    {% else %}
+                                    <td>No photos</td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_table_div2" class="small_screen_table_div2">
+                    <h1 class="site_products_count">My Products ({{LP}})</h1>
+
+                    <!-- for only extra small screens -->
+                    <div id="table_view_more_forsmall_btn_div" class="table_view_more_forsmall_btn_div">
+                        <button id="table_view_more_forsmall_btn" class="table_view_more_forsmall_btn" onclick="show_small_table2()">View more details</button>
+                    </div>
+
+                    <div id="table_view_less_forsmall_btn_div" class="table_view_less_forsmall_btn_div">
+                        <button id="table_view_less_forsmall_btn" class="table_view_less_forsmall_btn" onclick="hide_small_table2()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div id="small_screen_table_view_less_btn_div" class="small_screen_table_view_less_btn_div">
+                        <button id="small_screen_table_view_less_btn" class="small_screen_table_view_less_btn" onclick="hide_small_table()">View less details</button>
+                    </div>
+                    <table id="table5">
+                        <tr>
+                            <th>id</th>
+                            <th>Description</th>
+                            <th>Old Price</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.description }}</td>
+                                    <td class="Price">{{ product.old_price }}<span class="table_doller">$</span></td>
+                                    <td><a class="a_update" href="/update{{product.id}}"><button class="updatebtnn" id="update_btn">Update</button></a></td>
+                                    <td><a class="a_delete" href="/delete/{{product.id}}/{{x}}"><button class="deletebtnn" id="deletee_btn">Delete</button></a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+<!-- ======================================================================================================================================== -->
+
+<!-- ================================== TRANSACTIONS TABLES ====================================================================== -->
+                <div class="table_div">
+                    <h1 id="full_trans_header" class="site_products_count">My Transactions ({{TL}})</h1>
+                    <table id="trans_table1">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Img</th>
+                            <th>Color</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Sub total</th>
+                            <th>Shippings</th>
+                            <th>Taxes</th>
+                            <th>Discount</th>
+                            <th>Grand total</th>
+                            <th>Date & Time</th>
+                        </tr>
+                        <tbody>
+                            {% for trans in transactions %}
+                                <tr>
+                                    <td>{{ trans.id }}</td>
+                                    <td>{{ trans.product_name }}</td>
+                                    <td>{{ trans.brand }}</td>
+                                    <td><img src="static/uploads/{{ trans.img }}"></td>
+                                    <td>{{ trans.color }}</td>
+                                    <td>{{ trans.size }}</td>
+                                    <td class="Price">{{ trans.price }}<span class="table_doller">$</span></td>
+                                    <td>{{ trans.quantity }}</td>
+                                    <td>{{ trans.sub_total_ }}</td>
+                                    <td>{{ trans.shipping_ }}</td>
+                                    <td>{{ trans.taxes_ }}</td>
+                                    <td>{{ trans.discount_ }}</td>
+                                    <td>{{ trans.grand_total_|round(1) }}</td>
+                                    <td>{{ trans.date_time }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="trans_table_div2" class="table_div2">
+                    <h1 class="site_products_count">My Transactions ({{TL}})</h1>
+                    <div class="table_view_more_btn_div">
+                        <button id="trans_table_view_more_btn" class="table_view_more_btn" onclick="show_trans_table()">View more details</button>
+                    </div>
+                    <table id="trans_table2">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Img</th>
+                            <th>Color</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tbody>
+                            {% for product in transactions %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.product_name }}</td>
+                                    <td>{{ product.brand }}</td>
+                                    <td><img src="static/uploads/{{ product.img }}"></td>
+                                    <td>{{ product.color }}</td>
+                                    <td>{{ product.size }}</td>
+                                    <td>{{ product.price }}<span class="table_doller">$</span></td>
+                                    <td>{{ product.quantity }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+
+                <div id="trans_table_div3" class="table_div3">
+                    <h1 class="site_products_count">My Transactions ({{TL}})</h1>
+
+                    <!-- for only small screens -->
+                        <div id="trans_table_view_less_forsmall_btn_ForTableDiv3" class="table_view_less_forsmall_btn_div">
+                            <button id="trans_table_view_less_forsmall_btn2" class="table_view_less_forsmall_btn" onclick="hide_small_trans_table()">View less details</button>
+                        </div>
+                    <!-- ===================== -->
+
+                        <div class="table_view_less_btn_div">
+                            <button id="trans_table_view_less_btn" class="table_view_less_btn" onclick="hide_trans_table()">View less details</button>
+                        </div>
+                    <table id="trans_table3">
+                        <tr>
+                            <th>id</th>
+                            <th>Sup</th>
+                            <th>Shipping</th>
+                            <th>Tax</th>
+                            <th>Dsc.</th>
+                            <th>Grnd</th>
+                            <th>D & T</th>
+                        </tr>
+                        <tbody>
+                            {% for trans in transactions %}
+                                <tr>
+                                    <td>{{ trans.id }}</td>
+                                    <td>{{ trans.sub_total_ }}</td>
+                                    <td>{{ trans.shipping_ }}</td>
+                                    <td>{{ trans.taxes_ }}</td>
+                                    <td>{{ trans.discount_ }}</td>
+                                    <td>{{ trans.grand_total_|round(1) }}</td>
+                                    <td>{{ trans.date_time }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+<!-- ======== -->
+
+
+
+                <div id="small_screen_trans_table_div" class="small_screen_table_div">
+                    <h1 class="site_products_count">My Transactions ({{TL}})</h1>
+                    <div id="small_screen_trans_table_view_more_btn_div" class="small_screen_table_view_more_btn_div">
+                        <button id="small_screen_trans_table_view_more_btn" class="small_screen_table_view_more_btn" onclick="show_small_trans_table()">View more details</button>
+                    </div>
+                    <table id="small_trans_table">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Img</th>
+                            <th>color</th>
+                            <th>price</th>
+                        </tr>
+                        <tbody>
+                            {% for trans in transactions %}
+                                <tr>
+                                    <td>{{ trans.id }}</td>
+                                    <td>{{ trans.product_name }}</td>
+                                    <td>{{ trans.brand }}</td>
+                                    <td><img src="static/uploads/{{ trans.img }}"></td>
+                                    <td>{{ trans.color }}</td>
+                                    <td class="Price">{{ trans.price }}<span class="table_doller">$</span></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_trans_table_div2" class="small_screen_table_div2">
+                    <h1 class="site_products_count">My Transactions ({{TL}})</h1>
+
+                    <!-- for only extra small screens -->
+                    <div id="trans_table_view_more_forsmall_btn_div" class="table_view_more_forsmall_btn_div">
+                        <button id="trans_table_view_more_forsmall_btn" class="table_view_more_forsmall_btn" onclick="show_small_trans_table2()">View more details</button>
+                    </div>
+
+                    <div id="trans_table_view_less_forsmall_btn_div" class="table_view_less_forsmall_btn_div">
+                        <button id="trans_table_view_less_forsmall_btn" class="table_view_less_forsmall_btn" onclick="hide_small_trans_table2()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div id="small_screen_trans_table_view_less_btn_div" class="small_screen_table_view_less_btn_div">
+                        <button id="small_screen_trans_table_view_less_btn" class="small_screen_table_view_less_btn" onclick="hide_small_trans_table()">View less details</button>
+                    </div>
+                    <table id="trans_table5">
+                        <tr>
+                            <th>id</th>
+                            <th>size</th>
+                            <th>quantity</th>
+                        </tr>
+                        <tbody>
+                            {% for trans in transactions %}
+                                <tr>
+                                    <td>{{ trans.id }}</td>
+                                    <td>{{ trans.size }}</td>
+                                    <td>{{ trans.quantity }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+        <!-- ======================================================================================================================================== -->
+
+        <!-- ================================== Selling TABLES ====================================================================== -->
+                <div id="selling_table_div" class="table_div">
+                    <h1 id="selling_table_header" class="site_products_count">My Best Selling Products ({{BL}})</h1>
+                    <table id="selling_table1">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Brand</th>
+                            <th>Img</th>
+                            <th>Color</th>
+                            <th>Price</th>
+                            <th>Purchases</th>
+                            <th>Date & Time</th>
+                        </tr>
+                        <tbody>
+                            {% for sell in best_sellers_products %}
+                                <tr>
+                                    <td>{{ sell.id }}</td>
+                                    <td>{{ sell.product_name }}</td>
+                                    <td>{{ sell.brand }}</td>
+                                    <td><img src="static/uploads/{{ sell.img1 }}"></td>
+                                    <td>{{ sell.color }}</td>
+                                    <td class="Price">{{ sell.new_price }}<span class="table_doller">$</span></td>
+                                    <td>{{ sell.purchases }}</td>
+                                    <td>{{ sell.date_time }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+                <div id="selling_table_div2" class="table_div2">
+                    <h1 id="selling_table_header2" class="site_products_count">My Best Selling Products ({{BL}})</h1>
+
+                    <div class="table_view_more_btn_div">
+                        <button id="selling_table_view_more_btn" class="table_view_more_btn" onclick="show_selling_table()">View more details</button>
+                    </div>
+
+                    <table id="selling_table2">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Img</th>
+                            <th>Price</th>
+                            <th>Purchases</th>
+                            <th>Date & Time</th>
+                        </tr>
+                        <tbody>
+                            {% for sell in best_sellers_products %}
+                                <tr>
+                                    <td>{{ sell.id }}</td>
+                                    <td>{{ sell.product_name }}</td>
+                                    <td><img src="static/uploads/{{ sell.img1 }}"></td>
+                                    <td class="Price">{{ sell.new_price }}<span class="table_doller">$</span></td>
+                                    <td>{{ sell.purchases }}</td>
+                                    <td>{{ sell.date_time }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+                <div id="selling_table_div3" class="table_div3">
+                    <h1 class="site_products_count">My Best Selling Products ({{BL}})</h1>
+
+                    <!-- for only small screens -->
+                    <div id="selling_table_view_less_forsmall_btn_ForTableDiv3" class="table_view_less_forsmall_btn_div">
+                        <button id="selling_table_view_less_forsmall_btn2" class="table_view_less_forsmall_btn" onclick="hide_small_selling_table()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div class="table_view_less_btn_div">
+                        <button id="selling_table_view_less_btn" class="table_view_less_btn" onclick="hide_selling_table()">View less details</button>
+                    </div>
+                    <table id="selling_table3">
+                        <tr>
+                            <th>id</th>
+                            <th>Brand</th>
+                            <th>Color</th>
+                        </tr>
+                        <tbody>
+                            {% for sell in best_sellers_products %}
+                                <tr>
+                                    <td>{{ sell.id }}</td>
+                                    <td>{{ sell.brand }}</td>
+                                    <td>{{ sell.color }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_selling_table_div" class="small_screen_table_div">
+                    <h1 class="site_products_count">My Best Selling Products ({{BL}})</h1>
+                    <div id="small_screen_selling_table_view_more_btn_div" class="small_screen_table_view_more_btn_div">
+                        <button id="small_screen_selling_table_view_more_btn" class="small_screen_table_view_more_btn" onclick="show_small_selling_table()">View more details</button>
+                    </div>
+                    <table id="small_selling_table">
+                        <tr>
+                            <th>id</th>
+                            <th>Product name</th>
+                            <th>Img</th>
+                            <th>Purchases</th>
+                        </tr>
+                        <tbody>
+                            {% for sell in best_sellers_products %}
+                                <tr>
+                                    <td>{{ sell.id }}</td>
+                                    <td>{{ sell.product_name }}</td>
+                                    <td><img src="static/uploads/{{ sell.img1}}"></td>
+                                    <td>{{ sell.purchases }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_selling_table_div2" class="small_screen_table_div2">
+                    <h1 class="site_products_count">My Best Selling Products ({{BL}})</h1>
+
+                    <!-- for only extra small screens -->
+                    <div id="selling_table_view_more_forsmall_btn_div" class="table_view_more_forsmall_btn_div">
+                        <button id="selling_table_view_more_forsmall_btn" class="table_view_more_forsmall_btn" onclick="show_small_selling_table2()">View more details</button>
+                    </div>
+
+                    <div id="selling_table_view_less_forsmall_btn_div" class="table_view_less_forsmall_btn_div">
+                        <button id="selling_table_view_less_forsmall_btn" class="table_view_less_forsmall_btn" onclick="hide_small_selling_table2()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div id="small_screen_selling_table_view_less_btn_div" class="small_screen_table_view_less_btn_div">
+                        <button id="small_screen_selling_table_view_less_btn" class="small_screen_table_view_less_btn" onclick="hide_small_selling_table()">View less details</button>
+                    </div>
+                    <table id="selling_table5">
+                        <tr>
+                            <th>id</th>
+                            <th>Price</th>
+                            <th>Date & Time</th>
+                        </tr>
+                        <tbody>
+                            {% for sell in best_sellers_products %}
+                                <tr>
+                                    <td>{{ sell.id }}</td>
+                                    <td>{{ sell.new_price }}</td>
+                                    <td>{{ sell.date_time }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+<!-- ======================================================================================================================== -->
+
+<!-- ================================== USERS TABLES ====================================================================== -->
+                <div id="users_table_div" class="table_div">
+                    <h1 id="users_table_header" class="site_products_count">My Users ({{UL}})</h1>
+                    <table id="users_table1">
+                        <tr>
+                            <th>id</th>
+                            <th>username</th>
+                            <th>email</th>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>country</th>
+                            <th>city</th>
+                            <th>address</th>
+                            <th>apartment no.</th>
+                            <th>phone</th>
+                            <th>cash</th>
+                        </tr>
+                        <tbody>
+
+                            {% for info in users_info %}
+                                <tr>
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.username }}</td>
+                                    <td>{{ info.email }}</td>
+                                    <td>{{ info.first_name }}</td>
+                                    <td>{{ info.last_name }}</td>
+                                    <td>{{ info.country }}</td>
+                                    <td>{{ info.city }}</td>
+                                    <td>{{ info.address }}</td>
+                                    <td>{{ info.apartment_no }}</td>
+                                    <td>{{ info.phone }}</td>
+                                    <td>{{ info.cash }}</td>
+                                </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="users_table_div2" class="table_div2">
+                    <h1 id="users_table_header2" class="site_products_count">My Users ({{UL}})</h1>
+
+                    <div class="table_view_more_btn_div">
+                        <button id="users_table_view_more_btn" class="table_view_more_btn" onclick="show_users_table()">View more details</button>
+                    </div>
+
+                    <table id="users_table2">
+                        <tr>
+                            <th>id</th>
+                            <th>username</th>
+                            <th>email</th>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>country</th>
+                        </tr>
+                        <tbody>
+                            {% for info in users_info %}
+                                <tr>
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.username }}</td>
+                                    <td>{{ info.email }}</td>
+                                    <td>{{ info.first_name }}</td>
+                                    <td>{{ info.last_name }}</td>
+                                    <td>{{ info.country }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <div id="users_table_div3" class="table_div3">
+                    <h1 class="site_products_count">My Users ({{UL}})</h1>
+
+                    <!-- for only small screens -->
+                    <div id="users_table_view_less_forsmall_btn_ForTableDiv3" class="table_view_less_forsmall_btn_div">
+                        <button id="users_table_view_less_forsmall_btn2" class="table_view_less_forsmall_btn" onclick="hide_small_users_table()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div class="table_view_less_btn_div">
+                        <button id="users_table_view_less_btn" class="table_view_less_btn" onclick="hide_users_table()">View less details</button>
+                    </div>
+                    <table id="users_table3">
+                        <tr>
+                            <th>id</th>
+                            <th>city</th>
+                            <th>address</th>
+                            <th>apartment no.</th>
+                            <th>phone</th>
+                            <th>cash</th>
+                        </tr>
+                        <tbody>
+                            {% for info in users_info %}
+                                <tr>
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.city }}</td>
+                                    <td>{{ info.address }}</td>
+                                    <td>{{ info.apartment_no }}</td>
+                                    <td>{{ info.phone }}</td>
+                                    <td>{{ info.cash }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_users_table_div" class="small_screen_table_div">
+                    <h1 class="site_products_count">My Users ({{UL}})</h1>
+                    <div id="small_screen_users_table_view_more_btn_div" class="small_screen_table_view_more_btn_div">
+                        <button id="small_screen_users_table_view_more_btn" class="small_screen_table_view_more_btn" onclick="show_small_users_table()">View more details</button>
+                    </div>
+                    <table id="small_users_table">
+                        <tr>
+                            <th>id</th>
+                            <th>username</th>
+                            <th>email</th>
+                        </tr>
+                        <tbody>
+                            {% for info in users_info %}
+                                <tr>
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.username }}</td>
+                                    <td>{{ info.email }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div id="small_screen_users_table_div2" class="small_screen_table_div2">
+                    <h1 class="site_products_count">My Users ({{UL}})</h1>
+
+                    <!-- for only extra small screens -->
+                    <div id="users_table_view_more_forsmall_btn_div" class="table_view_more_forsmall_btn_div">
+                        <button id="users_table_view_more_forsmall_btn" class="table_view_more_forsmall_btn" onclick="show_small_users_table2()">View more details</button>
+                    </div>
+
+                    <div id="users_table_view_less_forsmall_btn_div" class="table_view_less_forsmall_btn_div">
+                        <button id="users_table_view_less_forsmall_btn" class="table_view_less_forsmall_btn" onclick="hide_small_users_table2()">View less details</button>
+                    </div>
+                    <!-- ===================== -->
+
+                    <div id="small_screen_users_table_view_less_btn_div" class="small_screen_table_view_less_btn_div">
+                        <button id="small_screen_users_table_view_less_btn" class="small_screen_table_view_less_btn" onclick="hide_small_users_table()">View less details</button>
+                    </div>
+                    <table id="users_table5">
+                        <tr>
+                            <th>id</th>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>country</th>
+                        </tr>
+                        <tbody>
+                            {% for info in users_info %}
+                                <tr>
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.first_name }}</td>
+                                    <td>{{ info.last_name }}</td>
+                                    <td>{{ info.country }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+            <footer>
+                <div class="title">
+                    <h3>A CULUTURE OF FASHION</h3>
+                </div>
+                <div class="all_footer">
+                    <div class="footer_container">
+                        <div class="join_us">
+                            <h3>JOIN US</h3>
+                            <a href="/register">sign up</a>
+                        </div>
+                        <div class="contact_us">
+                            <h3>CONTACT US</h3>
+                            <a href="#">contact us</a>
+                        </div>
+                        <div class="social_icons">
+                            <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                            <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                            <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                        </div>
+                        <div class="footer_bar">
+                            <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                            <div class="visa_icons">
+                                <img src="static/visa1.png" alt="VisaCard">
+                                <img src="static/mastercard1.webp" alt="MasterCard">
+                                <img src="static/paypal.png" alt="Paypal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+
+
+{% endblock body %}

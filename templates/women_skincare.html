@@ -1,0 +1,344 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/{{ css }}">
+{% endblock head %}
+{% block body %}
+    <section class="fst_show_women">
+        {% if del_mode_row.del_mode == 1 %}
+
+            <div id="side_cart_div2" class="side_cart_div2">
+                <div class="hed">
+                    <form method="post">
+                        <input type="number" name="del_take" id="del_take">
+                        <button id="close_btn2">Close <span>X</span></button>
+                    </form>
+                    <h1>My Cart</h1>
+                </div>
+                {% for car in user_car %}
+                <div class="side_cart_product">
+                    <div class="product_data">
+                        <div class="cart_pro_title_div">
+                            {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% else %}
+                                <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            {% endif %}
+                        </div>
+                        <div class="cart_priceandcolor_div">
+                            <div class="cart_price_div">
+                                <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                            </div>
+                            <div class="cart_color_div">
+                                <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                            </div>
+                        </div>
+
+                        <div class="cart_sizeandquantity_div">
+                            <div class="cart_size_div">
+                                <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                            </div>
+                            <div class="cart_quantity_div">
+                                <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                            </div>
+                        </div>
+
+
+                        <div class="car_edit_btns">
+                            <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                            <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                        </div>
+
+                    </div>
+                    <div class="product_image">
+                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="cart_foot">
+                    <span class="total_price" id="total_price"></span>
+                </div>
+                <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+            </div>
+        {% else %}
+            <div id="side_cart_div" class="side_cart_div">
+                <div class="hed">
+                    <button id="close_btn">Close <span>X</span></button>
+
+                    <h1>My Cart</h1>
+                </div>
+                {% for car in user_car %}
+                    <div class="side_cart_product">
+                        <div class="product_data">
+                            <div class="cart_pro_title_div">
+                                {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                    <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                {% else %}
+                                    <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                {% endif %}
+                            </div>
+                            <div class="cart_priceandcolor_div">
+                                <div class="cart_price_div">
+                                    <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                                </div>
+                                <div class="cart_color_div">
+                                    <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                                </div>
+                            </div>
+
+                            <div class="cart_sizeandquantity_div">
+                                <div class="cart_size_div">
+                                    <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                                </div>
+                                <div class="cart_quantity_div">
+                                    <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                                </div>
+                            </div>
+
+
+                            <div class="car_edit_btns">
+                                <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                                <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                            </div>
+
+                        </div>
+                        <div class="product_image">
+                            <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="cart_foot">
+                    <span class="total_price" id="total_price"></span>
+                </div>
+                <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+            </div>
+        {% endif %}
+
+
+
+        <script>
+            var total = 0;
+            {% for car in user_car %}
+            total += parseFloat({{ car.price }} * {{ car.quantity}});
+            {% endfor %}
+            let cart_total_price = document.getElementById('total_price')
+            if(cart_total_price)
+            {
+                cart_total_price.innerHTML = "Total Price: "+total+"<span class='total_dolar'>&dollar;</span>";
+            }
+
+            let del_take = document.getElementById('del_take');
+            let close_btn = document.getElementById('close_btn2');
+            close_btn.onclick = function(){
+                del_take.value = 0;
+            }
+        </script>
+
+        <div class="categories">
+            <h1>categories</h1>
+            <div class="category_content">
+                <ul class="category_ul">
+                    <li class="women_menu">
+
+                        <a href="/women">Women</a>
+                        <div class="women_category">
+
+                            <div class="filters">
+                                <a href="#">Clothing</a>
+                                <button class="show_me" onclick="show_btnn1()"><img src="static/arroww.png" alt="arrow"></button>
+                            </div>
+
+                            <div class="hidden">
+                                <div class="sub_hidden">
+                                    <a href="/women-dresses">Dresses</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-tops">Tops</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Jackets&Coats">Jacket & Coats</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Blazers">Blazers</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Pants_Jeans">Pants & jeans</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Shirts_Blouses">Shirts & Blouses</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Sweetshirts_Hoodies">Sweetshirts & Hoodies</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-Skirts">Skirts</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women-SportWear">Sportwear</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/Women-SleepWear">Sleepwear</a>
+                                </div>
+                            </div>
+
+
+                            <div class="filters">
+                                <a href="#">Footwear</a>
+                                <button class="show_me" onclick="show_btnn2()"><img src="static/arroww.png" alt="arrow"></button>
+                            </div>
+
+                            <div class="hidden">
+                                <div class="sub_hidden">
+                                    <a href="/women_flats">Flats</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_sneakers">Sneakers</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_heals">Heals</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_boots">Boots</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_sandals_mules">Sandals & Mules</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_slippers">Slippers</a>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="filters">
+                                <a href="#">Bags</a>
+                                <button class="show_me" onclick="show_btnn3()"><img src="static/arroww.png" alt="arrow"></button>
+                            </div>
+                            <div class="hidden">
+                                <div class="sub_hidden">
+                                    <a href="/women_ShoulderBags">Shoulder Bags</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_Clutch_MiniBags">Clutch & Mini Bags</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_TuteBags">Tute Bags</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_BackPacks">Backpacks</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_LaptopBags">Laptop Bags</a>
+                                </div>
+                            </div>
+
+
+                            <div class="filters">
+                                <a href="#">Jewelry & Accessories</a>
+                                <button class="show_me" onclick="show_btnn4()"><img src="static/arroww.png" alt="arrow"></button>
+                            </div>
+                            <div class="hidden">
+                                <div class="sub_hidden">
+                                    <a href="/women_earrings">Earrings</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_necklaces">Necklaces</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_rings">Rings</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_HairAccessories">Hair Accessories</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_PhoneAccessories">Phone Accessories</a>
+                                </div>
+                            </div>
+
+
+                            <div class="filters">
+                                <a href="#">Beauty</a>
+                                <button class="show_me" onclick="show_btnn5()"><img src="static/arroww.png" alt="arrow"></button>
+                            </div>
+                            <div class="hidden">
+                                <div class="sub_hidden">
+                                    <a href="/women_Bath&Body">Bath & Body</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_skincare">Skincare</a>
+                                </div>
+                                <div class="sub_hidden">
+                                    <a href="/women_haircare">Haircare</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cards_women">
+            <div class="women_header">
+                <h1 id="women_skincare_header">WOMEN SKINCARE ({{women_skincare_products}})</h1>
+            </div>
+
+            <div id="themes_container" class="themes_container">
+                {% for product in products %}
+                    {% if product.section == "women-skincare" %}
+                        <div class="women_theme">
+                            <div class="card_image_div">
+                                <ul>
+                                    <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
+                                    <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
+                                </ul>
+                            </div>
+                            <div class="women_footer">
+                                <h5>{{product.name}}</h5>
+                                <p>{{product.description}}</p>
+                                <div class="prices">
+
+                                    <span class="span2"><span class="span1">USD {{product.old_price}}</span>  USD {{product.new_price}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <footer>
+            <div class="title">
+                <h3>A CULUTURE OF FASHION</h3>
+            </div>
+            <div class="all_footer">
+                <div class="footer_container">
+                    <div class="join_us">
+                        <h3>JOIN US</h3>
+                        <a href="/register">sign up</a>
+                    </div>
+                    <div class="contact_us">
+                        <h3>CONTACT US</h3>
+                        <a href="#">contact us</a>
+                    </div>
+                    <div class="social_icons">
+                        <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                        <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                        <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                    </div>
+                    <div class="footer_bar">
+                        <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                        <div class="visa_icons">
+                            <img src="static/visa1.png" alt="VisaCard">
+                            <img src="static/mastercard1.webp" alt="MasterCard">
+                            <img src="static/paypal.png" alt="Paypal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+{% endblock body %}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    {% block head %}
+        {% if css %}
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='{{ css }}') }}">
+        {% endif %}
+    {% endblock head %}
+    {% if title %}
+        <title>Creativeness Mall-{{title}}</title>
+    {% else %}
+        <title>Creativeness Mall</title>
+    {% endif %}
+</head>
+<body >
+    <header>
+        <nav id="small_nav" class="small_nav">
+            <div>
+                <h5>Free shiping on all orders above <span>399$</span></h5>
+            </div>
+        </nav>
+
+        <nav id="med_nav" class="med_nav">
+            <form method="post" action="/search" class="Search">
+
+                <input class="srch" name="searched" type="text" placeholder="Search" autocomplete="on">
+                <input class="submit" type="submit" value="go">
+
+            </form>
+
+
+            {% if user == "admin@aDmin111" %}
+
+                <h1 id="owner" class="owner_mode">You are the Owner</h1>
+                <a class="cp" href="/dashboard"><button>Controll Pad</button></a>
+
+            {% endif %}
+            <div id="flash0">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                            <p id="msg_red" class="msg_red">{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </nav>
+
+
+
+        <nav id="the_nav" class="the_nav">
+
+            <div class="logo_div">
+                <div id="crt" class="Creativeness">
+                    <a href="/">Creativeness</a>
+                </div>
+
+                <div class="logo">
+
+                    <a href="/" class="logo_icon" id="logo_icon"><img src="static/panda.png" alt="logo"></a>
+
+                    <div id="i_can_see_you" class="i_can_see_you">
+                        <p>I Can See You</p>
+                    </div>
+                </div>
+
+
+
+                <div id="mall" class="mall">
+                    <a href="/">Mall</a>
+                </div>
+            </div>
+
+
+            <div class="navs">
+
+                <span>|</span>
+                <div class="log_car_div">
+                    {% if user %}
+                        {% if user == "admin@aDmin111" %}
+                        <a id="log_out" href="#" onclick="openpopup()">Log out</a>
+                        {% else %}
+                        <ul class="acc_ul">
+                            <li class="acc_menu">
+                                <a id="account" href="#" onclick="acc()">Hi, {{user}}</a>
+                                <ul id="acc_submenu" class="acc_submenu">
+                                    <li class="acc_subsub"><a href="/user_profile">Your profile</a></li>
+                                    <li class="acc_subsub"><a href="#" onclick="openpopup()">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <script>
+                            function acc(){
+                                let acc_submenu = document.getElementById('acc_submenu');
+                                if(acc_submenu.style.display == 'none')
+                                {
+                                    acc_submenu.style.display = 'block';
+                                }else{
+                                    acc_submenu.style.display = 'none';
+                                }
+
+                            }
+                            acc()
+                        </script>
+                        {% endif %}
+                    {% else %}
+                        <a class="login" href="/login"><img src="static/usericon.png" alt="icn"></a>
+                    {% endif %}
+                    <div class="nav_car_div">
+                        {% if user %}
+                            <small class="shopping_car_counter">{{ L }}</small>
+                        {% else %}
+                            <small class="shopping_car_counter">0</small>
+                        {% endif %}
+                        <a id="shopping_car" class="car"><img src="static/shopping_car.png" alt="shopping"></a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </nav>
+
+        <nav id="the_nav2" class="the_nav2">
+
+            <div class="logo_div">
+                <div id="crt" class="Creativeness">
+                    <a href="/">Creativeness</a>
+                </div>
+
+                <div class="logo">
+
+                    <a href="/" class="logo_icon"><img src="static/panda.png" alt="logo"></a>
+                </div>
+
+                <div id="mall" class="mall">
+                    <a href="/">Mall</a>
+                </div>
+            </div>
+
+
+            <div class="navs">
+
+                <span>|</span>
+                <div class="log_car_div">
+                    {% if user %}
+                        {% if user == "admin@aDmin111" %}
+                        <a id="log_out2" href="#" onclick="openpopup()">Log out</a>
+                        {% else %}
+                        <ul class="acc_ul">
+                            <li class="acc_menu">
+                                <a id="account2" href="#" onclick="acc2()">Hi {{user}}</a>
+                                <ul id="acc_submenu2" class="acc_submenu">
+                                    <li class="acc_subsub"><a href="/user_profile">Your profile</a></li>
+                                    <li class="acc_subsub"><a href="#" onclick="openpopup()">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <script>
+                            function acc2(){
+                                let acc_submenu2 = document.getElementById('acc_submenu2');
+                                if(acc_submenu2.style.display == 'none')
+                                {
+                                    acc_submenu2.style.display = 'block';
+                                }else{
+                                    acc_submenu2.style.display = 'none';
+                                }
+
+                            }
+                            acc2()
+                        </script>
+                        {% endif %}
+                    {% else %}
+                        <a class="login" href="/login"><img src="static/usericon.png" alt="icn"></a>
+                    {% endif %}
+                    <div class="nav_car_div">
+                        {% if user %}
+                            <small class="shopping_car_counter">{{ L }}</small>
+                        {% else %}
+                            <small class="shopping_car_counter">0</small>
+                        {% endif %}
+                        <a id="shopping_car2" class="car" ><img src="static/shopping_car.png" alt="shopping" width="10"></a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </nav>
+
+
+            <ul class="navigation">
+                <div class="nav-menu">
+                    <li class="menu">
+                        <a href="/women">Women</a>
+
+                        <ul class="submenu-w">
+                            <li>
+                                <a class="menu1-w" href="">CLOTHING</a>
+                                <div class="sub-sub">
+                                    <a href="/women-dresses">Dresses</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-tops">Tops</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Jackets&Coats">Jacket & Coats</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Blazers">Blazers</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Pants_Jeans">Pants & Jeans</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Shirts_Blouses">Shirts & Blouses</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Sweetshirts_Hoodies">Sweetshirts & Hoodies</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-Skirts">Skirts</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women-SportWear">SportWear</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/Women-SleepWear">Sleepwear</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#">FOOTWEARS</a>
+                                <div class="sub-sub">
+                                    <a href="/women_flats">Flats</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_sneakers">Sneakers</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_heals">Heals</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_boots">Boots</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_sandals_mules">Sandals & Mules</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_slippers">Slippers</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">BAGS</a>
+                                <div class="sub-sub">
+                                    <a href="/women_ShoulderBags">Shoulder Bags</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_Clutch_MiniBags">Clutch & Mini Bags</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_TuteBags">Tute Bags</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_BackPacks">Backpacks</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_LaptopBags">Laptop Bags</a>
+                                </div>
+
+                            </li>
+                            <li class="Jewelry_li">
+                                <a href="#">JEWELRY & ACCESSORIES</a>
+                                <div class="sub-sub">
+                                    <a href="/women_earrings">Earrings</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_necklaces">Necklaces</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_rings">Rings</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_HairAccessories">Hair Accessories</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_PhoneAccessories">Phone Accessories</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">BEAUTY</a>
+                                <div class="sub-sub">
+                                    <a href="/women_Bath&Body">Bath & Body</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_skincare">Skincare</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/women_haircare">Haircare</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="menu">
+                        <a href="/men">Men</a>
+                        <ul class="submenu-w">
+                            <li>
+                                <a href="#">CLOTHING</a>
+                                <div class="sub-sub">
+                                    <a href="/men_sweetshirts&hoodies">Sweetshirts & Hoodies</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_pullover&sweeters">Pullover and Sweeters</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_jackets">Jackets</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_shirts">Shirts</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_tshirts">T-shirts</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_pants&sweetpants">Pants & Sweetpants</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_sportswear">Sportwear</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_FullSuits">Full suits</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">FOOTWEAR</a>
+                                <div class="sub-sub">
+                                    <a href="/men_shoes">Shoes</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_sneakers">Sneakers</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">ACCESSORIES</a>
+                                <div class="sub-sub">
+                                    <a href="/men_bracelets">Bracelets</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/men_socks">Socks</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">BEAUTY</a>
+                                <div class="sub-sub">
+                                    <a href="/men_perfumes">Perfumes</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu">
+                        <a href="/kids">Kids</a>
+                        <ul id="sub_kids" class="submenu-w">
+                            <li>
+                                <a href="#">Boys</a>
+                                <div class="sub-sub">
+                                    <a href="/kids_boys_sweetshirts&hoodies">Sweetshirts & Hoodies</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_boys_Tshirts&Polos">T-shirts & Polos</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_boys_Pants&Sweetpants">Pants & Sweetpants</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_boys_shorts">Shorts</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_boys_footwear">Footwear</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Girls</a>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_tops">Tops</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_Sweetshirts&Hoodies">Sweetshirts & Hoodies</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_Dresses&JumpSuits">Dresses & Jumpsuits</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_Jacket&Coats">Jacket & Coats</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_Pants&SweetPants">Pants & Sweetpants</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_skirts">Skirts</a>
+                                </div>
+                                <div class="sub-sub">
+                                    <a href="/kids_girls_footwear">Footwear</a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </li>
+
+                    <li class="menu">
+                        <a id="NEW_ARRIVALS" href="/new_arrivals">New arrivals</a>
+                        <ul class="submenu">
+                            <li><a href="/new_arrivals_women">Women</a></li>
+                            <li><a href="/new_arrivals_men">Men</a></li>
+                            <li><a href="/new_arrivals_kids">Kids</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a id="BEST_SELLERS" href="/best_sellers">Best sellers</a>
+                        <ul class="submenu">
+                            <li><a href="/best_sellers_women">Women</a></li>
+                            <li><a href="/best_sellers_men">Men</a></li>
+                            <li><a href="/best_sellers_kids">Kids</a></li>
+                            <li><a href="/best_sellers_jewelry">Jewelry & Beauty</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/brands">Brands</a>
+                        <ul class="submenu">
+                            <li><a href="/brands_calvin">Calvin Klein</a></li>
+                            <li><a href="/brands_puma">Puma</a></li>
+                            <li><a href="/brands_lacoste">Lacoste</a></li>
+                            <li><a href="/brands_fila">Fila</a></li>
+                            <li><a href="/brands_dockers">Dockers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu">
+                        <a href="/sale">Sale</a>
+                    </li>
+                </div>
+            </ul>
+
+
+
+
+    </header>
+   <div id="pop-up-container" class="pop-up-container">
+        <div id="pop-up" class="pop-up">
+            <h1>are you sure you want to sign out ?</h1>
+            <div class="confirmation">
+                <button id="yes" onclick="signout()">yes</button>
+                <button id="no" onclick="closepopup()">no</button>
+            </div>
+        </div>
+   </div>
+
+   <div id="go_up_btn_div" onclick="topFunction()"><img id="go_up_img" src="static/up_arrow3.png"></div>
+
+    {% block body %}
+    {% endblock body %}
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+
+</html>

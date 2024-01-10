@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+{% endblock head %}
+{% block body %}
+<div class="register_container">
+    <div class="head">
+        <h1 class="hedd">Registration Page</h1>
+    </div>
+    <div class="login_form_div">
+        <form class="login_form" action="" method="POST">
+            {{form.hidden_tag()}}
+            {{form.username ( class="username", autocomplete="off"  )}}
+            {% for error in form.username.errors %}
+                <p class="register_error">{{error}}</p>
+            {% endfor %}
+            <br>
+            <br>
+
+            {{form.email ( class="username" )}}
+            {% for error in form.email.errors %}
+                <p class="register_error">{{error}}</p>
+            {% endfor %}
+            {% if not form.email.errors %}
+            <br>
+            {% endif %}
+            {{form.password ( class="password", autocomplete="off" )}}
+            {% for error in form.password.errors %}
+                <p class="register_error">{{error}}</p>
+            {% endfor %}
+            {% if not form.email.errors %}
+            <br>
+            {% endif %}
+            {{form.confirm ( class="password", autocomplete="off" )}}
+            {% for error in form.confirm.errors %}
+                <p class="register_error">{{error}}</p>
+            {% endfor %}
+            {% if not form.email.errors %}
+            <br>
+            {% endif %}
+            {{form.submit ( class="submit1" )}}
+        </form>
+    </div>
+
+    <div class="ask_div">
+        <a class="ask" href="/login">already have an account? Log In</a>
+    </div>
+
+    <footer>
+        <div class="title">
+            <h3>A CULUTURE OF FASHION</h3>
+        </div>
+        <div class="all_footer">
+            <div class="footer_container">
+                <div class="join_us">
+                    <h3>JOIN US</h3>
+                    <a href="#">sign up</a>
+                </div>
+                <div class="contact_us">
+                    <h3>CONTACT US</h3>
+                    <a href="#">contact us</a>
+                </div>
+                <div class="social_icons">
+                    <a gref="#"><img src="static/facebook1.png" alt="facebook"></a>
+                    <a gref="#"><img src="static/instagram.png" alt="instagram"></a>
+                    <a gref="#"><img src="static/youtube.png" alt="youtube"></a>
+                </div>
+                <div class="footer_bar">
+                    <h6>© CREATIVENESS 2023. All Rights Reserved</h6>
+                    <div class="visa_icons">
+                        <img src="static/visa1.png" alt="VisaCard">
+                        <img src="static/mastercard1.webp" alt="MasterCard">
+                        <img src="static/paypal.png" alt="Paypal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock body %}
