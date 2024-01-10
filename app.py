@@ -286,17 +286,17 @@ def home():
                     if del_take:
                         del_mode_row.del_mode = 0
                         db.session.commit()
-                        return render_template("home.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
+                        return render_template("index.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
                     else:
-                        return render_template("home.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
+                        return render_template("index.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
         else:
             if g.user:
                 if g.id:
                     user_car = UserProducts.query.filter_by(user_id=session['id']).all()
                     L = len(user_car)
                     del_mode_row = DeleteMode.query.filter_by(user_id=session["id"]).first()
-                    return render_template("home.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
-        return render_template("home.html", title="Home", css="main.css", del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
+                    return render_template("index.html", title="Home", css="main.css", user=session["user"], flash=flash, user_car=user_car, L=L, del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
+        return render_template("index.html", title="Home", css="main.css", del_mode_row=del_mode_row, newarrivals_women_product=newarrivals_women_product, best_sellers_women_products=best_sellers_women_products, best_sellers_men_products=best_sellers_men_products, newarrivals_men_product=newarrivals_men_product, newarrivals_kids_product=newarrivals_kids_product)
 
 @app.before_request
 def before_request():
