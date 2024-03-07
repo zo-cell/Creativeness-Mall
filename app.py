@@ -6,6 +6,11 @@ from wtforms.validators import InputRequired, Length, ValidationError, DataRequi
 from flask_bcrypt import Bcrypt
 from datetime import datetime
 from werkzeug.utils import secure_filename
+import pandas as pd
+from dotenv import load_dotenv
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import os
 
 db = SQLAlchemy()
@@ -17,7 +22,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
 app.config['SECRET_KEY']=os.urandom(32)
 db.init_app(app)
 
-
+cloudinary.config(
+    cloud_name="drnoxkesy",
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+    secure=True,
+)
 
 
 class User(db.Model):
@@ -517,6 +527,8 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
+                    cloudinary.uploader.upload_image(app.config["IMAGE_UPLOADS"] + "/" + img1.filename)
+                    image_api = cloudinary.CloudinaryImage(img1.filename).image()
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
                 if img3 != None:
@@ -532,7 +544,7 @@ def creation_form(sec):
                 ST = sec
 
                 # posting in the database tables the new product:
-                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image1, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
+                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image_api, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
                 db.session.add(NewProduct)
                 NewColor = Colors(color1=color1, color2=color2, color3=color3, color4=color4, color5=color5)
                 db.session.add(NewColor)
