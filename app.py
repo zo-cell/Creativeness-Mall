@@ -401,7 +401,7 @@ def dashboard_back():
     return redirect("/dashboard")
 
 
-app.config["IMAGE_UPLOADS"] = "https://api.render.com/deploy/srv-cnkou80cmk4c739cvqpg?key=kg1Fe12RRVs"
+app.config["IMAGE_UPLOADS"] = "postgres://shadysamy:4jU3prTwQkwRLSGirqgxkpWHc2aVMih0@dpg-cnjk4n7109ks73bphtmg-a/ecommercedb_hvic"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
