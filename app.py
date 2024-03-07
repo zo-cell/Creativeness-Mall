@@ -401,7 +401,7 @@ def dashboard_back():
     return redirect("/dashboard")
 
 
-app.config["IMAGE_UPLOADS"] = "/static/uploads"
+app.config["IMAGE_UPLOADS"] = "https://api.render.com/deploy/srv-cnkou80cmk4c739cvqpg?key=kg1Fe12RRVs"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
