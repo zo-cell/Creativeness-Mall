@@ -401,7 +401,7 @@ def dashboard_back():
     return redirect("/dashboard")
 
 
-app.config["IMAGE_UPLOADS"] = "/workspaces/140069059/project/Creativeness-Mall/static/uploads"
+app.config["IMAGE_UPLOADS"] = "/static/uploads"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
