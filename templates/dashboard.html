@@ -397,7 +397,7 @@
                                     <td class="Price">{{ product.old_price }}<span class="table_doller">$</span></td>
                                     <td class="Price">{{ product.new_price }}<span class="table_doller">$</span></td>
                                     {% if product.img1 != "no_photo.jpg" %}
-                                        <td>{{product.img1}}</td>
+                                        <td><img src="{{product.img1}}" alt="img1"></td>
                                     {% else %}
                                     <td>No photos</td>
                                     {% endif %}
