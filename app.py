@@ -498,7 +498,7 @@ def creation_form(sec):
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     flash(path)
-                    session["img1"] = img1
+                    session["img1"] = image1
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
