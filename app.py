@@ -540,7 +540,7 @@ def creation_form(sec):
                     
                     # upload_result = cloudinary.uploader.upload(img1)
                     # app.logger.info(upload_result)
-                    return jsonify(upload_result)
+                    # return jsonify(upload_result)
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
                 if img3 != None:
