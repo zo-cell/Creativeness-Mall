@@ -510,6 +510,8 @@ def creation_form(sec):
                     
                     upload_result = cloudinary.uploader.upload(img1)
                     image_info = cloudinary.api.resource
+                    # image_api = cloudinary.CloudinaryImage(img1.filename).image()["secure_url"]
+                    flash(upload_result["secure_url"])
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
                 if img2 != None:
