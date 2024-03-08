@@ -24,8 +24,8 @@ db.init_app(app)
 
 cloudinary.config(
     cloud_name="drnoxkesy",
-    api_key=os.getenv('CLOUDINARY_API_KEY'),
-    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+    api_key=os.getenv('828688123921376'),
+    api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
     secure=True,
 )
 
