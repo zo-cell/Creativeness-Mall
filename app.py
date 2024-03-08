@@ -428,7 +428,7 @@ def creation_form(sec):
         api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
         secure=True,
     )
-
+    path = None
     # getting products from database and getting ots length:
     products = Products.query.order_by(Products.id).all()
     LP = len(products)
