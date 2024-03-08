@@ -402,6 +402,7 @@ def creation_form(sec):
     # getting products from database and getting ots length:
     products = Products.query.order_by(Products.id).all()
     LP = len(products)
+    image_api = "no_photo.jpg"
 
     if request.method == "POST":
         if g.user:
@@ -510,6 +511,7 @@ def creation_form(sec):
                     upload_result = cloudinary.uploader.upload(img1)
                     image_info = cloudinary.api.resource
                     image_api = upload_result["secure_url"]
+                    
                     # image_api = cloudinary.CloudinaryImage(img1.filename).image()["secure_url"]
                     # flash(upload_result["secure_url"])
                     # app.logger.info(upload_result)
