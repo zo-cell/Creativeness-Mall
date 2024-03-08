@@ -406,7 +406,7 @@ def dashboard_back():
 
 
 # upload_folder = os.path.join('static','uploads')
-app.config["IMAGE_UPLOADS"] = "/static"
+app.config["IMAGE_UPLOADS"] = os.getcwd()
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
@@ -528,7 +528,7 @@ def creation_form(sec):
 
                 # saving images on the server:
                 if img1 != None:
-                    # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
+                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
@@ -538,8 +538,8 @@ def creation_form(sec):
                         secure=True,
                     )
                     
-                    upload_result = cloudinary.uploader.upload(img1)
-                    app.logger.info(upload_result)
+                    # upload_result = cloudinary.uploader.upload(img1)
+                    # app.logger.info(upload_result)
                     return jsonify(upload_result)
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
