@@ -24,6 +24,18 @@ db.init_app(app)
 
 
 
+
+cloudinary.config(
+    cloud_name="drnoxkesy",
+    api_key="828688123921376", 
+    api_secret="i0reEJH3AzbvkqP119DjXEzvKa8",
+)
+
+
+
+
+
+
 class User(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
@@ -306,14 +318,10 @@ def home():
 def before_request():
     g.user = None
     g.id = None
-    g.img1 = None
 
     if "user" in session and "id" in session:
         g.user = session["user"]
         g.id = session["id"]
-        
-    if "img1" in session:
-        g.img1 = session["img1"]
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -375,7 +383,7 @@ def dashboard_back():
 
 # upload_folder = os.path.join('static','uploads')
 # app.config["IMAGE_UPLOADS"] = os.getcwd()
-app.config["IMAGE_UPLOADS"] = "/opt/render/project/src/"
+# app.config["IMAGE_UPLOADS"] = "/opt/render/project/src/"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
@@ -390,12 +398,7 @@ def allowed_image(filename):
 @app.route("/creation_form-<string:sec>", methods=["GET", "POST"])
 def creation_form(sec):
     # app.logger.info('in creation_form-<string:sec> route')
-    cloudinary.config(
-        cloud_name="drnoxkesy",
-        api_key="828688123921376", 
-        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8",
-    )
-    path = None
+    
     # getting products from database and getting ots length:
     products = Products.query.order_by(Products.id).all()
     LP = len(products)
@@ -499,19 +502,16 @@ def creation_form(sec):
                     # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     # path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     # flash(path)
-                    session["img1"] = image1
+                    # session["img1"] = image1
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
-                    cloudinary.config(
-                        cloud_name="drnoxkesy",
-                        api_key="828688123921376", 
-                        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8",
-                    )
+                    
                     
                     upload_result = cloudinary.uploader.upload(img1)
                     image_info = cloudinary.api.resource
+                    image_api = upload_result["secure_url"]
                     # image_api = cloudinary.CloudinaryImage(img1.filename).image()["secure_url"]
-                    flash(upload_result["secure_url"])
+                    # flash(upload_result["secure_url"])
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
                 if img2 != None:
@@ -529,7 +529,7 @@ def creation_form(sec):
                 ST = sec
 
                 # posting in the database tables the new product:
-                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image1, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
+                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image_api, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
                 db.session.add(NewProduct)
                 NewColor = Colors(color1=color1, color2=color2, color3=color3, color4=color4, color5=color5)
                 db.session.add(NewColor)
@@ -585,12 +585,6 @@ def dashboard():
             user_car = UserProducts.query.filter_by(user_id=session['id']).all()
             L = len(user_car)
             return render_template("dashboard.html", title="Controll pad", css="dashboard.css", user=session["user"], products=products, user_car=user_car, L=L, LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
-    if g.user:
-        if g.id:
-            if g.img1:
-                user_car = UserProducts.query.filter_by(user_id=session['id']).all()
-                L = len(user_car)
-                return render_template("dashboard.html", title="Controll pad", css="dashboard.css", user=session["user"], products=products, user_car=user_car, L=L, LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products, img1=session["img1"])
     return render_template("dashboard.html", title="Controll pad", css="dashboard.css", LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
 
 
