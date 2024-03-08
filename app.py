@@ -308,9 +308,11 @@ def before_request():
     g.id = None
     g.img1 = None
 
-    if "user" in session and "id" in session and "img1" in session:
+    if "user" in session and "id" in session:
         g.user = session["user"]
         g.id = session["id"]
+        
+    if "img1" in session:
         g.img1 = session["img1"]
 
 
