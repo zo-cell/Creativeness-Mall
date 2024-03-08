@@ -306,10 +306,12 @@ def home():
 def before_request():
     g.user = None
     g.id = None
+    g.img1 = None
 
-    if "user" in session and "id" in session:
+    if "user" in session and "id" in session and "img1" in session:
         g.user = session["user"]
         g.id = session["id"]
+        g.img1 = session["img1"]
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -361,43 +363,7 @@ def logout():
     return redirect("/login")
 
 
-@app.route("/dashboard")
-def dashboard():
 
-    # getting all products from database for product table in the dashboard:
-    products = Products.query.order_by(Products.id).all()
-
-    # getting all transactions from database for transactions table in the dashboard:
-    transactions = Transactions.query.order_by(Transactions.id).all()
-
-    # getting all the best sellers products from database for best sellers table in the dashboard:
-    best_sellers_products = OwnerTransactions.query.order_by(OwnerTransactions.purchases.desc()).all()
-
-    # getting all users from database for users table in the dashboard:
-    users = User.query.order_by(User.id).all()
-
-    # getting all user informations from database for user inforamtion table in the dashboard:
-    users_info = UserInformation.query.order_by(UserInformation.id).all()
-
-    # getting the length of transactions:
-    TL = len(transactions)
-
-    # getting the length of best sellers:
-    BL = len(best_sellers_products)
-
-    # getting the length of the users:
-    UL = len(users)
-
-    # getting the length of products:
-    LP = len(products)
-
-    if g.user:
-        if g.id:
-
-            user_car = UserProducts.query.filter_by(user_id=session['id']).all()
-            L = len(user_car)
-            return render_template("dashboard.html", title="Controll pad", css="dashboard.css", user=session["user"], products=products, user_car=user_car, L=L, LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
-    return render_template("dashboard.html", title="Controll pad", css="dashboard.css", LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
 
 
 @app.route("/dashboard_back")
@@ -532,6 +498,7 @@ def creation_form(sec):
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     flash(path)
+                    session["img1"] = img1
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
@@ -572,8 +539,63 @@ def creation_form(sec):
             if g.id:
                 user_car = UserProducts.query.filter_by(user_id=session['id']).all()
                 L = len(user_car)
-                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car, img1=img1)
-    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec, img1=img1)
+                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car)
+    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec)
+
+
+
+
+
+
+@app.route("/dashboard")
+def dashboard():
+
+    # getting all products from database for product table in the dashboard:
+    products = Products.query.order_by(Products.id).all()
+
+    # getting all transactions from database for transactions table in the dashboard:
+    transactions = Transactions.query.order_by(Transactions.id).all()
+
+    # getting all the best sellers products from database for best sellers table in the dashboard:
+    best_sellers_products = OwnerTransactions.query.order_by(OwnerTransactions.purchases.desc()).all()
+
+    # getting all users from database for users table in the dashboard:
+    users = User.query.order_by(User.id).all()
+
+    # getting all user informations from database for user inforamtion table in the dashboard:
+    users_info = UserInformation.query.order_by(UserInformation.id).all()
+
+    # getting the length of transactions:
+    TL = len(transactions)
+
+    # getting the length of best sellers:
+    BL = len(best_sellers_products)
+
+    # getting the length of the users:
+    UL = len(users)
+
+    # getting the length of products:
+    LP = len(products)
+
+    if g.user:
+        if g.id:
+            user_car = UserProducts.query.filter_by(user_id=session['id']).all()
+            L = len(user_car)
+            return render_template("dashboard.html", title="Controll pad", css="dashboard.css", user=session["user"], products=products, user_car=user_car, L=L, LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
+    if g.user:
+        if g.id:
+            if g.img1:
+                user_car = UserProducts.query.filter_by(user_id=session['id']).all()
+                L = len(user_car)
+                return render_template("dashboard.html", title="Controll pad", css="dashboard.css", user=session["user"], products=products, user_car=user_car, L=L, LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products, img1=session["img1"])
+    return render_template("dashboard.html", title="Controll pad", css="dashboard.css", LP=LP, TL=TL, BL=BL, UL=UL, users=users, users_info=users_info, transactions=transactions, best_sellers_products=best_sellers_products)
+
+
+
+
+
+
+
 
 
 @app.route("/update<int:id>", methods=["GET", "POST"])
