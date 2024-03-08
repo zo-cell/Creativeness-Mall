@@ -502,10 +502,10 @@ def creation_form(sec):
                     img5 = None
 
                 # securing filenames before saving it on the server:
-                if img1 != None:
-                    image1 = secure_filename(img1.filename)
-                else:
-                    image1 = "no_photo.jpg"
+                # if img1 != None:
+                #     image1 = secure_filename(img1.filename)
+                # else:
+                #     image1 = "no_photo.jpg"
 
                 if img2 != None:
                     image2 = secure_filename(img2.filename)
@@ -527,7 +527,7 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
-                    cloudinary.uploader.upload_image(img1.filename)
+                    cloudinary.uploader.upload(img1)
                     
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
