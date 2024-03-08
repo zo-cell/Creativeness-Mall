@@ -541,7 +541,7 @@ def creation_form(sec):
                         secure=True,
                     )
                     
-                    upload_result = cloudinary.uploader.upload(path, api_key=os.getenv('828688123921376'))
+                    # upload_result = cloudinary.uploader.upload(path, api_key=os.getenv('828688123921376'))
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
                 if img2 != None:
@@ -572,8 +572,8 @@ def creation_form(sec):
             if g.id:
                 user_car = UserProducts.query.filter_by(user_id=session['id']).all()
                 L = len(user_car)
-                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car)
-    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec)
+                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car, img1=img1)
+    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec, img1=img1)
 
 
 @app.route("/update<int:id>", methods=["GET", "POST"])
