@@ -391,10 +391,9 @@ def allowed_image(filename):
 def creation_form(sec):
     # app.logger.info('in creation_form-<string:sec> route')
     cloudinary.config(
-        cloud_name="drnoxkesy",
-        api_key=os.getenv('828688123921376'),
-        api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
-        secure=True,
+        cloud_name="drnoxkesy,
+        api_key="828688123921376", 
+        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8,
     )
     path = None
     # getting products from database and getting ots length:
@@ -504,10 +503,9 @@ def creation_form(sec):
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
-                        cloud_name="drnoxkesy",
-                        api_key=os.getenv('828688123921376'),
-                        api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
-                        secure=True,
+                        cloud_name="drnoxkesy,
+                        api_key="828688123921376", 
+                        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8,
                     )
                     
                     upload_result = cloudinary.uploader.upload(img1)
