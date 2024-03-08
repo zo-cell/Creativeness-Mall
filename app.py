@@ -527,7 +527,7 @@ def creation_form(sec):
 
                 # saving images on the server:
                 if img1 != None:
-                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
+                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     # cloudinary.uploader.upload(secured_image)
                     
