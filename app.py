@@ -497,9 +497,9 @@ def creation_form(sec):
 
                 # saving images on the server:
                 if img1 != None:
-                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
-                    path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
-                    flash(path)
+                    # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
+                    # path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
+                    # flash(path)
                     session["img1"] = image1
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
@@ -510,7 +510,8 @@ def creation_form(sec):
                         secure=True,
                     )
                     
-                    # upload_result = cloudinary.uploader.upload(path, api_key=os.getenv('828688123921376'))
+                    upload_result = cloudinary.uploader.upload(img1)
+                    image_info = cloudinary.api.resource
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
                 if img2 != None:
