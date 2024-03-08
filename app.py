@@ -406,7 +406,8 @@ def dashboard_back():
 
 
 # upload_folder = os.path.join('static','uploads')
-app.config["IMAGE_UPLOADS"] = os.getcwd()
+# app.config["IMAGE_UPLOADS"] = os.getcwd()
+app.config["IMAGE_UPLOADS"] = "/opt/render/project/src/"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
@@ -529,7 +530,7 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
-                    path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
+                    # path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     flash(path)
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
@@ -558,7 +559,7 @@ def creation_form(sec):
                 ST = sec
 
                 # posting in the database tables the new product:
-                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=path, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
+                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image1, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
                 db.session.add(NewProduct)
                 NewColor = Colors(color1=color1, color2=color2, color3=color3, color4=color4, color5=color5)
                 db.session.add(NewColor)
