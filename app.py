@@ -410,8 +410,9 @@ def dashboard():
 def dashboard_back():
     return redirect("/dashboard")
 
-
-app.config["IMAGE_UPLOADS"] = "Creativeness-Mall/static/uploads"
+#"Creativeness-Mall/static/uploads"
+upload_folder = os.path.join('static','uploads')
+app.config["IMAGE_UPLOADS"] = upload_folder
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
@@ -501,11 +502,11 @@ def creation_form(sec):
                 else:
                     img5 = None
 
-                # securing filenames before saving it on the server:
-                # if img1 != None:
-                #     image1 = secure_filename(img1.filename)
-                # else:
-                #     image1 = "no_photo.jpg"
+                securing filenames before saving it on the server:
+                if img1 != None:
+                    image1 = secure_filename(img1.filename)
+                else:
+                    image1 = "no_photo.jpg"
 
                 if img2 != None:
                     image2 = secure_filename(img2.filename)
@@ -526,8 +527,9 @@ def creation_form(sec):
 
                 # saving images on the server:
                 if img1 != None:
-                    # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
-                    cloudinary.uploader.upload(img1)
+                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
+                    secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
+                    cloudinary.uploader.upload(secured_image)
                     
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
