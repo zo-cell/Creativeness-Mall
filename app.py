@@ -393,7 +393,7 @@ def creation_form(sec):
     cloudinary.config(
         cloud_name="drnoxkesy",
         api_key="828688123921376", 
-        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8,
+        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8",
     )
     path = None
     # getting products from database and getting ots length:
@@ -503,9 +503,9 @@ def creation_form(sec):
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
-                        cloud_name="drnoxkesy,
+                        cloud_name="drnoxkesy",
                         api_key="828688123921376", 
-                        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8,
+                        api_secret="i0reEJH3AzbvkqP119DjXEzvKa8",
                     )
                     
                     upload_result = cloudinary.uploader.upload(img1)
