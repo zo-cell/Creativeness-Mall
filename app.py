@@ -541,7 +541,7 @@ def creation_form(sec):
                         secure=True,
                     )
                     
-                    # upload_result = cloudinary.uploader.upload(img1)
+                    upload_result = cloudinary.uploader.upload(path, api_key=os.getenv('828688123921376'))
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
                 if img2 != None:
