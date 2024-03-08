@@ -407,6 +407,7 @@ def dashboard_back():
 
 # upload_folder = os.path.join('static','uploads')
 app.config["IMAGE_UPLOADS"] = os.getcwd()
+path = app.config["IMAGE_UPLOADS"]
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPG", "JPEG", "WEBP", "AVIF", "GIF"]
 
 def allowed_image(filename):
@@ -529,6 +530,7 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
+                    flash(path)
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
                     cloudinary.config(
@@ -569,8 +571,8 @@ def creation_form(sec):
             if g.id:
                 user_car = UserProducts.query.filter_by(user_id=session['id']).all()
                 L = len(user_car)
-                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car)
-    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec)
+                return render_template("creation_form.html", title="creating a new product", css="creation_form.css", user=session["user"], sec=sec, L=L, user_car=user_car, path=path)
+    return render_template("creation_form.html", title="creating a new product", css="creation_form.css", sec=sec, path=path)
 
 
 @app.route("/update<int:id>", methods=["GET", "POST"])
