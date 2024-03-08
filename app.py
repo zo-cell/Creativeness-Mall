@@ -22,12 +22,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
 app.config['SECRET_KEY']=os.urandom(32)
 db.init_app(app)
 
-cloudinary.config(
-    cloud_name="drnoxkesy",
-    api_key=os.getenv('828688123921376'),
-    api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
-    secure=True,
-)
 
 
 class User(db.Model):
@@ -426,6 +420,13 @@ def allowed_image(filename):
 
 @app.route("/creation_form-<string:sec>", methods=["GET", "POST"])
 def creation_form(sec):
+    app.logger.info('in creation_form-<string:sec> route')
+    cloudinary.config(
+        cloud_name="drnoxkesy",
+        api_key=os.getenv('828688123921376'),
+        api_secret=os.getenv('i0reEJH3AzbvkqP119DjXEzvKa8'),
+        secure=True,
+    )
 
     # getting products from database and getting ots length:
     products = Products.query.order_by(Products.id).all()
