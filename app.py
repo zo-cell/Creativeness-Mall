@@ -502,7 +502,7 @@ def creation_form(sec):
                 else:
                     img5 = None
 
-                securing filenames before saving it on the server:
+                # securing filenames before saving it on the server:
                 if img1 != None:
                     image1 = secure_filename(img1.filename)
                 else:
