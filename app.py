@@ -18,7 +18,7 @@ app = Flask(__name__)
 app.app_context().push()
 # app.app_context()
 bcrypt = Bcrypt(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///instance/database.db"
 app.config['SECRET_KEY']=os.urandom(32)
 db.init_app(app)
 
