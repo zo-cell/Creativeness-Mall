@@ -391,7 +391,7 @@ def allowed_image(filename):
 def creation_form(sec):
     # app.logger.info('in creation_form-<string:sec> route')
     cloudinary.config(
-        cloud_name="drnoxkesy,
+        cloud_name="drnoxkesy",
         api_key="828688123921376", 
         api_secret="i0reEJH3AzbvkqP119DjXEzvKa8,
     )
