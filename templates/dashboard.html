@@ -397,30 +397,55 @@
                                     <td class="Price">{{ product.old_price }}<span class="table_doller">$</span></td>
                                     <td class="Price">{{ product.new_price }}<span class="table_doller">$</span></td>
                                     {% if product.img1 != "no_photo.jpg" %}
-                                        <td><img src="{{product.img1}}" alt="img1"></td>
+                                        {% if "https" in product.img1 or "http" in product.img1 %}
+                                            <td><img src="{{product.img1}}" alt="img1"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{product.img1}}" alt="img1"></td>
+                                        {% endif %}
                                     {% else %}
-                                    <td>No photos</td>
+                                        <td>No photos</td>
                                     {% endif %}
+                                    
                                     {% if product.img2 != "no_photo.jpg" %}
-                                        <td><img src="static/uploads/{{product.img2}}" alt="img2"></td>
+                                        {% if "https" in product.img2 or "http" in product.img2 %}
+                                            <td><img src="{{product.img2}}" alt="img2"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{product.img2}}" alt="img2"></td>    
+                                        {% endif %}
                                     {% else %}
                                         <td>No photos</td>
                                     {% endif %}
-                                    {% if product.img3 != "no_photo.jpg"%}
-                                        <td><img src="static/uploads/{{product.img3}}" alt="img3"></td>
+                                    
+                                    {% if product.img3 != "no_photo.jpg" %}
+                                        {% if "https" in product.img3 or "http" in product.img3 %}
+                                            <td><img src="{{product.img3}}" alt="img3"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{product.img3}}" alt="img3"></td>    
+                                        {% endif %}
                                     {% else %}
                                         <td>No photos</td>
                                     {% endif %}
+                                    
                                     {% if product.img4 != "no_photo.jpg" %}
-                                        <td><img src="static/uploads/{{product.img4}}" alt="img4"></td>
+                                        {% if "https" in product.img4 or "http" in product.img4 %}
+                                            <td><img src="{{product.img4}}" alt="img4"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{product.img4}}" alt="img4"></td>    
+                                        {% endif %}
                                     {% else %}
                                         <td>No photos</td>
                                     {% endif %}
+                                    
                                     {% if product.img5 != "no_photo.jpg" %}
-                                        <td><img src="static/uploads/{{product.img5}}" alt="img5"></td>
+                                        {% if "https" in product.img5 or "http" in product.img5 %}
+                                            <td><img src="{{product.img5}}" alt="img5"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{product.img5}}" alt="img5"></td>    
+                                        {% endif %}
                                     {% else %}
                                         <td>No photos</td>
                                     {% endif %}
+                                    
                                     <td><a class="a_update" href="/update{{product.id}}"><button class="updatebtnn" id="update_btn">Update</button></a></td>
 
                                     <td><a class="a_delete" href="/delete/{{product.id}}"><button class="deletebtnn" id="deletee_btn">Delete</button></a></td>
