@@ -530,7 +530,7 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
-                    # path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
+                    path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     flash(path)
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
                     
