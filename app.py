@@ -516,14 +516,30 @@ def creation_form(sec):
                     # flash(upload_result["secure_url"])
                     # app.logger.info(upload_result)
                     # return jsonify(upload_result)
+                
                 if img2 != None:
-                    img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
+                    # img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
+                    upload_result = cloudinary.uploader.upload(img2)
+                    image_info = cloudinary.api.resource
+                    image_api = upload_result["secure_url"]
+                    
                 if img3 != None:
-                    img3.save(os.path.join(app.config["IMAGE_UPLOADS"], img3.filename))
+                    # img3.save(os.path.join(app.config["IMAGE_UPLOADS"], img3.filename))
+                    upload_result = cloudinary.uploader.upload(img3)
+                    image_info = cloudinary.api.resource
+                    image_api = upload_result["secure_url"]
+                    
                 if img4 != None:
-                    img4.save(os.path.join(app.config["IMAGE_UPLOADS"], img4.filename))
+                    # img4.save(os.path.join(app.config["IMAGE_UPLOADS"], img4.filename))
+                    upload_result = cloudinary.uploader.upload(img4)
+                    image_info = cloudinary.api.resource
+                    image_api = upload_result["secure_url"]
+                    
                 if img5 != None:
-                    img5.save(os.path.join(app.config["IMAGE_UPLOADS"], img5.filename))
+                    # img5.save(os.path.join(app.config["IMAGE_UPLOADS"], img5.filename))
+                    upload_result = cloudinary.uploader.upload(img5)
+                    image_info = cloudinary.api.resource
+                    image_api = upload_result["secure_url"]
 
 
                 if not allowed_image(image1) or not allowed_image(image2) or not allowed_image(image3) or not allowed_image(image4) or not allowed_image(image5):
