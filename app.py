@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, session, url_for, flash, g, request
+from flask import Flask, render_template, redirect, session, url_for, flash, g, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
@@ -479,9 +479,9 @@ def creation_form(sec):
                 # getting the images from its form inputs at the frontend:
                 if request.files['img1']:
                     img1 = request.files['img1']
+                    app.logger.info('%s img1', img1)
                 else:
                     img1 = None
-
                 if request.files['img2']:
                     img2 = request.files['img2']
                 else:
@@ -527,10 +527,11 @@ def creation_form(sec):
 
                 # saving images on the server:
                 if img1 != None:
-                    img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
+                    # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
                     # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
-                    # cloudinary.uploader.upload(secured_image)
-                    
+                    upload_result = cloudinary.uploader.upload(img1)
+                    app.logger.info(upload_result)
+                    return jsonify(upload_result)
                 if img2 != None:
                     img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
                 if img3 != None:
