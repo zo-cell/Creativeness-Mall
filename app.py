@@ -24,7 +24,6 @@ db.init_app(app)
 
 
 
-
 cloudinary.config(
     cloud_name="drnoxkesy",
     api_key="828688123921376", 
