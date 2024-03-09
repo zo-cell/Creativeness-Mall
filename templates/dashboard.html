@@ -687,7 +687,15 @@
                                     <td>{{ trans.id }}</td>
                                     <td>{{ trans.product_name }}</td>
                                     <td>{{ trans.brand }}</td>
-                                    <td><img src="static/uploads/{{ trans.img }}"></td>
+                                    {% if trans.img != "no_photo.jpg" %}
+                                        {% if "https" in trans.img or "http" in trans.img %}
+                                            <td><img src="{{trans.img}}" alt="img"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{trans.img}}" alt="img"></td>    
+                                        {% endif %}
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
                                     <td>{{ trans.color }}</td>
                                     <td>{{ trans.size }}</td>
                                     <td class="Price">{{ trans.price }}<span class="table_doller">$</span></td>
