@@ -45,12 +45,12 @@
 
 .product_submit
 {
-    width: 30%;
+    width: 45%;
     height: 50px;
     background: chocolate;
     font-size: 1.3em;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 50px;
     box-shadow: 0 10px 10px rgba( 1 1 1 / 65%);
     cursor: pointer;
     border-radius: 10px;
@@ -100,10 +100,8 @@ input[type="file"]
 }
 .upload_btn_div
 {
-    background: green;
     width: 30%;
     height: 30%;
-
 }
 .upload_btn_div label
 {
@@ -128,6 +126,28 @@ input[type="file"]
 {
     transform: scale(1.06);
 }
+
+.CSV_file_upload_div{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    border-top: 3px solid black;
+    /* background: green; */
+}
+.CSV_file_upload_div h1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#CSV_uploadbtn_label{
+    position: absolute;
+    top: 60%;
+    right: 37.3%;
+    width: 200px;
+}
+
+
 #img1_hed{
     margin-top: 5px;
 }
@@ -340,8 +360,8 @@ input[type="file"]
         width: 260px;
     }
     .product_submit{
-        width: 200px;
-        margin-top: 250px;
+        width: 260px;
+        margin-top: 50px;
     }
     #img2_hed{
         margin-top: 50px;
@@ -383,6 +403,13 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    .CSV_file_upload_div{
+        margin-top: 280px;
+    }
+    #CSV_uploadbtn_label{
+        right: 13.5%;
+        height: 36px;
     }
 }
 
@@ -491,8 +518,8 @@ input[type="file"]
         width: 290px;
     }
     .product_submit{
-        width: 200px;
-        margin-top: 250px;
+        width: 280px;
+        margin-top: 50px;
     }
     #img2_hed{
         margin-top: 50px;
@@ -534,6 +561,13 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    .CSV_file_upload_div{
+        margin-top: 280px;
+    }
+    #CSV_uploadbtn_label{
+        right: 19%;
+        height: 36px;
     }
 }
 
@@ -642,8 +676,8 @@ input[type="file"]
         width: 330px;
     }
     .product_submit{
-        width: 200px;
-        margin-top: 250px;
+        width: 300px;
+        margin-top: 50px;
     }
     #img2_hed{
         margin-top: 50px;
@@ -685,6 +719,13 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    .CSV_file_upload_div{
+        margin-top: 280px;
+    }
+    #CSV_uploadbtn_label{
+        right: 23%;
+        height: 36px;
     }
 }
 
@@ -793,8 +834,8 @@ input[type="file"]
         width: 330px;
     }
     .product_submit{
-        width: 200px;
-        margin-top: 250px;
+        width: 300px;
+        margin-top: 50px;
     }
     #img2_hed{
         margin-top: 50px;
@@ -836,6 +877,13 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    .CSV_file_upload_div{
+        margin-top: 280px;
+    }
+    #CSV_uploadbtn_label{
+        right: 26%;
+        height: 36px;
     }
 }
 
@@ -937,6 +985,9 @@ input[type="file"]
     {
         width: 285px;
     }
+    #product_submit{
+        width: 300px;
+    }
     .upload_btn_div label{
         width: 95px;
         height: 35px;
@@ -944,6 +995,10 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    #CSV_uploadbtn_label{
+        right: 30%;
+        height: 38px;
     }
 }
 
@@ -1045,6 +1100,9 @@ input[type="file"]
     {
         width: 320px;
     }
+    #product_submit{
+        width: 300px;
+    }
     .upload_btn_div label{
         width: 95px;
         height: 35px;
@@ -1052,6 +1110,10 @@ input[type="file"]
     .upload_btn_div label:hover
     {
         transform: scale(1.06);
+    }
+    #CSV_uploadbtn_label{
+        right: 32%;
+        height: 40px;
     }
 }
 
@@ -1160,6 +1222,10 @@ input[type="file"]
     {
         transform: scale(1.06);
     }
+    #CSV_uploadbtn_label{
+        right: 33.5%;
+        height: 40px;
+    }
 }
 
 
@@ -1267,6 +1333,10 @@ input[type="file"]
     {
         transform: scale(1.06);
     }
+    #CSV_uploadbtn_label{
+        right: 34.5%;
+        height: 40px;
+    }
 }
 
 @media (min-width: 711px) and (max-width: 767px){
@@ -1360,6 +1430,9 @@ input[type="file"]
     #product_image5:focus
     {
         width: 480px;
+    }
+    #CSV_uploadbtn_label{
+        right: 36%
     }
 }
 
@@ -1458,6 +1531,10 @@ input[type="file"]
         width: 95px;
         height: 35px;
         right: 45px;
+
+    }
+    #CSV_uploadbtn_label{
+        height: 40px;
     }
 }
 
