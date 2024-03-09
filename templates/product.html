@@ -101,39 +101,83 @@
             <div class="pro_page_img">
 
                 <div id="slid_imgs" class="slid_imgs">
-                    {% if product_to_show.img2 != "no_photo.jpg" %}
-                        <img id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                    {% if "https" in product_to_show.img2 or "http" in product_to_show.img2 %}        
+                        {% if product_to_show.img2 != "no_photo.jpg" %}
+                            <img id="slid_img1" class="slid_img" src="{{ product_to_show.img2 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img1" class="slid_img" src="{{ product_to_show.img2 }}">
+                        {% endif %}
                     {% else %}
-                        <img style="display: none;" id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                        {% if product_to_show.img2 != "no_photo.jpg" %}
+                            <img id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img1" class="slid_img" src="static/uploads/{{ product_to_show.img2 }}">
+                        {% endif %}
+                    {% endif %}
+                        
+                    {% if "https" in product_to_show.img3 or "http" in product_to_show.img3 %}        
+                        {% if product_to_show.img3 != "no_photo.jpg" %}
+                            <img id="slid_img2" class="slid_img" src="{{ product_to_show.img3 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img1" class="slid_img" src="{{ product_to_show.img3 }}">
+                        {% endif %}
+                    {% else %}
+                        {% if product_to_show.img3 != "no_photo.jpg" %}
+                            <img id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                        {% endif %}
+                    {% endif %}
+                        
+                    {% if "https" in product_to_show.img4 or "http" in product_to_show.img4 %}
+                        {% if product_to_show.img4 != "no_photo.jpg" %}
+                            <img id="slid_img3" class="slid_img" src="{{ product_to_show.img4 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img3" class="slid_img" src="{{ product_to_show.img4 }}">
+                        {% endif %}
+                    {% else %}
+                        {% if product_to_show.img4 != "no_photo.jpg" %}
+                            <img id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                        {% endif %}
                     {% endif %}
 
-                    {% if product_to_show.img3 != "no_photo.jpg" %}
-                        <img id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                    {% if "https" in product_to_show.img5 or "http" in product_to_show.img5 %}
+                        {% if product_to_show.img5 != "no_photo.jpg" %}
+                            <img id="slid_img4" class="slid_img" src="{{ product_to_show.img5 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img4" class="slid_img" src="{{ product_to_show.img5 }}">
+                        {% endif %}
                     {% else %}
-                        <img style="display: none;" id="slid_img2" class="slid_img" src="static/uploads/{{ product_to_show.img3 }}">
+                        {% if product_to_show.img5 != "no_photo.jpg" %}
+                            <img id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
+                        {% endif %}
                     {% endif %}
 
-                    {% if product_to_show.img4 != "no_photo.jpg" %}
-                        <img id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                    {% if "https" in product_to_show.img1 or "http" in product_to_show.img1 %}
+                        {% if product_to_show.img1 %}
+                            <img id="slid_img5" class="slid_img" src="{{ product_to_show.img1 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img5" class="slid_img" src="{{ product_to_show.img1 }}">
+                        {% endif %}
                     {% else %}
-                        <img style="display: none;" id="slid_img3" class="slid_img" src="static/uploads/{{ product_to_show.img4 }}">
+                        {% if product_to_show.img1 %}
+                            <img id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
+                        {% else %}
+                            <img style="display: none;" id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
+                        {% endif %}
                     {% endif %}
-
-                    {% if product_to_show.img5 != "no_photo.jpg" %}
-                        <img id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
-                    {% else %}
-                        <img style="display: none;" id="slid_img4" class="slid_img" src="static/uploads/{{ product_to_show.img5 }}">
-                    {% endif %}
-
-                    {% if product_to_show.img1 %}
-                        <img id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
-                    {% else %}
-                        <img style="display: none;" id="slid_img5" class="slid_img" src="static/uploads/{{ product_to_show.img1 }}">
-                    {% endif %}
+                        
                 </div>
                 <div id="main_img_div" class="main_img_div">
-                    <img id="main_img" class="main_img" src="static/uploads/{{ product_to_show.img1 }}">
-
+                    {% if "https" in product_to_show.img5 or "http" in product_to_show.img5 %}
+                        <img id="main_img" class="main_img" src="{{ product_to_show.img1 }}">
+                    {% else %}
+                        <img id="main_img" class="main_img" src="static/uploads/{{ product_to_show.img1 }}">
+                    {% endif %}
                 </div>
 
 
@@ -185,7 +229,11 @@
 
                             </div>
                             <div class="product_image">
-                                <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                {% if "https" in car.img1 or "http" in car.img1 %}
+                                    <img id="cart_img" src="{{ car.img1 }}" alt="image">
+                                {% else %}
+                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
@@ -238,7 +286,11 @@
 
                                 </div>
                                 <div class="product_image">
-                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                    {% if "https" in car.img1 or "http" in car.img1 %}
+                                        <img id="cart_img" src="{{ car.img1 }}" alt="image">
+                                    {% else %}
+                                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endfor %}
