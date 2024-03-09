@@ -402,7 +402,11 @@ def creation_form(sec):
     # getting products from database and getting ots length:
     products = Products.query.order_by(Products.id).all()
     LP = len(products)
-    image_api = "no_photo.jpg"
+    image_api1 = "no_photo.jpg"
+    image_api2 = "no_photo.jpg"
+    image_api3 = "no_photo.jpg"
+    image_api4 = "no_photo.jpg"
+    image_api5 = "no_photo.jpg"
 
     if request.method == "POST":
         if g.user:
@@ -501,57 +505,61 @@ def creation_form(sec):
                 # saving images on the server:
                 if img1 != None:
                     # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], image1))
-                    # path = os.path.join(app.config["IMAGE_UPLOADS"], image1)
-                    # flash(path)
-                    # session["img1"] = image1
-                    # secured_image = os.path.join(app.config["IMAGE_UPLOADS"], image1)
-                    
-                    
                     
                     upload_result = cloudinary.uploader.upload(img1)
                     image_info = cloudinary.api.resource
-                    image_api = upload_result["secure_url"]
-                    
-                    # image_api = cloudinary.CloudinaryImage(img1.filename).image()["secure_url"]
-                    # flash(upload_result["secure_url"])
-                    # app.logger.info(upload_result)
-                    # return jsonify(upload_result)
+                    image_api1 = upload_result["secure_url"]
                 
                 if img2 != None:
                     # img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
                     upload_result = cloudinary.uploader.upload(img2)
                     image_info = cloudinary.api.resource
-                    image_api = upload_result["secure_url"]
+                    image_api2 = upload_result["secure_url"]
                     
                 if img3 != None:
                     # img3.save(os.path.join(app.config["IMAGE_UPLOADS"], img3.filename))
                     upload_result = cloudinary.uploader.upload(img3)
                     image_info = cloudinary.api.resource
-                    image_api = upload_result["secure_url"]
+                    image_api3 = upload_result["secure_url"]
                     
                 if img4 != None:
                     # img4.save(os.path.join(app.config["IMAGE_UPLOADS"], img4.filename))
                     upload_result = cloudinary.uploader.upload(img4)
                     image_info = cloudinary.api.resource
-                    image_api = upload_result["secure_url"]
+                    image_api4 = upload_result["secure_url"]
                     
                 if img5 != None:
                     # img5.save(os.path.join(app.config["IMAGE_UPLOADS"], img5.filename))
                     upload_result = cloudinary.uploader.upload(img5)
                     image_info = cloudinary.api.resource
-                    image_api = upload_result["secure_url"]
+                    image_api5 = upload_result["secure_url"]
 
 
                 if not allowed_image(image1) or not allowed_image(image2) or not allowed_image(image3) or not allowed_image(image4) or not allowed_image(image5):
                     return redirect(request.url)
                 ST = sec
 
+                # Uploading CSV file :
+                uploaded_file = request.files['CSV']
+
                 # posting in the database tables the new product:
-                NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image_api, img2=image2, img3=image3, img4=image4, img5=image5, section=ST)
-                db.session.add(NewProduct)
-                NewColor = Colors(color1=color1, color2=color2, color3=color3, color4=color4, color5=color5)
-                db.session.add(NewColor)
-                db.session.commit()
+
+                if uploaded_file.filename == "":
+                    NewProduct = Products(name=name, brand=brand, description=description, colors=colors, old_price=old_price, new_price=new_price, img1=image_api1, img2=image_api2, img3=image_api3, img4=image_api4, img5=image_api5, section=ST)
+                    db.session.add(NewProduct)
+                    NewColor = Colors(color1=color1, color2=color2, color3=color3, color4=color4, color5=color5)
+                    db.session.add(NewColor)
+                    db.session.commit()
+                else:
+                    file_path = os.path.join(app.config["IMAGE_UPLOADS"], uploaded_file.filename)
+                    uploaded_file.save(file_path)
+                    # upload_csv(file_path)
+                    col_names = ['name','brand','description','old_price','new_price','colors','img1','img2','img3','img4','img5','section']
+                    csvData = pd.read_csv(file_path, names=col_names, header=None)
+                    for i,row in csvData.iterrows():
+                        newone = Products(name=row['name'], brand=row['brand'], description=row['description'], old_price=row['old_price'], new_price=row['new_price'], colors=row['colors'], img1=row['img1'], img2=row['img2'], img3=row['img3'], img4=row['img4'], img5=row['img5'], section=ST)
+                        db.session.add(newone)
+                        db.session.commit()
 
 
                 return redirect('/dashboard')
@@ -708,25 +716,43 @@ def update(id):
                 image5 = "no_photo.jpg"
 
             if img1 != None:
-                img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
+                # img1.save(os.path.join(app.config["IMAGE_UPLOADS"], img1.filename))
+
+                upload_result = cloudinary.uploader.upload(img1)
+                image_info = cloudinary.api.resource
+                image_api1 = upload_result["secure_url"]
             if img2 != None:
-                img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
+                # img2.save(os.path.join(app.config["IMAGE_UPLOADS"], img2.filename))
+
+                upload_result = cloudinary.uploader.upload(img2)
+                image_info = cloudinary.api.resource
+                image_api2 = upload_result["secure_url"]
             if img3 != None:
-                img3.save(os.path.join(app.config["IMAGE_UPLOADS"], img3.filename))
+                # img3.save(os.path.join(app.config["IMAGE_UPLOADS"], img3.filename))
+
+                upload_result = cloudinary.uploader.upload(img3)
+                image_info = cloudinary.api.resource
+                image_api3 = upload_result["secure_url"]
             if img4 != None:
-                img4.save(os.path.join(app.config["IMAGE_UPLOADS"], img4.filename))
+                # img4.save(os.path.join(app.config["IMAGE_UPLOADS"], img4.filename))
+
+                upload_result = cloudinary.uploader.upload(img4)
+                image_info = cloudinary.api.resource
+                image_api4 = upload_result["secure_url"]
             if img5 != None:
-                img5.save(os.path.join(app.config["IMAGE_UPLOADS"], img5.filename))
+                # img5.save(os.path.join(app.config["IMAGE_UPLOADS"], img5.filename))
 
-
+                upload_result = cloudinary.uploader.upload(img5)
+                image_info = cloudinary.api.resource
+                image_api5 = upload_result["secure_url"]
             if not allowed_image(image1) or not allowed_image(image2) or not allowed_image(image3) or not allowed_image(image4) or not allowed_image(image5):
                 return redirect(request.url)
 
-            product_to_update.img1  = image1
-            product_to_update.img2 = image2
-            product_to_update.img3 = image3
-            product_to_update.img4 = image4
-            product_to_update.img5 = image5
+            product_to_update.img1  = image_api1
+            product_to_update.img2 = image_api2
+            product_to_update.img3 = image_api3
+            product_to_update.img4 = image_api4
+            product_to_update.img5 = image_api5
             try:
                 db.session.commit()
                 return redirect("/dashboard")
