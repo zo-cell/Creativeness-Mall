@@ -899,7 +899,15 @@
                                     <td>{{ sell.id }}</td>
                                     <td>{{ sell.product_name }}</td>
                                     <td>{{ sell.brand }}</td>
-                                    <td><img src="static/uploads/{{ sell.img1 }}"></td>
+                                    {% if sell.img1 != "no_photo.jpg" %}
+                                        {% if "https" in sell.img1 or "http" in sell.img1 %}
+                                            <td><img src="{{sell.img1}}" alt="img1"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{sell.img1}}" alt="img1"></td>    
+                                        {% endif %}
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
                                     <td>{{ sell.color }}</td>
                                     <td class="Price">{{ sell.new_price }}<span class="table_doller">$</span></td>
                                     <td>{{ sell.purchases }}</td>
@@ -935,7 +943,15 @@
                                 <tr>
                                     <td>{{ sell.id }}</td>
                                     <td>{{ sell.product_name }}</td>
-                                    <td><img src="static/uploads/{{ sell.img1 }}"></td>
+                                    {% if sell.img1 != "no_photo.jpg" %}
+                                        {% if "https" in sell.img1 or "http" in sell.img1 %}
+                                            <td><img src="{{sell.img1}}" alt="img1"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{sell.img1}}" alt="img1"></td>    
+                                        {% endif %}
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
                                     <td class="Price">{{ sell.new_price }}<span class="table_doller">$</span></td>
                                     <td>{{ sell.purchases }}</td>
                                     <td>{{ sell.date_time }}</td>
@@ -998,7 +1014,15 @@
                                 <tr>
                                     <td>{{ sell.id }}</td>
                                     <td>{{ sell.product_name }}</td>
-                                    <td><img src="static/uploads/{{ sell.img1}}"></td>
+                                    {% if sell.img1 != "no_photo.jpg" %}
+                                        {% if "https" in sell.img1 or "http" in sell.img1 %}
+                                            <td><img src="{{sell.img1}}" alt="img1"></td>
+                                        {% else %}
+                                            <td><img src="static/uploads/{{sell.img1}}" alt="img1"></td>    
+                                        {% endif %}
+                                    {% else %}
+                                        <td>No photos</td>
+                                    {% endif %}
                                     <td>{{ sell.purchases }}</td>
                                 </tr>
                             {% endfor %}
