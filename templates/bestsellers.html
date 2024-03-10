@@ -51,10 +51,17 @@
                     {% if "bestsellers" in product.section %}
                         <div class="men_theme">
                             <div class="card_image_div">
-                                <ul>
-                                    <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
-                                    <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
-                                </ul>
+                                {% if "https" in product.img1 or "http" in product.img1 %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% endif %}
                             </div>
                             <div class="men_footer">
                                 <h5>{{product.name}}</h5>
@@ -73,10 +80,17 @@
                     {% if product.purchases > 3 %}
                         <div class="men_theme">
                             <div class="card_image_div">
-                                <ul>
-                                    <li><a href="/product{{product.product_id}}"><img class="fst_pic" src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
-                                    <li><a href="/product{{product.product_id}}"><img class="snd_pic" src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
-                                </ul>
+                                {% if "https" in product.img1 or "http" in product.img1 %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% endif %}
                             </div>
                             <div class="men_footer">
                                 <h5>{{product.product_name}}</h5>
@@ -136,7 +150,11 @@
 
                             </div>
                             <div class="product_image">
-                                <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                {% if "https" in car.img1 or "http" in car.img1 %}
+                                    <img id="cart_img" src="{{ car.img1 }}" alt="image">
+                                {% else %}
+                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
@@ -189,7 +207,11 @@
 
                                 </div>
                                 <div class="product_image">
-                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                    {% if "https" in car.img1 or "http" in car.img1 %}
+                                        <img id="cart_img" src="{{ car.img1 }}" alt="image">
+                                    {% else %}
+                                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endfor %}
