@@ -1,4 +1,6 @@
-
+body {
+    background: #d4d4d4;
+}
 .fst_show_men
 {
     width: 100%;
@@ -7,7 +9,7 @@
     left: 0;
     top: 180px;
     background-size: cover;
-    background: #d3f9fdf3;
+    background: #d4d4d4;
 }
 .fst_show_men .cards_men
 {
@@ -19,21 +21,13 @@
     margin-bottom: 250px;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.themes_container
-{
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    /* background: blue; */
 }
 .men_theme
 {
-    box-shadow:5px 10px 10px rgba(10, 10, 10, 0.65);
+    box-shadow: 0 10px 30px rgba(20, 20, 20, 0.65);
     padding: 15px;
-    background: #f5d000;
+    /* background: #f15bb5; */
     transition: .9s ease-in-out;
 }
 .men_theme:hover
@@ -48,6 +42,7 @@
     justify-content: center;
     margin-top: 150px;
     position: relative;
+    /* background: green; */
 }
 .men_header::before
 {
@@ -58,11 +53,13 @@
     height: 15px;
     position: absolute;
     bottom: 0;
-    background: black;
-    box-shadow: 0 10px 10px #9b5de5;
+    background: linear-gradient(to right, #233d78 30%, #abb7d3 85% ) !important;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px  #535251d5 !important;
 }
 .men_header h1
 {
+
     /* margin-left: 550px; */
     font-size: 1.5em;
     font-weight: 900;
@@ -86,7 +83,17 @@
     margin-top: 35px;
     margin-left: 50px;
 }
+.themes_container
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    margin-top: 80px;
 
+}
 .men_theme
 {
     display: flex;
@@ -95,10 +102,11 @@
     flex-direction: column;
     /* background-color: #9b5de5; */
     width: 18.75em;
-    height: 31em;
-    box-shadow: 0 10px 10px rgba(1 1 1 /65%);
+    height: fit-content;
+    box-shadow: 0 10px 30px rgba(20, 20, 20, 0.65);
     padding: 25px;
-    margin-top: 80px;
+    /* margin-top: 80px; */
+    margin-bottom: 20px;
     border-radius: 15px;
 }
 .men_footer{
@@ -106,7 +114,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    gap: 5px;
+    /* border: 1px solid red; */
+    height: 8em;
+    width: 100%;
 }
 .men_card_title{
     width: 100%;
@@ -185,8 +196,8 @@
 .men_theme img
 {
     width: 250px;
-    height: 370px;
-    border-radius: 10px;
+    height: 450px;
+    /* border-radius: 10px; */
 
 }
 .categories
@@ -198,8 +209,7 @@
 }
 .categories h1
 {
-    /* color: #807e7eb6; */
-    color: chocolate;
+    color: #807e7eb6;
 }
 .categories::before
 {
@@ -293,7 +303,6 @@
 .sub_hidden > a
 {
     font-size: .8em;
-    color: black;
 }
 
 
@@ -407,7 +416,7 @@ input[type="file"]
 }
 .upload_btn_div
 {
-    background: green;
+    /* background: green; */
     width: 30%;
     height: 30%;
 
@@ -521,58 +530,7 @@ input[type="file"]
     display: none;
 } */
 
-.total_price{
-    font-weight: 700;
-}
-.total_dolar{
-    color: red;
-    font-weight: 700;
-}
-.Red{
-    width: 30px;
-    height: 30px;
-    border: 3px #c5c3c3ca solid;
-    border-radius: 50%;
-    background-color: red;
-    color: red;
-    /* display: none; */
-}
-.Green{
-    width: 30px;
-    height: 30px;
-    border: 3px #c5c3c3ca solid;
-    border-radius: 50%;
-    background-color: green;
-    color: green;
-    /* display: none; */
-}
-.Blue{
-    width: 30px;
-    height: 30px;
-    border: 3px #c5c3c3ca solid;
-    border-radius: 50%;
-    background-color: blue;
-    color: blue;
-    /* display: none; */
-}
-.Black{
-    width: 30px;
-    height: 30px;
-    border: 3px #c5c3c3ca solid;
-    border-radius: 50%;
-    background-color: black;
-    /* display: none; */
-}
 
-.White{
-    width: 30px;
-    height: 30px;
-    border: 3px #c5c3c3ca solid;
-    border-radius: 50%;
-    background-color: white;
-    color: white;
-    /* display: none; */
-}
 footer
 {
     width: 100%;
@@ -586,7 +544,7 @@ footer
 }
 
 
-/* ========================================= */
+/* ==========================================*/
 /* Media Query: */
 
 /*         ===> Extra small screens <===     */
@@ -609,12 +567,36 @@ footer
     .men_header
     {
         width: 90%;
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: center;
         margin-top: 70px;
         margin-left: 15px;
         position: relative;
+    }
+    .men_header h1{
+        margin-left: 10px;
+        font-size: 85%;
+        letter-spacing: 0px;
+    }
+
+    #men{
+        font-size: 130%;
+    }
+    #men_sweetshirts_header{
+        font-size: 70%;
+        margin-left: 0px;
+        letter-spacing: 0px;
+    }
+    #men_clutch_header{
+        font-size: 70%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+    #men_phoneaccessories_header{
+        font-size: 70%;
+        margin-left: 0;
+        letter-spacing: 1px;
     }
 
     .men_header::before
@@ -623,42 +605,32 @@ footer
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 10px;
+        height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
-        box-shadow: 0 10px 10px #9b5de5;
+        background: #9b5de5;
+        box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
-    #men{
-        font-size: 130%;
-    }
-    .men_header h1{
-        margin-left: 10px;
-        font-size: 85%;
-        letter-spacing: 0px;
-    }
-    #men_sweetshirts_header{
-        font-size: 70%;
-        margin-left: 0px;
-        letter-spacing: 1px;
-    }
-
     .categories{
         display: none;
     }
 
 
-    /* Men theme */
+    /* men theme */
+
+
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 12em;
-        height: 23em;
+        /* height: 23em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
+        /* margin-top: 50px; */
         margin-bottom: 30px;
         border-radius: 15px;
     }
@@ -667,6 +639,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 13em;
     }
     .men_card_title{
         width: 100%;
@@ -675,6 +648,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -682,6 +656,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -691,6 +666,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -701,6 +677,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -708,11 +685,13 @@ footer
         font-size: .7em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 150px;
-        height: 329px;
+        height: 240px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -722,7 +701,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -733,6 +714,7 @@ footer
         50%{left: -150px}
         100%{left: -150px}
     }
+
     .men_theme img
     {
         width: 150px;
@@ -771,6 +753,7 @@ footer
         font-size: 90%;
         letter-spacing: 0px;
     }
+
     #men{
         font-size: 130%;
     }
@@ -778,6 +761,16 @@ footer
         font-size: 80%;
         margin-left: 0px;
         letter-spacing: 0px;
+    }
+    #men_clutch_header{
+        font-size: 80%;
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+    #men_phoneaccessories_header{
+        font-size: 80%;
+        margin-left: 0;
+        letter-spacing: 1px;
     }
 
     .men_header::before
@@ -789,7 +782,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -797,7 +790,7 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .themes_container{
         min-height: 50%;
     }
@@ -808,7 +801,7 @@ footer
         align-items: center;
         flex-direction: column;
         width: 10em;
-        height: 20em;
+        /* height: 20em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         border-radius: 15px;
@@ -818,6 +811,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
     }
     .men_card_title{
         width: 100%;
@@ -826,6 +820,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -833,6 +828,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: .9em;
+
     }
     .men_footer p
     {
@@ -859,11 +855,13 @@ footer
         font-size: .55em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 140px;
-        height: 279px;
+        height: 185px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -873,7 +871,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -884,6 +884,7 @@ footer
         50%{left: -140px}
         100%{left: -140px}
     }
+
     .men_theme img
     {
         width: 140px;
@@ -891,8 +892,6 @@ footer
         border-radius: 10px;
     }
 }
-
-
 
 @media (min-width: 350px) and (max-width: 419px){
     .fst_show_men{
@@ -945,7 +944,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -953,7 +952,7 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
 
     .themes_container{
         min-height: 50%;
@@ -964,8 +963,8 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 12em;
-        height: 23em;
+        width: 11.5em;
+        /* height: 26.5em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-bottom: 30px;
@@ -976,6 +975,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
     }
     .men_card_title{
         width: 100%;
@@ -984,13 +984,14 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-weight: 900;
-        font-size: 1.2em;
+        font-weight: 700;
+        font-size: 1em;
     }
     .men_footer p
     {
@@ -1000,6 +1001,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1010,6 +1012,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1017,11 +1020,13 @@ footer
         font-size: .7em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 160px;
-        height: 329px;
+        height: 260px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1037,6 +1042,7 @@ footer
     }
     .card_image_div ul li{
         float: left;
+        height: 300px;
     }
     @keyframes sliding{
         0%{left: 0}
@@ -1047,7 +1053,7 @@ footer
     .men_theme img
     {
         width: 160px;
-        height: 240px;
+        height: 260px;
         border-radius: 10px;
     }
 }
@@ -1083,6 +1089,7 @@ footer
         font-size: 100%;
         letter-spacing: 1px;
     }
+
     #men{
         font-size: 130%;
     }
@@ -1095,7 +1102,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1103,7 +1110,7 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .themes_container{
         margin-top: 50px;
         min-height: 50%;
@@ -1114,8 +1121,9 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 12.7em;
-        height: 23em;
+        /* height: 23em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1126,6 +1134,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
     }
     .men_card_title{
         width: 100%;
@@ -1134,6 +1143,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -1141,6 +1151,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1150,6 +1161,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1160,6 +1172,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1167,11 +1180,13 @@ footer
         font-size: .7em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 160px;
-        height: 329px;
+        height: 240px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1181,7 +1196,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -1192,6 +1209,7 @@ footer
         50%{left: -160px}
         100%{left: -160px}
     }
+
     .men_theme img
     {
         width: 160px;
@@ -1241,7 +1259,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1249,15 +1267,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 13.6em;
-        height: 28em;
+        /* height: 28em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1268,6 +1287,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
     }
     .men_card_title{
         width: 100%;
@@ -1276,6 +1296,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -1283,6 +1304,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1292,6 +1314,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1302,6 +1325,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1309,11 +1333,13 @@ footer
         font-size: .8em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 170px;
-        height: 399px;
+        height: 300px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1323,7 +1349,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -1334,6 +1362,7 @@ footer
         50%{left: -170px}
         100%{left: -170px}
     }
+
     .men_theme img
     {
         width: 170px;
@@ -1383,7 +1412,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1391,15 +1420,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 13.6em;
-        height: 28em;
+        /* height: 28em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1410,6 +1440,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em
     }
     .men_card_title{
         width: 100%;
@@ -1418,6 +1449,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -1425,6 +1457,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1454,8 +1487,9 @@ footer
     }
     .card_image_div{
         width: 170px;
-        height: 399px;
+        height: 300px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1484,8 +1518,8 @@ footer
     }
 }
 
-/* ============================================ */
-/*           ===> Small screens <===            */
+/* ========================================= */
+/*          ===> Small screens <==          */
 @media (min-width: 600px) and (max-width: 649px) {
     .fst_show_men{
         top: 0;
@@ -1527,7 +1561,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1535,15 +1569,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 13.6em;
-        height: 28em;
+        /* height: 28em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1554,6 +1589,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
 
     }
     .men_card_title{
@@ -1571,6 +1607,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1580,6 +1617,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1590,6 +1628,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1597,11 +1636,13 @@ footer
         font-size: .8em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 170px;
-        height: 399px;
+        height: 300px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1611,7 +1652,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -1622,6 +1665,7 @@ footer
         50%{left: -170px}
         100%{left: -170px}
     }
+
     .men_theme img
     {
         width: 170px;
@@ -1661,6 +1705,7 @@ footer
         font-size: 140%;
         letter-spacing: 3px;
     }
+
     .men_header::before
     {
         content: "";
@@ -1670,7 +1715,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1678,7 +1723,7 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
@@ -1686,7 +1731,7 @@ footer
         align-items: center;
         flex-direction: column;
         width: 13em;
-        height: 28em;
+        /* height: 28em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1697,6 +1742,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
     }
     .men_card_title{
         width: 100%;
@@ -1711,8 +1757,9 @@ footer
         color: black;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-weight: 900;
+        font-weight: 850;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1722,6 +1769,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1732,6 +1780,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1739,11 +1788,13 @@ footer
         font-size: .8em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 170px;
-        height: 399px;
+        height: 300px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1753,7 +1804,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -1814,7 +1867,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -1822,16 +1875,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
+        /* background-color: #9b5de5; */
         width: 14em;
-        height: 29em;
+        /* height: 29em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1842,6 +1895,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 12em;
     }
     .men_card_title{
         width: 100%;
@@ -1850,6 +1904,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -1857,6 +1912,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -1866,6 +1922,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -1876,6 +1933,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -1883,11 +1941,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 180px;
-        height: 410px;
+        height: 330px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -1897,7 +1957,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -1908,7 +1970,6 @@ footer
         50%{left: -180px}
         100%{left: -180px}
     }
-
     .men_theme img
     {
         width: 180px;
@@ -1955,8 +2016,7 @@ footer
         display: none;
     }
 
-
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
@@ -1964,7 +2024,7 @@ footer
         align-items: center;
         flex-direction: column;
         width: 15.2em;
-        height: 30em;
+        /* height: 30em; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -1975,6 +2035,8 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 10em;
+
     }
     .men_card_title{
         width: 100%;
@@ -1983,7 +2045,6 @@ footer
         align-items: center;
         flex-direction: column;
     }
-
     .men_footer h5
     {
         color: black;
@@ -2020,9 +2081,8 @@ footer
     }
     .card_image_div{
         width: 190px;
-        height: 420px;
+        height: 340px;
         border-radius: 10px;
-        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2092,7 +2152,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2100,15 +2160,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 17em;
-        height: 30em;
+        /* height: fit-content; */
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -2119,6 +2180,8 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        height: 10em;
+
     }
     .men_card_title{
         width: 100%;
@@ -2127,6 +2190,7 @@ footer
         align-items: center;
         flex-direction: column;
     }
+
     .men_footer h5
     {
         color: black;
@@ -2160,11 +2224,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 210px;
-        height: 430px;
+        height: 350px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2174,7 +2240,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -2191,6 +2259,7 @@ footer
         width: 210px;
         height: 350px;
         border-radius: 10px;
+
     }
 }
 
@@ -2234,7 +2303,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2242,7 +2311,7 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
@@ -2261,7 +2330,6 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
     }
     .men_card_title{
         width: 100%;
@@ -2277,7 +2345,6 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
-
     }
     .men_footer p
     {
@@ -2307,7 +2374,7 @@ footer
     }
     .card_image_div{
         width: 230px;
-        height: 450px;
+        height: 370px;
         border-radius: 10px;
         overflow: hidden;
     }
@@ -2318,9 +2385,7 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
-
         position: relative;
-
     }
     .card_image_div ul li{
         float: left;
@@ -2331,7 +2396,6 @@ footer
         50%{left: -230px}
         100%{left: -230px}
     }
-
     .men_theme img
     {
         width: 230px;
@@ -2375,7 +2439,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2383,15 +2447,16 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 18em;
-        height: 31em;
+        height: fit-content;
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
         padding: 25px;
         margin-top: 0px;
@@ -2402,6 +2467,9 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 100%;
+        height: 10em;
+        /* border: 1px solid red; */
 
     }
     .men_card_title{
@@ -2429,6 +2497,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -2439,6 +2508,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -2446,11 +2516,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 230px;
-        height: 450px;
+        height: 370px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2460,7 +2532,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -2477,10 +2551,11 @@ footer
         width: 230px;
         height: 370px;
         border-radius: 10px;
+
     }
 }
 
-/* ========================================== */
+/* ========================================= */
 /*          ===> Large screens <==           */
 @media (min-width: 992px) and (max-width: 1014px){
     .fst_show_men{
@@ -2497,6 +2572,7 @@ footer
         margin-bottom: 250px;
         flex-direction: row;
         flex-wrap: wrap;
+        /* background: blue; */
     }
     .men_header
     {
@@ -2521,7 +2597,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2529,13 +2605,14 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 18em;
         height: 31em;
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
@@ -2548,6 +2625,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
     }
     .men_card_title{
         width: 100%;
@@ -2564,6 +2642,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -2573,6 +2652,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -2583,6 +2663,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -2590,11 +2671,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 230px;
         height: 450px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2604,7 +2687,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -2621,6 +2706,7 @@ footer
         width: 230px;
         height: 370px;
         border-radius: 10px;
+
     }
 }
 
@@ -2664,7 +2750,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2672,13 +2758,14 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 18em;
         height: 31em;
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
@@ -2708,6 +2795,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -2717,6 +2805,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -2727,6 +2816,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -2734,11 +2824,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 230px;
         height: 450px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2748,7 +2840,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -2765,6 +2859,7 @@ footer
         width: 230px;
         height: 370px;
         border-radius: 10px;
+
     }
 }
 
@@ -2781,6 +2876,7 @@ footer
         margin-bottom: 250px;
         flex-direction: row;
         flex-wrap: wrap;
+        /* background: blue; */
     }
     .men_header
     {
@@ -2791,6 +2887,7 @@ footer
         margin-top: 150px;
         margin-left: 60px;
         position: relative;
+        /* background: green */
     }
     #men_sweetshirts_header{
         font-size: 140%;
@@ -2805,7 +2902,7 @@ footer
         height: 15px;
         position: absolute;
         bottom: 0;
-        background: black;
+        background: #9b5de5;
         box-shadow: 0 10px 10px rgba(8, 179, 185, 0.65)
     }
     .categories{
@@ -2813,13 +2910,14 @@ footer
     }
 
 
-    /* Men theme */
+    /* men theme */
     .men_theme
     {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        /* background-color: #9b5de5; */
         width: 18em;
         height: 31em;
         box-shadow: 0 10px 10px rgba(1 1 1 /65%);
@@ -2832,6 +2930,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
     }
     .men_card_title{
         width: 100%;
@@ -2848,6 +2947,7 @@ footer
         margin-bottom: 10px;
         font-weight: 900;
         font-size: 1.2em;
+
     }
     .men_footer p
     {
@@ -2857,6 +2957,7 @@ footer
     }
     .prices{
         width: 100%;
+        /* background: green; */
         display: flex;
         justify-content: center;
         margin-right: 25px;
@@ -2867,6 +2968,7 @@ footer
         color: red;
         font-size: .9em;
         font-weight: 900;
+        /* margin-left: 30px; */
     }
     .span2
     {
@@ -2874,11 +2976,13 @@ footer
         font-size: .9em;
         font-weight: 900;
         margin-left: 20px;
+
     }
     .card_image_div{
         width: 230px;
         height: 450px;
         border-radius: 10px;
+        /* z-index: 999; */
         overflow: hidden;
     }
     .card_image_div ul{
@@ -2888,7 +2992,9 @@ footer
         animation-duration: 10s;
     }
     .card_image_div ul:hover{
+
         position: relative;
+
     }
     .card_image_div ul li{
         float: left;
@@ -2905,6 +3011,7 @@ footer
         width: 230px;
         height: 370px;
         border-radius: 10px;
+
     }
 }
 
@@ -2914,3 +3021,4 @@ footer
         margin-left: 20px;
     }
 }
+
