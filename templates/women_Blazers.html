@@ -6,115 +6,122 @@
     <section class="fst_show_women">
         {% if del_mode_row.del_mode == 1 %}
 
-            <div id="side_cart_div2" class="side_cart_div2">
-                <div class="hed">
-                    <form method="post">
-                        <input type="number" name="del_take" id="del_take">
-                        <button id="close_btn2">Close <span>X</span></button>
-                    </form>
-                    <h1>My Cart</h1>
-                </div>
-                {% for car in user_car %}
-                <div class="side_cart_product">
-                    <div class="product_data">
-                        <div class="cart_pro_title_div">
-                            {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
-                                <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
-                            {% else %}
-                                <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
-                            {% endif %}
+                    <div id="side_cart_div2" class="side_cart_div2">
+                        <div class="hed">
+                            <form method="post">
+                                <input type="number" name="del_take" id="del_take">
+                                <button id="close_btn2">Close <span>X</span></button>
+                            </form>
+                            <h1>My Cart</h1>
                         </div>
-                        <div class="cart_priceandcolor_div">
-                            <div class="cart_price_div">
-                                <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                        {% for car in user_car %}
+                        <div class="side_cart_product">
+                            <div class="product_data">
+                                <div class="cart_pro_title_div">
+                                    {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                        <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                    {% else %}
+                                        <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                    {% endif %}
+                                </div>
+                                <div class="cart_priceandcolor_div">
+                                    <div class="cart_price_div">
+                                        <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                                    </div>
+                                    <div class="cart_color_div">
+                                        <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                                    </div>
+                                </div>
+
+                                <div class="cart_sizeandquantity_div">
+                                    <div class="cart_size_div">
+                                        <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                                    </div>
+                                    <div class="cart_quantity_div">
+                                        <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="car_edit_btns">
+                                    <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                                    <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                                </div>
+
                             </div>
-                            <div class="cart_color_div">
-                                <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
-                            </div>
-                        </div>
-
-                        <div class="cart_sizeandquantity_div">
-                            <div class="cart_size_div">
-                                <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
-                            </div>
-                            <div class="cart_quantity_div">
-                                <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
-                            </div>
-                        </div>
-
-
-                        <div class="car_edit_btns">
-                            <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
-                            <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
-                        </div>
-
-                    </div>
-                    <div class="product_image">
-                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
-                    </div>
-                </div>
-                {% endfor %}
-                <div class="cart_foot">
-                    <span class="total_price" id="total_price"></span>
-                </div>
-                <a href="/checkout"><button id="checkout">Checkout</button></a>
-
-            </div>
-        {% else %}
-            <div id="side_cart_div" class="side_cart_div">
-                <div class="hed">
-                    <button id="close_btn">Close <span>X</span></button>
-
-                    <h1>My Cart</h1>
-                </div>
-                {% for car in user_car %}
-                    <div class="side_cart_product">
-                        <div class="product_data">
-                            <div class="cart_pro_title_div">
-                                {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
-                                    <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                            <div class="product_image">
+                                {% if "https" in car.img1 or "http" in car.img1 %}
+                                    <img id="cart_img" src="{{ car.img1 }}" alt="image">
                                 {% else %}
-                                    <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                    <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
                                 {% endif %}
                             </div>
-                            <div class="cart_priceandcolor_div">
-                                <div class="cart_price_div">
-                                    <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
-                                </div>
-                                <div class="cart_color_div">
-                                    <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
-                                </div>
-                            </div>
-
-                            <div class="cart_sizeandquantity_div">
-                                <div class="cart_size_div">
-                                    <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
-                                </div>
-                                <div class="cart_quantity_div">
-                                    <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
-                                </div>
-                            </div>
-
-
-                            <div class="car_edit_btns">
-                                <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
-                                <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
-                            </div>
-
                         </div>
-                        <div class="product_image">
-                            <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                        {% endfor %}
+                        <div class="cart_foot">
+                            <span class="total_price" id="total_price"></span>
                         </div>
+                        <a href="/checkout"><button id="checkout">Checkout</button></a>
+
                     </div>
-                {% endfor %}
-                <div class="cart_foot">
-                    <span class="total_price" id="total_price"></span>
-                </div>
-                <a href="/checkout"><button id="checkout">Checkout</button></a>
+                {% else %}
+                    <div id="side_cart_div" class="side_cart_div">
+                        <div class="hed">
+                            <button id="close_btn">Close <span>X</span></button>
 
-            </div>
-        {% endif %}
+                            <h1>My Cart</h1>
+                        </div>
+                        {% for car in user_car %}
+                            <div class="side_cart_product">
+                                <div class="product_data">
+                                    <div class="cart_pro_title_div">
+                                        {% if car.Brand|length >= 15 or car.Name|length >= 15 %}
+                                            <h2 class="long_cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                        {% else %}
+                                            <h2 class="cart_pro_name_brand">{{ car.Name }} | {{ car.Brand }}</h2>
+                                        {% endif %}
+                                    </div>
+                                    <div class="cart_priceandcolor_div">
+                                        <div class="cart_price_div">
+                                            <span class="price_word">Price: <span class="cart_price">{{ car.price }}</span><span class="dolar">$</span></span>
+                                        </div>
+                                        <div class="cart_color_div">
+                                            <span class="color_word">Color: <button id="cart_color_btn" class="{{ car.color }}"></button></span>
+                                        </div>
+                                    </div>
 
+                                    <div class="cart_sizeandquantity_div">
+                                        <div class="cart_size_div">
+                                            <span class="size_word">Size: <span class="size_value">{{ car.size }}</span></span>
+                                        </div>
+                                        <div class="cart_quantity_div">
+                                            <span class="quantity_word">Quantity: <span class="quantity_value">{{ car.quantity }}</span></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="car_edit_btns">
+                                        <a href="/cart_update/{{car.id}}/{{car.product_id}}"><button class="car_update">Update</button></a>
+                                        <a href="/cart_delete/{{car.id}}"><button class="car_delete">Delete</button></a>
+                                    </div>
+
+                                </div>
+                                <div class="product_image">
+                                    {% if "https" in car.img1 or "http" in car.img1 %}
+                                        <img id="cart_img" src="{{ car.img1 }}" alt="image">
+                                    {% else %}
+                                        <img id="cart_img" src="static/uploads/{{ car.img1 }}" alt="image">
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="cart_foot">
+                            <span class="total_price" id="total_price"></span>
+                        </div>
+                        <a href="/checkout"><button id="checkout">Checkout</button></a>
+
+                    </div>
+                {% endif %}
 
 
         <script>
@@ -292,10 +299,17 @@
                     {% if product.section == "women-blazers" %}
                         <div class="women_theme">
                             <div class="card_image_div">
-                                <ul>
-                                    <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
-                                    <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
-                                </ul>
+                                {% if "https" in product.img1 or "http" in product.img1 %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li><a href="/product{{product.id}}"><img class="fst_pic" id="{{product.id}}"  src="static/uploads/{{ product.img1 }}" alt="design"></a></li>
+                                        <li><a href="/product{{product.id}}"><img class="snd_pic" id="{{product.img2}}"  src="static/uploads/{{ product.img2 }}" alt="design"></a></li>
+                                    </ul>
+                                {% endif %}
                             </div>
                             <div class="women_footer">
                                 <h5>{{product.name}}</h5>
