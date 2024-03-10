@@ -1109,6 +1109,13 @@ if(owner){
             else if(sections_div.style.display == "none")
             {
                 sections_div.style.display = "block";
+                sections_menu_women_btn.style.paddingRight = "192px";
+                sections_menu_men_btn.style.paddingRight = "220px";
+                sections_menu_kids_btn.style.paddingRight = "217px";
+                sections_menu_newarrival_btn.style.paddingRight = "160px";
+                sections_menu_bestsellers_btn.style.paddingRight = "160px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
 
             }else{
                 sections_div.style.display = "none";
@@ -1218,6 +1225,12 @@ if(owner){
             else if(sections_submenu_women_ul.style.display == "none"){
                 sections_submenu_women_ul.style.display = "block";
 
+                sections_submenu_clothing_btn.style.paddingRight = "179px";
+                sections_submenu_footwears_btn.style.paddingRight = "150px";
+                sections_submenu_bags_btn.style.paddingRight = "198px";
+                sections_submenu_jewelryandaccessories_btn.style.paddingRight = "88px";
+                sections_submenu_beauty_btn.style.paddingRight = "187PX";
+
                 sections_menu_men_btn.innerHTML = "";
                 sections_menu_men_btn.style.paddingRight = "250px";
                 sections_menu_men_btn.style.boxShadow = "0px 0px 0px #9b5de5";
@@ -1250,28 +1263,29 @@ if(owner){
             }else{
                 sections_submenu_women_ul.style.display = "none";
 
+
                 sections_menu_men_btn.innerHTML = "Men";
-                sections_menu_men_btn.style.paddingRight = "211px";
+                sections_menu_men_btn.style.paddingRight = "220px";
                 sections_menu_men_btn.style.boxShadow = "0px 5px 5px 0px rgba(1 1 1 /0.65)";
 
                 sections_menu_kids_btn.innerHTML = "Kids";
-                sections_menu_kids_btn.style.paddingRight = "207px";
+                sections_menu_kids_btn.style.paddingRight = "217px";
                 sections_menu_kids_btn.style.boxShadow = "0px 5px 5px 0px rgba(1 1 1 /0.65)";
 
                 sections_menu_newarrival_btn.innerHTML = "New.arrivals";
-                sections_menu_newarrival_btn.style.paddingRight = "140px";
+                sections_menu_newarrival_btn.style.paddingRight = "160px";
                 sections_menu_newarrival_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_bestsellers_btn.innerHTML = "Best.sellers";
-                sections_menu_bestsellers_btn.style.paddingRight = "144px";
+                sections_menu_bestsellers_btn.style.paddingRight = "160px";
                 sections_menu_bestsellers_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_brands_btn.innerHTML = "Brands";
-                sections_menu_brands_btn.style.paddingRight = "183px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
                 sections_menu_brands_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 hide_me_now_men.style.display = "none";
@@ -2010,6 +2024,11 @@ if(owner){
             else if(sections_submenu_men_ul.style.display == "none"){
                 sections_submenu_men_ul.style.display = "block";
 
+                sections_submenu_clothing_men_btn.style.paddingRight = "179px";
+                sections_submenu_footwear_men_btn.style.paddingRight = "172px";
+                sections_submenu_accessories_men_btn.style.paddingRight = "150px";
+                sections_submenu_beauty_men_btn.style.paddingRight = "187px";
+
 
                 sections_menu_women_btn.style.boxShadow =  "0px 0px 0px #9b5de5";
                 sections_menu_women_btn.style.display = "none";
@@ -2046,29 +2065,30 @@ if(owner){
             }else{
                 sections_submenu_men_ul.style.display = "none";
 
+
                 sections_menu_women_btn.style.display = "inline";
                 sections_menu_women_btn.style.boxShadow = "0px 5px 5px 0px rgba(1 1 1 /0.65)";
 
                 sections_ul.style.display = "flex";
 
                 sections_menu_kids_btn.innerHTML = "Kids";
-                sections_menu_kids_btn.style.paddingRight = "207px";
+                sections_menu_kids_btn.style.paddingRight = "217px";
                 sections_menu_kids_btn.style.boxShadow = "0px 5px 5px 0px rgba(1 1 1 /0.65)";
 
                 sections_menu_newarrival_btn.innerHTML = "New.arrivals";
-                sections_menu_newarrival_btn.style.paddingRight = "140px";
+                sections_menu_newarrival_btn.style.paddingRight = "160px";
                 sections_menu_newarrival_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_bestsellers_btn.innerHTML = "Best.sellers";
-                sections_menu_bestsellers_btn.style.paddingRight = "144px";
+                sections_menu_bestsellers_btn.style.paddingRight = "160px";
                 sections_menu_bestsellers_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_brands_btn.innerHTML = "Brands";
-                sections_menu_brands_btn.style.paddingRight = "183px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
                 sections_menu_brands_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
 
@@ -2610,6 +2630,10 @@ if(owner){
             else if(sections_submenu_kids_ul.style.display == "none"){
                 sections_submenu_kids_ul.style.display = "block";
 
+                sections_submenu_boys_kids_btn.style.paddingRight = "200px";
+                sections_submenu_girls_kids_btn.style.paddingRight = "200px";
+
+
                 sections_menu_women_btn.style.display = "none";
                 sections_menu_men_btn.style.display = "none";
 
@@ -2640,6 +2664,7 @@ if(owner){
             }else{
                 sections_submenu_kids_ul.style.display = "none";
 
+
                 sections_ul.style.display = "flex";
 
                 sections_menu_women_btn.style.display = "inline";
@@ -2647,19 +2672,19 @@ if(owner){
                 sections_menu_men_btn.style.display = "inline";
 
                 sections_menu_newarrival_btn.innerHTML = "New.arrivals";
-                sections_menu_newarrival_btn.style.paddingRight = "140px";
+                sections_menu_newarrival_btn.style.paddingRight = "160px";
                 sections_menu_newarrival_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_bestsellers_btn.innerHTML = "Best.sellers";
-                sections_menu_bestsellers_btn.style.paddingRight = "144px";
+                sections_menu_bestsellers_btn.style.paddingRight = "160px";
                 sections_menu_bestsellers_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_brands_btn.innerHTML = "Brands";
-                sections_menu_brands_btn.style.paddingRight = "183px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
                 sections_menu_brands_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
 
@@ -2955,6 +2980,9 @@ if(owner){
             }else{
                 sections_submenu_newarrival_ul.style.display = "none";
 
+
+
+
                 sections_menu_women_btn.style.display = "inline";
                 sections_menu_men_btn.style.display = "inline";
                 sections_menu_kids_btn.style.display = "inline";
@@ -2962,15 +2990,15 @@ if(owner){
                 sections_ul.style.display = "flex";
 
                 sections_menu_bestsellers_btn.innerHTML = "Best.sellers";
-                sections_menu_bestsellers_btn.style.paddingRight = "144px";
+                sections_menu_bestsellers_btn.style.paddingRight = "160px";
                 sections_menu_bestsellers_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_brands_btn.innerHTML = "Brands";
-                sections_menu_brands_btn.style.paddingRight = "183px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
                 sections_menu_brands_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
 
@@ -3064,12 +3092,13 @@ if(owner){
 
                 sections_ul.style.display = "flex";
 
+
                 sections_menu_brands_btn.innerHTML = "Brands";
-                sections_menu_brands_btn.style.paddingRight = "183px";
+                sections_menu_brands_btn.style.paddingRight = "198px";
                 sections_menu_brands_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
 
@@ -3147,7 +3176,7 @@ if(owner){
                 sections_ul.style.display = "flex";
 
                 sections_menu_sale_btn.innerHTML = "Sale";
-                sections_menu_sale_btn.style.paddingRight = "209px";
+                sections_menu_sale_btn.style.paddingRight = "217px";
                 sections_menu_sale_btn.style.boxShadow = "0px 5px 5px rgba(1 1 1 / 65%)";
 
                 hide_me_now_sale.style.display = "none";
